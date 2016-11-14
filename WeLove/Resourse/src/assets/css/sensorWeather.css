@@ -1,0 +1,32 @@
+html{
+    font-size:20px;
+}
+[v-cloak] { display: none }
+h3{
+    position: relative;
+    top:1.625rem;
+    left:0.875rem;
+}
+ select{
+    position: absolute;
+    top:4rem;
+    left:0.875rem;
+    width:17rem;
+    height:1.5rem;
+    border:none;
+    border-bottom:2px solid #0f9d58;
+    appearance:none;
+    -webkit-appearance:none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../img/slide2/arrow.png") no-repeat scroll right center transparent;
+    padding-right: 14px;
+}
+
+
+ #lineCharts{
+    top:6rem;
+    position: absolute;
+     width:18.75rem;
+     overflow-y: hidden;
+     height:14.5rem;
+}

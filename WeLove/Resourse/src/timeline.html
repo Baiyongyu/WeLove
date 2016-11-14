@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>时间轴</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/libs/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/timeline.css"/>
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var _getRequest = {
+            constructor:function(){
+                var url = decodeURIComponent(location.search);
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    strs = str.split("&");
+                    for(var i = 0; i < strs.length; i ++) {
+                        theRequest[strs[i].split("=")[0]]=decodeURIComponent(strs[i].split("=")[1]);
+                    }
+                }
+                return theRequest;
+            },
+            getInfo:function(info){
+                if(typeof(_getRequest.constructor()[info])=="undefined"){
+                    return "undefined";
+                }else{
+                    return _getRequest.constructor()[info].replace( /\r|\n/g, "" );
+                }
+            }
+        }
+    </script>
+    <script src="assets/js/libs/swiper/swiper.min.js"></script>
+    <script src="assets/js/libs/vue/vue.min.js"></script>
+    <script src="assets/js/libs/vue/vue-resource.min.js"></script>
+    <script type="text/javascript">
+        function GameObject(){this.zOrder=0;this.x=0;this.y=0;this.startupGameObject=function(x,y,z){this.zOrder=z;this.x=x;this.y=y;g_GameObjectManager.addGameObject(this);return this};this.shutdownGameObject=function(){g_GameObjectManager.removeGameObject(this)}}function VisualGameObject(){this.image=null;this.draw=function(dt,context,xScroll,yScroll){context.drawImage(this.image,this.x-xScroll,this.y-yScroll)};this.startupVisualGameObject=function(image,x,y,z){this.startupGameObject(x,y,z);this.image=image;return this};this.shutdownVisualGameObject=function(){this.shutdownGameObject()}}VisualGameObject.prototype=new GameObject;function RepeatingGameObject(){this.width=0;this.height=0;this.scrollFactor=1;this.startupRepeatingGameObject=function(image,x,y,z,width,height,scrollFactor){this.startupVisualGameObject(image,x,y,z);this.width=width;this.height=height;this.scrollFactor=scrollFactor;return this};this.shutdownstartupRepeatingGameObject=function(){this.shutdownVisualGameObject()};this.draw=function(dt,canvas,xScroll,yScroll){var areaDrawn=[0,0];for(var y=0;y<this.height;y+=areaDrawn[1]){for(var x=0;x<this.width;x+=areaDrawn[0]){var newPosition=[this.x+x,this.y+y];var newFillArea=[this.width-x,this.height-y];var newScrollPosition=[0,0];if(x==0){newScrollPosition[0]=xScroll*this.scrollFactor}if(y==0){newScrollPosition[1]=yScroll*this.scrollFactor}areaDrawn=this.drawRepeat(canvas,newPosition,newFillArea,newScrollPosition)}}};this.drawRepeat=function(canvas,newPosition,newFillArea,newScrollPosition){var xOffset=Math.abs(newScrollPosition[0])%this.image.width;var yOffset=Math.abs(newScrollPosition[1])%this.image.height;var left=newScrollPosition[0]<0?this.image.width-xOffset:xOffset;var top=newScrollPosition[1]<0?this.image.height-yOffset:yOffset;var width=newFillArea[0]<this.image.width-left?newFillArea[0]:this.image.width-left;var height=newFillArea[1]<this.image.height-top?newFillArea[1]:this.image.height-top;canvas.drawImage(this.image,left,top,width,height,newPosition[0],newPosition[1],width,height);return[width,height]}}RepeatingGameObject.prototype=new VisualGameObject();function AnimatedGameObject(){this.currentFrame=0;this.timeBetweenFrames=0;this.timeSinceLastFrame=0;this.frameWidth=0;this.startupAnimatedGameObject=function(image,x,y,z,frameCount,fps){if(frameCount<=0){throw"framecount can not be <= 0"}if(fps<=0){throw"fps can not be <= 0"}this.startupVisualGameObject(image,x,y,z);this.currentFrame=0;this.frameCount=frameCount;this.timeBetweenFrames=1/fps;this.timeSinceLastFrame=this.timeBetweenFrames;this.frameWidth=this.image.width/this.frameCount};this.draw=function(dt,context,xScroll,yScroll){var sourceX=this.frameWidth*this.currentFrame;context.drawImage(this.image,sourceX,0,this.frameWidth,this.image.height,this.x-xScroll,this.y-yScroll,this.frameWidth,this.image.height);this.timeSinceLastFrame-=dt;if(this.timeSinceLastFrame<=0){this.timeSinceLastFrame=this.timeBetweenFrames;++this.currentFrame;this.currentFrame%=this.frameCount}}}AnimatedGameObject.prototype=new VisualGameObject;Array.prototype.remove=function(from,to){var rest=this.slice((to||from)+1||this.length);this.length=from<0?this.length+from:from;return this.push.apply(this,rest)};Array.prototype.removeObject=function(object){for(var i=0;i<this.length;++i){if(this[i]===object){this.remove(i);break}}};function ApplicationManager(){this.startupApplicationManager=function(){this.runner=new AnimatedGameObject().startupAnimatedGameObject(g_run,0,0,1,cTotalFrames,FPS);return this}}function GameObjectManager(){this.gameObjects=new Array();this.lastFrame=new Date().getTime();this.xScroll=0;this.yScroll=0;this.applicationManager=null;this.canvas=null;this.context2D=null;this.backBuffer=null;this.backBufferContext2D=null;this.startupGameObjectManager=function(){g_GameObjectManager=this;this.canvas=document.getElementById("canvas");this.context2D=this.canvas.getContext("2d");this.backBuffer=document.createElement("canvas");this.backBuffer.width=this.canvas.width;this.backBuffer.height=this.canvas.height;this.backBufferContext2D=this.backBuffer.getContext("2d");this.applicationManager=new ApplicationManager().startupApplicationManager();setInterval(function(){g_GameObjectManager.draw()},SECONDS_BETWEEN_FRAMES);return this};this.draw=function(){var thisFrame=new Date().getTime();var dt=(thisFrame-this.lastFrame)/1000;this.lastFrame=thisFrame;this.backBufferContext2D.clearRect(0,0,this.backBuffer.width,this.backBuffer.height);this.context2D.clearRect(0,0,this.canvas.width,this.canvas.height);for(x in this.gameObjects){if(this.gameObjects[x].update){this.gameObjects[x].update(dt,this.backBufferContext2D,this.xScroll,this.yScroll)}}for(x in this.gameObjects){if(this.gameObjects[x].draw){this.gameObjects[x].draw(dt,this.backBufferContext2D,this.xScroll,this.yScroll)}}this.context2D.drawImage(this.backBuffer,0,0)};this.addGameObject=function(gameObject){this.gameObjects.push(gameObject);this.gameObjects.sort(function(a,b){return a.zOrder-b.zOrder})};this.removeGameObject=function(gameObject){this.gameObjects.removeObject(gameObject)
+        }}function initCanvas(){new GameObjectManager().startupGameObjectManager()}var cSpeed=9;var cWidth=128;var cHeight=78;var cTotalFrames=20;var cFrameWidth=128;var cImageSrc="assets/img/sprites.gif";var cImageTimeout=false;function startAnimation(){document.getElementById("loaderImage").innerHTML='<canvas id="canvas" width="'+cWidth+'" height="'+cHeight+'"><p>Your browser does not support the canvas element.</p></canvas>';FPS=Math.round(100/cSpeed);SECONDS_BETWEEN_FRAMES=1/FPS;g_GameObjectManager=null;g_run=genImage;g_run.width=cTotalFrames*cFrameWidth;genImage.onload=function(){cImageTimeout=setTimeout(fun,0)};initCanvas()}function imageLoader(s,fun){clearTimeout(cImageTimeout);cImageTimeout=0;genImage=new Image();genImage.onload=function(){cImageTimeout=setTimeout(fun,0)};genImage.onerror=new Function("alert('Could not load the image')");genImage.src=s}new imageLoader(cImageSrc,"startAnimation()");
+    </script>
+    <style>
+        *, *:after, *:before {
+            -webkit-box-sizing: border-box;
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+            list-style:none;
+            border:none;
+        }
+        body {
+            font-family: "Microsoft yahei", serif;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body id="app">
+    <div id="loaderImage"  v-bind:class="{'undis': isLoaderEnd}"></div>
+
+    <section id="cd-timeline" class="cd-container" v-bind:class="{'dis': isLoaderEnd}">
+        <!--农事活动事件-->
+        <template  v-for="item in activity_info" >
+            <div class="cd-timeline-block" >
+                <div class="cd-timeline-img">
+                    <i class="iconfont" v-bind:class="_showIcon(item.activity_type_id)"></i>
+                </div>
+                <div class="cd-timeline-content">
+                    <template  v-for="content in item.activity_message">
+                        <p>{{content.activity_detail}}</p>
+                        <!--农事活动照片-->
+                        <template v-if="_showImg(content.activity_urls)">
+                            <section class="swiper-container" >
+                                <div class="swiper-wrapper">
+                                    <template v-for="img in content.activity_urls">
+                                        <div class="swiper-slide">
+                                            <img data-src="{{img}}" class="swiper-lazy"/>
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                        </div>
+                                    </template>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-white"></div>
+                                <div class="swiper-button-next swiper-button-white"></div>
+                                <div class="swiper-button-prev swiper-button-white"></div>
+                            </section>
+                        </template>
+                        <!--农事活动视频-->
+                        <template v-if="_showVedio(content.activity_videos)">
+                            <iframe style="height:7.9rem;width:13rem;" src="{{content.activity_videos}}" frameborder=0 allowfullscreen></iframe>
+                        </template>
+
+                        <span class="cd-date">{{content.activity_time }}</span>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </section>
+
+    <script type="text/javascript">
+    var timeLine = new Vue({
+        el: '#app',
+        data: {
+            activity_info: {},
+            crop_id:_getRequest.getInfo('crop_id'),
+             user_id:function(){return _getRequest.getInfo('user_id')},
+             SESSION:function(){return _getRequest.getInfo('SESSION')},
+            isLoaderEnd:false
+        },
+        methods:{
+            _showImg:function(arr){
+                return (arr.length > 0 ? true : false);
+            },
+            _showVedio:function(url){
+                return (url.length > 0 ? true : false);
+            },
+            _showIcon:function(type){
+                switch(type.toString()){
+                    case '1': return 'icon-wadi'; break;
+                    case '2': return 'icon-wadi'; break;
+                    case '3': return 'icon-toucao'; break;
+                    case '4': return 'icon-nongyaohuafei'; break;
+                    case '5': return 'icon-wadi'; break;
+                    case '6': return 'icon-yongyaojilu'; break;
+                    case '7': return 'icon-shouhuo'; break;
+                    case '8': return 'icon-xiaodu'; break;
+                    case '9': return 'icon-nongyaohuafei'; break;
+                    case '10': return 'icon-shui'; break;
+                    case '11': return 'icon-shui'; break;
+                    case '12': return 'icon-tou'; break;
+                    case '13': return 'icon-tou'; break;
+                    case '14': return 'icon-shouhuo'; break;
+                    case '15': return 'icon-yongyaojilu'; break;
+                    case '16': return 'icon-shouhuo'; break;
+                }
+            }
+        },
+        ready:function(){
+            //this.$http.get('assets/js/data/timeline.json',{crop_id:2},function(data) {
+            this.$http.get('http://60.169.69.3:9001/api/trace/detail',{crop_id:this.crop_id,user_id:this.user_id,SESSION:this.SESSION},function(data) {
+                this.$set('activity_info', data.data.activity_info);
+                setTimeout(function(){
+                    timeLine.$set('isLoaderEnd',true);
+                },500);
+            }).then(function(){
+                new Swiper('.swiper-container', {
+                    speed: 300,
+                    lazyLoading: true,
+                    preloadImages: false,
+                    longSwipesRatio: 0.3,
+                    pagination: '.swiper-pagination',
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev'
+                });
+            }).error(function(data, status, request) {
+                console.log('fail' + status + "," + request);
+            })
+        }
+    });
+</script>
+</body>
+</html>

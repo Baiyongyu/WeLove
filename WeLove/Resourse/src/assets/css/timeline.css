@@ -1,0 +1,187 @@
+
+[v-cloak] { display: none }
+.cd-container {
+  width: 90%;
+  margin: 0 auto;
+}
+@font-face {font-family: 'iconfont';
+  src:url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.cd-container .iconfont {
+  font-size: 1.5rem;
+  font-family:"iconfont" !important;  font-style:normal;  -webkit-font-smoothing: antialiased;  -webkit-text-stroke-width: 0.2px;  color:limegreen;
+}
+[v-cloak] { display: none }
+#loaderImage{
+  position: fixed;
+  top:50%;
+  left:50%;
+  margin-top:-39px;
+  margin-left:-64px;
+}
+.icon-user:before { content: "\e60e"; }
+.icon-arrow:before { content: "\e60d"; }
+.icon-tou:before { content: "\e60c"; }
+.icon-shuichan:before { content: "\e600"; }
+.icon-shui:before { content: "\e601"; }
+.icon-yongyaojilu:before { content: "\e602"; }
+.icon-adress:before { content: "\e60f"; }
+.icon-weiyang:before { content: "\e603"; }
+.icon-xiaodu:before { content: "\e604"; }
+.icon-nongyaohuafei:before { content: "\e605"; }
+.icon-tel:before { content: "\e610"; }
+.icon-shachong:before { content: "\e606"; }
+.icon-shouhuo:before { content: "\e607"; }
+.icon-wadi:before { content: "\e608"; }
+.icon-plant1155478easyiconnet:before { content: "\e609"; }
+.icon-querenshouhuo-copy:before { content: "\e60a"; }
+.icon-toucao:before { content: "\e60b"; }
+
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.undis{
+  display: none;
+}
+.dis{
+  visibility: visible !important;
+}
+
+#cd-timeline {
+  position: relative;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  visibility:hidden;
+}
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: .9rem;
+  height: 100%;
+  width: .2rem;
+  background: #d7e4ed;
+}
+
+
+.cd-timeline-block {
+  position: relative;
+  margin: 1rem 0;
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 .25rem #d7e4ed, inset 0 2px 0 rgba(0, 0, 0, .08), 0 .15rem 0 .2rem rgba(0, 0, 0, .05);
+  background: #fff;
+}
+.cd-timeline-img i{
+  position: absolute;
+  top: 0.15rem;
+  left: 0.2rem;
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 2.7rem;
+  background: #d7e4ed;
+  border-radius: .25rem;
+  padding: .5rem .5rem 0;
+  box-shadow: 0 .15rem 0 #d7e4ed;
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-content h2 {
+  color: #303e49;
+  font-size:.75rem;
+}
+.cd-timeline-content p {
+  font-size: .65rem;
+}
+.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  display: inline-block;
+}
+.cd-timeline-content p {
+  line-height: 1.7;
+  margin: 0;
+}
+.cd-timeline-content .cd-read-more {
+  float: right;
+  padding: .8rem 1rem;
+  background: #acb7c0;
+  color: #d7e4ed;
+  border-radius: .25rem;
+}
+.cd-timeline-content .swiper-wrapper{
+  padding:.35rem 0;
+  width:13rem;
+  height:7.8rem;
+
+
+}
+.cd-timeline-content .swiper-wrapper img{
+  border-radius:5px;
+  width:13rem;
+  height:7.8rem;
+  background: #ccc;
+}
+.cd-timeline-content .swiper-slide{
+  width:13rem;
+  height:7.8rem;
+}
+
+.no-touch .cd-timeline-content .cd-read-more:hover {
+  background-color: #bac4cb;
+}
+.cd-timeline-content .cd-date {
+  float: left;
+  padding: .2rem 0 .5rem;
+  opacity: .7;
+  font-size: 0.5rem;
+  display: block;
+  width:100%;
+}
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: .8rem;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: .35rem solid transparent;
+  border-right: .35rem solid #d7e4ed;
+}
+
+
+
+
+
+
+
+

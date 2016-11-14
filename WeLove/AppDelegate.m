@@ -1,5 +1,5 @@
 //
-//  AppDelegate.m
+//  AppDelegate.h
 //  WeLove
 //
 //  Created by 宇玄丶 on 2016/11/14.
@@ -8,15 +8,36 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+typedef void (^RootContextSave)(void);
 
+@interface AppDelegate ()
+{
+    BMKMapManager *_mapManager;
+}
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    /* 百度地图 */
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:kBaiduMapKey  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
+    
+    self.tabBarController = [[ANTTabBarController alloc] init];
+    self.nav = [[ANTNavigationController alloc] initWithRootViewController:self.tabBarController];
+    self.nav.navigationBar.hidden = YES;
+    self.window.rootViewController = self.nav;
+    
+    [locationManager startLocation];
+    
     return YES;
 }
 
@@ -45,7 +66,138 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    // Saves changes in the application's managed object context before the application terminates.
+    [self saveContext];
 }
 
+#pragma mark - Core Data stack
+
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+- (NSURL *)applicationDocumentsDirectory {
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.ahqianmo.anz" in the application's documents directory.
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (NSManagedObjectModel *)managedObjectModel {
+    // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
+    if (_managedObjectModel != nil) {
+        return _managedObjectModel;
+    }
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"WeLove" withExtension:@"momd"];
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    return _managedObjectModel;
+}
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+    // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it.
+    if (_persistentStoreCoordinator != nil) {
+        return _persistentStoreCoordinator;
+    }
+    
+    // Create the coordinator and store
+    
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"WeLove.sqlite"];
+    NSError *error = nil;
+    NSString *failureReason = @"There was an error creating or loading the application's saved data.";
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+        // Report any error we got.
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
+        dict[NSLocalizedFailureReasonErrorKey] = failureReason;
+        dict[NSUnderlyingErrorKey] = error;
+        error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
+        // Replace this with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    [QMUtil addSkipBackupAttributeToItemAtURL:storeURL];
+    return _persistentStoreCoordinator;
+}
+
+- (NSManagedObjectContext *)rootObjectContext {
+    if (nil != _rootObjectContext)
+    {
+        return _rootObjectContext;
+    }
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (coordinator != nil)
+    {
+        _rootObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        [_rootObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    return _rootObjectContext;
+}
+
+- (NSManagedObjectContext *)managedObjectContext {
+    if (nil != _managedObjectContext) {
+        return _managedObjectContext;
+    }
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    _managedObjectContext.parentContext = [self rootObjectContext];
+    return _managedObjectContext;
+}
+
+- (void)saveContextWithWait:(BOOL)needWait
+{
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSManagedObjectContext *rootObjectContext = [self rootObjectContext];
+    
+    if (nil == managedObjectContext) {
+        return;
+    }
+    if ([managedObjectContext hasChanges])
+    {
+        [managedObjectContext performBlockAndWait:^{
+            NSError *error = nil;
+            if (![managedObjectContext save:&error])
+            {
+                NSLog(@"Save main context failed and error is %@", error);
+            }
+        }];
+    }
+    if (nil == rootObjectContext) {
+        return;
+    }
+    
+    RootContextSave rootContextSave = ^ {
+        NSError *error = nil;
+        if (![_rootObjectContext save:&error])
+        {
+            NSLog(@"Save root context failed and error is %@", error);
+        }
+    };
+    
+    if ([rootObjectContext hasChanges])
+    {
+        if (needWait)
+        {
+            [rootObjectContext performBlockAndWait:rootContextSave];
+        }
+        else
+        {
+            [rootObjectContext performBlock:rootContextSave];
+        }
+    }
+}
+
+#pragma mark - Core Data Saving support
+
+- (void)saveContext {
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        NSError *error = nil;
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+}
 
 @end

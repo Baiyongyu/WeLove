@@ -1,0 +1,59 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - BaiduMapKit (3.1.0)
+  - DBSphereTagCloud (1.0.0)
+  - Masonry (1.0.2)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.13)
+  - PKShortVideo (0.9.4)
+  - RongCloudIMKit (2.7.3)
+  - SDAutoLayout (2.1.7)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - BaiduMapKit (~> 3.1.0)
+  - DBSphereTagCloud (~> 1.0.0)
+  - Masonry (~> 1.0.0)
+  - MBProgressHUD (~> 0.9.2)
+  - MJExtension (~> 3.0.13)
+  - PKShortVideo
+  - RongCloudIMKit (~> 2.7.3)
+  - SDAutoLayout (~> 2.1.1)
+  - SDCycleScrollView (~> 1.65)
+  - SDWebImage (~> 3.7.5)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BaiduMapKit: 4cfaedb118cff7e157e9771859a4bf65a261b2a1
+  DBSphereTagCloud: 57b9571e93b3565fc22cd65040eabbada06b56f2
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  PKShortVideo: 201c2c166ede4b52e915a79f5148483903b7b2b3
+  RongCloudIMKit: 0b93700b17d224c7c213815b8a23a9c356fe20e2
+  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+
+PODFILE CHECKSUM: 7d95c38c7adb20457e20065f210e3bd202609d07
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>气象传感器</title>
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/sensorWeather.css">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var _getRequest = {
+            constructor:function(){
+                var url = decodeURIComponent(location.search);
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    strs = str.split("&");
+                    for(var i = 0; i < strs.length; i ++) {
+                        theRequest[strs[i].split("=")[0]]=decodeURIComponent(strs[i].split("=")[1]);
+                    }
+                }
+                return theRequest;
+            },
+            getInfo:function(info){
+                if(typeof(_getRequest.constructor()[info])=="undefined"){
+                    return "undefined";
+                }else{
+                    return _getRequest.constructor()[info].replace( /\r|\n/g, "" );
+                }
+            }
+        }
+    </script>
+</head>
+<body id="app">
+    <select v-model="selected">
+        <template v-for="item in sensorType">
+            <option v-bind="{selected:getValue(item.value),value:item.value}">
+                {{item.text}}
+            </option>
+        </template>
+    </select>
+    <div style="width: 100%;height:14.5rem;" id="lineCharts"></div>
+    <script src="assets/js/libs/vue/vue.min.js"></script>
+    <script src="assets/js/libs/vue/vue-resource.min.js"></script>
+    <script src="assets/js/libs/echarts/echarts.common.min.js"></script>
+    <script>
+        var sensor = new Vue({
+            el: '#app',
+            data: {
+                peng_no:function(){return _getRequest.getInfo('peng_no')},
+                user_id:function(){return _getRequest.getInfo('user_id')},
+                selected:function(){return _getRequest.getInfo('peng_type')},
+                getValue:function(val){return _getRequest.getInfo('peng_type') == val},
+                SESSION:function(){return _getRequest.getInfo('SESSION')},
+                sensorType:[
+                    {text: "土壤水分", value: "SOIL_HUMIDITY"},
+                    {text: "空气温度", value: "AIR_TEMPERATURE"},
+                    {text: "空气相对湿度", value: "AIR_HUMIDITY"},
+                    {text: "风速", value: "WIND_SPEED"},
+                    {text: "光照度", value: "LIGHT_ILLUMINATION"},
+                    {text: "日照", value: "SUNSHINE"},
+                    {text: "蒸发量", value: "EVAPORATION_RATE"},
+                    {text: "降雨量", value: "RAINFALL"}
+                ],
+                //echarts
+                myChart:{},
+                //echartsp配置
+                myChartOption:{
+                    title: {
+                        show:false,
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        formatter: function (params) {
+                            params = params[0];
+                            var date = new Date(params.name);
+                            return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1];
+                        },
+                        axisPointer: {
+                            animation: false
+                        }
+                    },
+                    xAxis: {
+                        type: 'time',
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        boundaryGap: [0, '100%'],
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    series: [{
+                        name: '模拟数据',
+                        type: 'line',
+                        showSymbol: false,
+                        hoverAnimation: false,
+                        data: []
+                    }]
+                }
+            },
+            created:function(){
+                this.myChart = echarts.init(document.getElementById('lineCharts'));
+                this.myChart.showLoading();
+            },
+            watch:{
+                'selected':function(){
+                    this.myChart.showLoading();
+                    this.$http.get('http://www.qmant.com/api/sensor/history',{peng_no:this.peng_no,peng_type:this.selected,user_id:this.user_id,SESSION:this.SESSION},function(data) {
+                    //this.$http.get('assets/js/data/tempdata.json',{peng_no:this.peng_no,peng_type:this.selected},function(data) {
+                        this.$set('myChartOption.series[0].data',data.data);
+                    });
+                },
+                'myChartOption.series[0].data':function(){
+                    this.myChart.hideLoading();
+                    this.myChart.setOption(this.myChartOption);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
