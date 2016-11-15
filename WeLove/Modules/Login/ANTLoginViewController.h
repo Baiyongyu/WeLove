@@ -6,9 +6,9 @@
 //  Copyright © 2016年 ahqianmo. All rights reserved.
 //
 
-#import "ANTBaseViewController.h"
+#import "BaseViewController.h"
 
-@interface ANTLoginViewController : ANTBaseViewController
+@interface ANTLoginViewController : BaseViewController
 +(void)presentLoginPageSuccess:(void(^)())success;
 @property(nonatomic,copy)void(^loginSuccessBlock)();
 @end

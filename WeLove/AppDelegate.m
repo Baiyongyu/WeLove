@@ -31,8 +31,8 @@ typedef void (^RootContextSave)(void);
         NSLog(@"manager start failed!");
     }
     
-    self.tabBarController = [[ANTTabBarController alloc] init];
-    self.nav = [[ANTNavigationController alloc] initWithRootViewController:self.tabBarController];
+    self.tabBarController = [[TabBarController alloc] init];
+    self.nav = [[NavigationController alloc] initWithRootViewController:self.tabBarController];
     self.nav.navigationBar.hidden = YES;
     self.window.rootViewController = self.nav;
     

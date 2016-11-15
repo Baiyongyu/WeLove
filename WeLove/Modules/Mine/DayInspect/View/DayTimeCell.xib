@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="KGk-i7-Jjw" customClass="DayTimeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufc-eG-aEP" userLabel="lineView">
+                        <rect key="frame" x="63.5" y="0.0" width="2" height="85"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1.5" id="miL-jY-CZF"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="punch_State_selector_18x18_" translatesAutoresizingMaskIntoConstraints="NO" id="wvR-JV-aVH">
+                        <rect key="frame" x="52" y="31" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Kfp-hH-Spw"/>
+                            <constraint firstAttribute="width" constant="25" id="RKv-c4-tzq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzr-Iq-x2H">
+                        <rect key="frame" x="8" y="32" width="38" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3N-mN-Ccg">
+                        <rect key="frame" x="167" y="8" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="v3N-mN-Ccg" secondAttribute="height" id="XLX-5H-zde"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LK3-C6-SXH">
+                        <rect key="frame" x="92" y="8" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="LK3-C6-SXH" secondAttribute="height" id="ZRF-0Q-VTc"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-lA-Lo3">
+                        <rect key="frame" x="242" y="8" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="zlm-lA-Lo3" secondAttribute="height" id="eGr-BU-VlI"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v3N-mN-Ccg" firstAttribute="width" secondItem="LK3-C6-SXH" secondAttribute="width" id="0ho-eg-icy"/>
+                    <constraint firstItem="v3N-mN-Ccg" firstAttribute="centerY" secondItem="zlm-lA-Lo3" secondAttribute="centerY" id="E1u-Ov-ZV0"/>
+                    <constraint firstItem="zlm-lA-Lo3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QJ6-ev-hq5"/>
+                    <constraint firstAttribute="bottom" secondItem="ufc-eG-aEP" secondAttribute="bottom" id="Woj-ra-cTD"/>
+                    <constraint firstItem="ufc-eG-aEP" firstAttribute="centerX" secondItem="wvR-JV-aVH" secondAttribute="centerX" id="ZKm-GK-K6j"/>
+                    <constraint firstItem="LK3-C6-SXH" firstAttribute="centerY" secondItem="v3N-mN-Ccg" secondAttribute="centerY" id="ZPW-7G-5Ll"/>
+                    <constraint firstItem="zlm-lA-Lo3" firstAttribute="leading" secondItem="v3N-mN-Ccg" secondAttribute="trailing" constant="5" id="gXV-ze-5NI"/>
+                    <constraint firstItem="v3N-mN-Ccg" firstAttribute="leading" secondItem="LK3-C6-SXH" secondAttribute="trailing" constant="5" id="hmW-pX-pDB"/>
+                    <constraint firstItem="zlm-lA-Lo3" firstAttribute="width" secondItem="LK3-C6-SXH" secondAttribute="width" id="hz6-j9-y68"/>
+                    <constraint firstItem="zlm-lA-Lo3" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.22" id="l9f-Sl-9cS"/>
+                    <constraint firstItem="ufc-eG-aEP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oc2-b0-f7b"/>
+                    <constraint firstItem="LK3-C6-SXH" firstAttribute="centerY" secondItem="wvR-JV-aVH" secondAttribute="centerY" id="pEB-le-ikM"/>
+                    <constraint firstItem="LK3-C6-SXH" firstAttribute="leading" secondItem="wvR-JV-aVH" secondAttribute="trailing" constant="15" id="so6-Ju-3lH"/>
+                    <constraint firstItem="zlm-lA-Lo3" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="yXl-jZ-fP4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgView1" destination="LK3-C6-SXH" id="fxi-Ya-khT"/>
+                <outlet property="imgView2" destination="v3N-mN-Ccg" id="XPk-0Z-Bd1"/>
+                <outlet property="imgView3" destination="zlm-lA-Lo3" id="GsU-w4-BLh"/>
+                <outlet property="timeLabel" destination="Lzr-Iq-x2H" id="hoZ-2V-Lzj"/>
+            </connections>
+            <point key="canvasLocation" x="-383" y="102"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="punch_State_selector_18x18_" width="18" height="18"/>
+    </resources>
+</document>

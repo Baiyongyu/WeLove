@@ -1,8 +1,8 @@
 //
 //  PrefixHeader.pch
-//  anz
+//  WeLove
 //
-//  Created by KevinCao on 16/6/28.
+//  Created by 宇玄丶 on 16/6/28.
 //  Copyright © 2016年 ahqianmo. All rights reserved.
 //
 
@@ -15,9 +15,8 @@
 /*---------------Models---------------*/
 #import "ComponentsModel.h"
 #import "UserModel.h"
-#import "FarmActivityModel.h"
+#import "HappyTimeModel.h"
 #import "WeatherModel.h"
-#import "SensorModel.h"
 
 /*-------------Categories--------------*/
 #import "UIView+UIViewFrame.h"
@@ -52,9 +51,9 @@
 #import "QMButton.h"
 
 /*---------------Base----------------*/
-#import "ANTBaseViewController.h"
-#import "ANTBaseTableViewController.h"
-#import "QMWebViewController.h"
+#import "BaseViewController.h"
+#import "BaseTableViewController.h"
+#import "WebViewController.h"
 #import "ANTLoginViewController.h"
 
 

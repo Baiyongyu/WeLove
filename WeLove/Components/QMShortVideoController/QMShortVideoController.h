@@ -6,11 +6,11 @@
 //  Copyright © 2016年 qianmo. All rights reserved.
 //
 
-#import "ANTBaseViewController.h"
+#import "BaseViewController.h"
 
 typedef void(^ShortVideoSuccessBlock)(QMImageModel *);
 
-@interface QMShortVideoController : ANTBaseViewController
+@interface QMShortVideoController : BaseViewController
 @property (nonatomic, assign) NSTimeInterval videoMaximumDuration;
 @property (nonatomic, assign) NSTimeInterval videoMinimumDuration;
 

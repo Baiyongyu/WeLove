@@ -1,14 +1,14 @@
 //
 //  WeatherTableViewController.h
-//  ant
+//  WeLove
 //
-//  Created by KevinCao on 16/8/17.
-//  Copyright © 2016年 ahqianmo. All rights reserved.
+//  Created by 宇玄丶 on 2016/11/14.
+//  Copyright © 2016年 qianmo. All rights reserved.
 //
 
-#import "ANTBaseTableViewController.h"
+#import "BaseTableViewController.h"
 
-@interface WeatherTableViewController : ANTBaseTableViewController
+@interface WeatherTableViewController : BaseTableViewController
 
 @end
 

@@ -36,7 +36,7 @@
 {
     NSMutableArray *tmpArray = [NSMutableArray array];
     for (NSDictionary *activityDic in [QMUtil checkArray:data[@"data"]]) {
-        FarmActivityModel *activityData = [[FarmActivityModel alloc] init];
+        HappyTimeModel *activityData = [[HappyTimeModel alloc] init];
         activityData.activityId = [QMUtil checkString:activityDic[@"activity_id"]];
         activityData.activityDate = [QMUtil getDateFromeString:[QMUtil checkString:activityDic[@"created_at"]]];
         activityData.activityName = [QMUtil checkString:activityDic[@"activity_type_name"]];

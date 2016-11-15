@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "ANTTabBarController.h"
-#import "ANTNavigationController.h"
+#import "TabBarController.h"
+#import "NavigationController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ANTNavigationController *nav;
-@property (strong, nonatomic) ANTTabBarController *tabBarController;
+@property (strong, nonatomic) NavigationController *nav;
+@property (strong, nonatomic) TabBarController *tabBarController;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectContext *rootObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

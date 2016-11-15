@@ -1,14 +1,14 @@
 //
 //  WeatherViewController.h
-//  ant
+//  WeLove
 //
-//  Created by KevinCao on 16/8/17.
-//  Copyright © 2016年 ahqianmo. All rights reserved.
+//  Created by 宇玄丶 on 2016/11/14.
+//  Copyright © 2016年 qianmo. All rights reserved.
 //
 
-#import "ANTBaseViewController.h"
+#import "BaseViewController.h"
 
-@interface WeatherViewController : ANTBaseViewController
+@interface WeatherViewController : BaseViewController
 @end
 
 @interface WeatherHeaderView : UIView
