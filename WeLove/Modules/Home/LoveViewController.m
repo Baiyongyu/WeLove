@@ -12,10 +12,14 @@
 #import "ComAnimationLayer.h"
 #import "MemoryDayViewController.h" // 纪念日
 #import "WishViewController.h"      // 心愿
+#import "MusicListViewController.h" // 音乐库
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 @interface LoveViewController ()
 {
     UIView *bgViewContainer;
     UIButton *_centerButton;
+    AVAudioPlayer *_audioPlayer;
 }
 //天气
 @property(nonatomic,strong)HomeWeatherView *weatherView;
@@ -49,7 +53,7 @@
     
     NSMutableArray *temp = [NSMutableArray new];
     
-    NSArray *titleArray = @[@"纪念日", @"心愿球", @"嘻嘻嘻", @"哈哈哈"];
+    NSArray *titleArray = @[@"纪念日", @"心愿球", @"嘻嘻嘻", @"音乐库"];
     NSArray *imgArray = @[@"indexPageIconAnni_26x26_", @"indexPageIconWish_26x26_", @"indexPageIconClock_26x26_", @"indexPageIconPunch_26x26_"];
     for (int i = 0; i < count; i++) {
         _centerButton = [UIButton new];
@@ -105,6 +109,9 @@
     } else if (btn.tag == 2) {
         WishViewController *wishVC = [[WishViewController alloc] init];
         [kRootNavigation pushViewController:wishVC animated:YES];
+    } else if (btn.tag == 4) {
+        MusicListViewController *musicVC = [[MusicListViewController alloc] init];
+        [kRootNavigation pushViewController:musicVC animated:YES];
     }
 }
 
@@ -125,6 +132,77 @@
     }
 
     [ComAnimationLayer createAnimationLayerWithString:@"小v，我爱你" andRect: CGRectMake(0, CGRectGetMaxY(_weatherView.frame) + 50, kScreenWidth, kScreenWidth) andView:self.view andFont:[UIFont boldSystemFontOfSize:40] andStrokeColor:kNavColor];
+    
+    // 音乐播放
+    [self MP3Player];
+}
+
+#pragma mark - 音乐播放
+- (void)MP3Player {
+    //后台播放音频设置
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setActive:YES error:nil];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    
+    //让app支持接受远程控制事件
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+    
+    //播放背景音乐
+    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"齐晨-咱们结婚吧" ofType:@"mp3"];
+//    NSURL *url = [[NSURL alloc] initWithString:@"http://music.163.com/outchain/player?type=2&id=28029509&auto=1&height=66"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
+    
+    // 创建播放器
+    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    [_audioPlayer prepareToPlay];
+    //[player setVolume:1];
+    //player.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
+    [_audioPlayer play]; //播放
+    
+    [self setLockScreenNowPlayingInfo];
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event
+{
+    if (event.type == UIEventTypeRemoteControl) {
+        
+        switch (event.subtype) {
+                
+            case UIEventSubtypeRemoteControlPause:
+                [_audioPlayer pause];
+                NSLog(@"RemoteControlEvents: pause");
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+                [_audioPlayer play];
+                NSLog(@"RemoteControlEvents: play");
+                break;
+            case UIEventSubtypeRemoteControlNextTrack:
+                [_audioPlayer play];
+                NSLog(@"RemoteControlEvents: playModeNext");
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                [_audioPlayer play];
+                NSLog(@"RemoteControlEvents: playPrev");
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+- (void)setLockScreenNowPlayingInfo
+{
+    //更新锁屏时的歌曲信息
+    if (NSClassFromString(@"MPNowPlayingInfoCenter")) {
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        
+        [dict setObject:@"歌曲名111" forKey:MPMediaItemPropertyTitle];
+        [dict setObject:@"演唱者1111" forKey:MPMediaItemPropertyArtist];
+        [dict setObject:@"专辑名1111" forKey:MPMediaItemPropertyAlbumTitle];
+        
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
+    }
 }
 
 #pragma mark - 开始动画

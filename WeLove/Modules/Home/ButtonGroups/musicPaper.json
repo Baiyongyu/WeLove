@@ -1,0 +1,29 @@
+[
+ {
+    "music_id":10000,
+    "name":"咱们结婚吧",
+    "icon":"http://f.hiphotos.baidu.com/ting/s%3D300/sign=1f4ac467be12c8fcb0f3f0cdcc0292b4/aa64034f78f0f736c202fa460d55b319eac413fc.jpg",
+    "fileName":"http://cdn.y.baidu.com/746dd400ec21750107a8cfd227d999f0.mp3",
+    "lrcName":"",
+    "singer": "齐晨",
+    "singerIcon": ""
+ },
+ {
+    "music_id":10001,
+    "name":"夜空中最亮的星",
+    "icon": "http://a.hiphotos.baidu.com/ting/s%3D300/sign=f5639faf21a446237acaa362a8237246/b17eca8065380cd709624738a044ad34588281e3.jpg",
+    "fileName":"http://cdn.y.baidu.com/2353657f691b51f88ccc5a301ac88b88.mp3",
+    "lrcName":"",
+    "singer":"逃跑计划",
+    "singerIcon":""
+ },
+ {
+    "music_id":10002,
+    "name":"正义之手",
+    "icon":"http://p3.music.126.net/xXrsv_rI6Qucb1dxibve4A==/3272146615759748.jpg",
+    "fileName":"http://m2.music.126.net/zLk1RXSKMONJye6jB3mjSA==/1407374887680902.mp3",
+    "lrcName":"",
+    "singer":"SNH48",
+    "singerIcon":""
+ }
+]

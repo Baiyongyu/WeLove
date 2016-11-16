@@ -22,9 +22,20 @@
 		F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA261DDAD73600800E43 /* LineMonthModel.m */; };
 		F35ADA311DDAD82F00800E43 /* DayTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA2C1DDAD82F00800E43 /* DayTimeCell.m */; };
 		F35ADA321DDAD82F00800E43 /* DayTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35ADA2D1DDAD82F00800E43 /* DayTimeCell.xib */; };
+		F3A5C45F1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3A5C45E1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 */; };
+		F3A5C4631DDBFEFE007E933C /* RotatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C4621DDBFEFE007E933C /* RotatingView.m */; };
+		F3A5C4661DDC07F7007E933C /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C4651DDC07F7007E933C /* MusicListViewController.m */; };
+		F3A5C4691DDC085E007E933C /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C4681DDC085E007E933C /* MusicModel.m */; };
+		F3A5C46D1DDC0A00007E933C /* AudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C46B1DDC0A00007E933C /* AudioPlayerController.m */; };
+		F3A5C46E1DDC0A00007E933C /* AudioPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A5C46C1DDC0A00007E933C /* AudioPlayerController.xib */; };
+		F3A5C4711DDC0A2A007E933C /* AudioPlayerController+methods.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C4701DDC0A2A007E933C /* AudioPlayerController+methods.m */; };
+		F3A5C4791DDC0AAF007E933C /* musicPaper.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A5C4781DDC0AAF007E933C /* musicPaper.json */; };
+		F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C47B1DDC27C0007E933C /* NSString+time.m */; };
+		F3A5C47F1DDC27C0007E933C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C47D1DDC27C0007E933C /* UIImage+ImageEffects.m */; };
+		F3A5C4851DDC2A93007E933C /* MusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C4831DDC2A93007E933C /* MusicTableViewCell.m */; };
+		F3A5C4861DDC2A93007E933C /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3A5C4841DDC2A93007E933C /* MusicTableViewCell.xib */; };
 		F3FAE2D91DD9EAFC00CBB034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2D81DD9EAFC00CBB034 /* main.m */; };
 		F3FAE2DC1DD9EAFC00CBB034 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2DB1DD9EAFC00CBB034 /* AppDelegate.m */; };
-		F3FAE2DF1DD9EAFC00CBB034 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2DE1DD9EAFC00CBB034 /* ViewController.m */; };
 		F3FAE2E21DD9EAFC00CBB034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE2E01DD9EAFC00CBB034 /* Main.storyboard */; };
 		F3FAE2E41DD9EAFC00CBB034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE2E31DD9EAFC00CBB034 /* Assets.xcassets */; };
 		F3FAE2E71DD9EAFC00CBB034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE2E51DD9EAFC00CBB034 /* LaunchScreen.storyboard */; };
@@ -233,12 +244,30 @@
 		F35ADA2B1DDAD82F00800E43 /* DayTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTimeCell.h; sourceTree = "<group>"; };
 		F35ADA2C1DDAD82F00800E43 /* DayTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTimeCell.m; sourceTree = "<group>"; };
 		F35ADA2D1DDAD82F00800E43 /* DayTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayTimeCell.xib; sourceTree = "<group>"; };
+		F3A5C45E1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "齐晨-咱们结婚吧.mp3"; sourceTree = "<group>"; };
+		F3A5C4611DDBFEFE007E933C /* RotatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingView.h; sourceTree = "<group>"; };
+		F3A5C4621DDBFEFE007E933C /* RotatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingView.m; sourceTree = "<group>"; };
+		F3A5C4641DDC07F7007E933C /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
+		F3A5C4651DDC07F7007E933C /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
+		F3A5C4671DDC085E007E933C /* MusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModel.h; sourceTree = "<group>"; };
+		F3A5C4681DDC085E007E933C /* MusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
+		F3A5C46A1DDC0A00007E933C /* AudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerController.h; sourceTree = "<group>"; };
+		F3A5C46B1DDC0A00007E933C /* AudioPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerController.m; sourceTree = "<group>"; };
+		F3A5C46C1DDC0A00007E933C /* AudioPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioPlayerController.xib; sourceTree = "<group>"; };
+		F3A5C46F1DDC0A2A007E933C /* AudioPlayerController+methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioPlayerController+methods.h"; sourceTree = "<group>"; };
+		F3A5C4701DDC0A2A007E933C /* AudioPlayerController+methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AudioPlayerController+methods.m"; sourceTree = "<group>"; };
+		F3A5C4781DDC0AAF007E933C /* musicPaper.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = musicPaper.json; sourceTree = "<group>"; };
+		F3A5C47A1DDC27C0007E933C /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
+		F3A5C47B1DDC27C0007E933C /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
+		F3A5C47C1DDC27C0007E933C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		F3A5C47D1DDC27C0007E933C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		F3A5C4821DDC2A93007E933C /* MusicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTableViewCell.h; sourceTree = "<group>"; };
+		F3A5C4831DDC2A93007E933C /* MusicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTableViewCell.m; sourceTree = "<group>"; };
+		F3A5C4841DDC2A93007E933C /* MusicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		F3FAE2D41DD9EAFC00CBB034 /* WeLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FAE2D81DD9EAFC00CBB034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3FAE2DA1DD9EAFC00CBB034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3FAE2DB1DD9EAFC00CBB034 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F3FAE2DD1DD9EAFC00CBB034 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F3FAE2DE1DD9EAFC00CBB034 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F3FAE2E11DD9EAFC00CBB034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3FAE2E31DD9EAFC00CBB034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3FAE2E61DD9EAFC00CBB034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -632,6 +661,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F3A5C4601DDBFEEE007E933C /* XunzhaunView */ = {
+			isa = PBXGroup;
+			children = (
+				F3A5C4611DDBFEFE007E933C /* RotatingView.h */,
+				F3A5C4621DDBFEFE007E933C /* RotatingView.m */,
+			);
+			name = XunzhaunView;
+			sourceTree = "<group>";
+		};
 		F3FAE2CB1DD9EAFC00CBB034 = {
 			isa = PBXGroup;
 			children = (
@@ -663,9 +701,8 @@
 				F3FAE6581DD9ED2A00CBB034 /* Networking */,
 				F3FAE6861DD9ED2A00CBB034 /* Resourse */,
 				F3FAE6DF1DD9ED2A00CBB034 /* Utils */,
-				F3FAE2DD1DD9EAFC00CBB034 /* ViewController.h */,
-				F3FAE2DE1DD9EAFC00CBB034 /* ViewController.m */,
 				F3FAE6851DD9ED2A00CBB034 /* PrefixHeader.pch */,
+				F3A5C45E1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 */,
 				F3FAE5571DD9ED2900CBB034 /* 3DBallPlist.plist */,
 				F3FAE5E71DD9ED2A00CBB034 /* HomeDatasList.plist */,
 				F3FAE7C41DD9F5DE00CBB034 /* WeLove.xcdatamodeld */,
@@ -689,6 +726,10 @@
 		F3FAE5581DD9ED2900CBB034 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F3A5C47A1DDC27C0007E933C /* NSString+time.h */,
+				F3A5C47B1DDC27C0007E933C /* NSString+time.m */,
+				F3A5C47C1DDC27C0007E933C /* UIImage+ImageEffects.h */,
+				F3A5C47D1DDC27C0007E933C /* UIImage+ImageEffects.m */,
 				F3FAE5591DD9ED2900CBB034 /* MBProgressHUD+QM.h */,
 				F3FAE55A1DD9ED2900CBB034 /* MBProgressHUD+QM.m */,
 				F3FAE55B1DD9ED2900CBB034 /* NSObject+PerformBlockAfterDelay.h */,
@@ -714,6 +755,7 @@
 		F3FAE56B1DD9ED2A00CBB034 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F3A5C4601DDBFEEE007E933C /* XunzhaunView */,
 				F3FAE56C1DD9ED2A00CBB034 /* Animation */,
 				F3FAE5771DD9ED2A00CBB034 /* ANTTextField */,
 				F3FAE57A1DD9ED2A00CBB034 /* CircleProgressView */,
@@ -1053,6 +1095,19 @@
 				F3FAE60A1DD9ED2A00CBB034 /* MemoryDayViewController.xib */,
 				F3FAE60B1DD9ED2A00CBB034 /* WishViewController.h */,
 				F3FAE60C1DD9ED2A00CBB034 /* WishViewController.m */,
+				F3A5C4641DDC07F7007E933C /* MusicListViewController.h */,
+				F3A5C4651DDC07F7007E933C /* MusicListViewController.m */,
+				F3A5C4821DDC2A93007E933C /* MusicTableViewCell.h */,
+				F3A5C4831DDC2A93007E933C /* MusicTableViewCell.m */,
+				F3A5C4841DDC2A93007E933C /* MusicTableViewCell.xib */,
+				F3A5C46A1DDC0A00007E933C /* AudioPlayerController.h */,
+				F3A5C46B1DDC0A00007E933C /* AudioPlayerController.m */,
+				F3A5C46C1DDC0A00007E933C /* AudioPlayerController.xib */,
+				F3A5C46F1DDC0A2A007E933C /* AudioPlayerController+methods.h */,
+				F3A5C4701DDC0A2A007E933C /* AudioPlayerController+methods.m */,
+				F3A5C4671DDC085E007E933C /* MusicModel.h */,
+				F3A5C4681DDC085E007E933C /* MusicModel.m */,
+				F3A5C4781DDC0AAF007E933C /* musicPaper.json */,
 			);
 			path = ButtonGroups;
 			sourceTree = "<group>";
@@ -1465,6 +1520,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = KK59AKUJZC;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1518,6 +1578,7 @@
 				F3FAE7911DD9ED2A00CBB034 /* WechatIMG5.jpeg in Resources */,
 				F3FAE78A1DD9ED2A00CBB034 /* WechatIMG23.jpeg in Resources */,
 				F3FAE7AE1DD9ED2A00CBB034 /* echarts.common.min.js in Resources */,
+				F3A5C4861DDC2A93007E933C /* MusicTableViewCell.xib in Resources */,
 				F3FAE7941DD9ED2A00CBB034 /* WechatIMG8.jpeg in Resources */,
 				F3FAE7811DD9ED2A00CBB034 /* WechatIMG15.jpeg in Resources */,
 				F3FAE7821DD9ED2A00CBB034 /* WechatIMG16.jpeg in Resources */,
@@ -1547,6 +1608,9 @@
 				F3FAE7831DD9ED2A00CBB034 /* WechatIMG17.jpeg in Resources */,
 				F3FAE6E91DD9ED2A00CBB034 /* 3DBallPlist.plist in Resources */,
 				F3FAE70E1DD9ED2A00CBB034 /* sr_refresh.png in Resources */,
+				F3A5C4791DDC0AAF007E933C /* musicPaper.json in Resources */,
+				F3A5C45F1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 in Resources */,
+				F3A5C46E1DDC0A00007E933C /* AudioPlayerController.xib in Resources */,
 				F3FAE77A1DD9ED2A00CBB034 /* youyuan.ttf in Resources */,
 				F3FAE7191DD9ED2A00CBB034 /* TZImagePickerController.bundle in Resources */,
 				F3FAE79B1DD9ED2A00CBB034 /* normalize.min.css in Resources */,
@@ -1634,6 +1698,8 @@
 				F3FAE7031DD9ED2A00CBB034 /* ZYQAssetPickerController.m in Sources */,
 				F3FAE7581DD9ED2A00CBB034 /* MineViewController.m in Sources */,
 				F3FAE7261DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m in Sources */,
+				F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */,
+				F3A5C4851DDC2A93007E933C /* MusicTableViewCell.m in Sources */,
 				F3FAE6F61DD9ED2A00CBB034 /* ComDynamicHeadView.m in Sources */,
 				F3FAE70B1DD9ED2A00CBB034 /* QMPictureView.m in Sources */,
 				F35AD9E41DDA9F3F00800E43 /* MyCell.m in Sources */,
@@ -1643,6 +1709,7 @@
 				F3FAE6FD1DD9ED2A00CBB034 /* FFMemberCenterHeadView.m in Sources */,
 				F3FAE7051DD9ED2A00CBB034 /* QMButton.m in Sources */,
 				F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */,
+				F3A5C47F1DDC27C0007E933C /* UIImage+ImageEffects.m in Sources */,
 				F3FAE7181DD9ED2A00CBB034 /* TZImageManager.m in Sources */,
 				F3FAE7241DD9ED2A00CBB034 /* UserInfo.m in Sources */,
 				F3FAE7141DD9ED2A00CBB034 /* TYWaveProgressView.m in Sources */,
@@ -1659,6 +1726,7 @@
 				F35ADA281DDAD73600800E43 /* LineDisplayModel.m in Sources */,
 				F3FAE71A1DD9ED2A00CBB034 /* TZImagePickerController.m in Sources */,
 				F3FAE7BC1DD9ED2A00CBB034 /* ANZKeyChain.m in Sources */,
+				F3A5C4691DDC085E007E933C /* MusicModel.m in Sources */,
 				F3FAE7151DD9ED2A00CBB034 /* NSBundle+TZImagePicker.m in Sources */,
 				F3FAE71F1DD9ED2A00CBB034 /* UIView+Layout.m in Sources */,
 				F3FAE6EB1DD9ED2A00CBB034 /* NSObject+PerformBlockAfterDelay.m in Sources */,
@@ -1668,7 +1736,6 @@
 				F3FAE6FE1DD9ED2A00CBB034 /* FFNumberScrollView.m in Sources */,
 				F3FAE6F71DD9ED2A00CBB034 /* FourPingTransition.m in Sources */,
 				F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */,
-				F3FAE2DF1DD9EAFC00CBB034 /* ViewController.m in Sources */,
 				F3FAE7641DD9ED2A00CBB034 /* ANZAPIProxy.m in Sources */,
 				F3FAE7131DD9ED2A00CBB034 /* TYWaterWaveView.m in Sources */,
 				F3FAE6F11DD9ED2A00CBB034 /* UIView+UIViewFrame.m in Sources */,
@@ -1703,6 +1770,7 @@
 				F3FAE72D1DD9ED2A00CBB034 /* UserModel.m in Sources */,
 				F3FAE7321DD9ED2A00CBB034 /* WebViewController.m in Sources */,
 				F35ADA0A1DDAB20D00800E43 /* NavHeadTitleView.m in Sources */,
+				F3A5C46D1DDC0A00007E933C /* AudioPlayerController.m in Sources */,
 				F3FAE6FB1DD9ED2A00CBB034 /* FFBarrageView.m in Sources */,
 				F3FAE7731DD9ED2A00CBB034 /* WeatherSensorManager.m in Sources */,
 				F35ADA091DDAB20D00800E43 /* HeadLineView.m in Sources */,
@@ -1711,12 +1779,15 @@
 				F3FAE7091DD9ED2A00CBB034 /* QMPictureBrowser.m in Sources */,
 				F3FAE6F31DD9ED2A00CBB034 /* ComAlbumPhoto.m in Sources */,
 				F35ADA001DDAB1D400800E43 /* BirdFlyViewController.m in Sources */,
+				F3A5C4661DDC07F7007E933C /* MusicListViewController.m in Sources */,
+				F3A5C4711DDC0A2A007E933C /* AudioPlayerController+methods.m in Sources */,
 				F3FAE6ED1DD9ED2A00CBB034 /* UIAlertView+Object.m in Sources */,
 				F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */,
 				F3FAE72F1DD9ED2A00CBB034 /* WeatherModel.m in Sources */,
 				F3FAE73E1DD9ED2A00CBB034 /* LoginViewController.m in Sources */,
 				F3FAE7041DD9ED2A00CBB034 /* ProgressBar.m in Sources */,
 				F3FAE70C1DD9ED2A00CBB034 /* QMShortVideoController.m in Sources */,
+				F3A5C4631DDBFEFE007E933C /* RotatingView.m in Sources */,
 				F3FAE7121DD9ED2A00CBB034 /* MTToViewTopButton.m in Sources */,
 				F3FAE7741DD9ED2A00CBB034 /* UserManager.m in Sources */,
 				F3FAE76B1DD9ED2A00CBB034 /* LocationManager.m in Sources */,

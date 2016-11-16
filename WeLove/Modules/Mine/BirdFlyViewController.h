@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 lcc. All rights reserved.
 //
 
-#import "ANTBaseViewController.h"
-@interface BirdFlyViewController : ANTBaseViewController
+#import "BaseViewController.h"
+@interface BirdFlyViewController : BaseViewController
 
 @end

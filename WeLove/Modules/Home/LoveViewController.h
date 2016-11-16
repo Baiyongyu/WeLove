@@ -13,5 +13,4 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bgShadowView;
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
 - (IBAction)buttonAction:(id)sender;
-
 @end
