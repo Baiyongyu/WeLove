@@ -6,8 +6,8 @@
 //  Copyright © 2016年 anqianmo. All rights reserved.
 //
 
-//#import "BaseViewController.h"
 #import <UIKit/UIKit.h>
+
 @interface PhotoAlbumViewController : UIViewController
 
 @end

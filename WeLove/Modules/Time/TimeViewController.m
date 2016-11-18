@@ -10,28 +10,18 @@
 
 #import "FFMemberCenterHeadView.h"              // 头部视图
 #import "HappinessTimeTableViewController.h"    // 幸福时光
-#import "ActivityListManager.h"
 #import "MTToViewTopButton.h"                   // 回到顶部
-
 #import "TYWaveProgressView.h"  // 波浪
-#import "TLMenuButtonView.h" // 右下角菜单
-
 #import "WZFlashButton.h"
 
 @interface TimeViewController ()
-{
-    BOOL _ISShowMenuButton;
-}
-/** LEVEL */
+
+/** Level */
 @property (nonatomic, strong) FFMemberCenterHeadView *headView;
 /** 在一起时间 */
 @property (nonatomic,strong) NSString *dateContent;
 /** 幸福时光 */
 @property(nonatomic,strong)HappinessTimeTableViewController *happinessTimeTableVC;
-@property(nonatomic,strong)ActivityListManager *activityListManager;
-
-/** 菜单 */
-@property (nonatomic, strong) TLMenuButtonView *tlMenuView ;
 /** 波浪 */
 @property (nonatomic, weak) TYWaveProgressView *waveProgressView1;
 @property (nonatomic, weak) TYWaveProgressView *waveProgressView2;
@@ -74,38 +64,6 @@
     
     /***************************波   浪*****************************/
     [self addWaveProgressView];
-    
-    
-    // 菜单
-    _ISShowMenuButton = NO;
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-50, kScreenHeight - 64 - 49, 30, 30)];
-    button.layer.cornerRadius = 15;
-    button.backgroundColor = kNavColor;
-    [button addTarget:self action:@selector(clickAddButton:) forControlEvents:UIControlEventTouchUpInside];
-    [button setImage:[UIImage imageNamed:@"jiahao"] forState:UIControlStateNormal];
-//    [self.view addSubview:button];
-    
-    TLMenuButtonView *tlMenuView = [TLMenuButtonView standardMenuView];
-    tlMenuView.centerPoint = button.center;
-    tlMenuView.clickAddButton = ^(NSInteger tag, UIColor *color){
-        weakSelf.view.backgroundColor = color;
-        _ISShowMenuButton = YES;
-        [weakSelf clickAddButton:button];
-    };
-    _tlMenuView = tlMenuView;
-}
-
-
-- (HappinessTimeTableViewController *)happinessTimeTableVC {
-    if (!_happinessTimeTableVC) {
-        _happinessTimeTableVC = [[HappinessTimeTableViewController alloc] initWithStyle:UITableViewStylePlain];
-        _happinessTimeTableVC.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        _happinessTimeTableVC.delegate = (id)self;
-        _happinessTimeTableVC.enableRefresh = YES;
-        _happinessTimeTableVC.enableNextPage = YES;
-    }
-    return _happinessTimeTableVC;
 }
 
 #pragma mark - 首页加载幸福时光数据封装
@@ -140,25 +98,6 @@
         height += 15;
     }
     activityData.contentHeight = height;
-}
-
-
-- (void)clickAddButton:(UIButton *)sender{
-    
-    if (!_ISShowMenuButton) {
-        [UIView animateWithDuration:0.2 animations:^{
-            CGAffineTransform rotate = CGAffineTransformMakeRotation( M_PI / 4 );
-            [sender setTransform:rotate];
-        }];
-        [_tlMenuView showItems];
-    }else{
-        [UIView animateWithDuration:0.2 animations:^{
-            CGAffineTransform rotate = CGAffineTransformMakeRotation( 0 );
-            [sender setTransform:rotate];
-        }];
-        [_tlMenuView dismiss];
-    }
-    _ISShowMenuButton = !_ISShowMenuButton;
 }
 
 #pragma mark - 加载3D球数据
@@ -277,41 +216,14 @@
     self.happinessTimeTableVC.dataArray = [@[activityData14, activityData13, activityData12, activityData11, activityData10, activityData9, activityData8, activityData7, activityData6, activityData5, activityData4, activityData3, activityData2, activityData1, activityData0] mutableCopy];
 }
 
-#pragma mark - APIManagerParamSourceDelegate
-- (NSDictionary *)paramsForApi:(BaseAPIManager *)manager {
-    //    return @{@"limit":@10,@"page":@(self.farmActivityTableVC.pageNum)};
-    return nil;
-}
-
-#pragma mark - APIManagerApiCallBackDelegate
-- (void)managerCallAPIDidSuccess:(BaseAPIManager *)manager {
-    [MBProgressHUD showTip:@"么么哒~"];
-    if (self.happinessTimeTableVC.dataArray.count == 10) {
-        self.happinessTimeTableVC.totalPagesNum = self.happinessTimeTableVC.pageNum+1;
-    }
-    [self.happinessTimeTableVC loadDataSuccess:self.happinessTimeTableVC.dataArray];
-}
-
-- (void)managerCallAPIDidFailed:(BaseAPIManager *)manager {
-    [self.happinessTimeTableVC loadDataFail];
-    [MBProgressHUD showTip:@"么么哒~"];
-}
-
 #pragma mark - ANTBaseTableViewControllerDelegate
 - (void)pullNextPageRequest:(UITableView *)tableView {
     [MBProgressHUD showTip:@"么么哒~"];
-    self.happinessTimeTableVC.pageNum++;
-    [self.happinessTimeTableVC loadView];
 }
 
 - (void)pullRefreshRequest:(UITableView *)tableView {
     [MBProgressHUD showTip:@"么么哒~"];
-    if (userManager.userInfo.isLogin) {
-        self.happinessTimeTableVC.pageNum = 1;
-        [self.activityListManager loadDataWithHUDOnView:nil];
-    } else {
-        [self.happinessTimeTableVC loadDataFail];
-    }
+    [self.happinessTimeTableVC loadDataFail];
 }
 
 #pragma mark - 创建波浪
@@ -377,15 +289,15 @@
     return dateContent;
 }
 
-
-- (ActivityListManager *)activityListManager {
-    if (!_activityListManager) {
-        _activityListManager = [[ActivityListManager alloc] init];
-        _activityListManager.paramSource = (id)self;
-        _activityListManager.delegate = (id)self;
-        _activityListManager.validator = (id)_activityListManager;
+- (HappinessTimeTableViewController *)happinessTimeTableVC {
+    if (!_happinessTimeTableVC) {
+        _happinessTimeTableVC = [[HappinessTimeTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        _happinessTimeTableVC.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        _happinessTimeTableVC.delegate = (id)self;
+        _happinessTimeTableVC.enableRefresh = YES;
+        _happinessTimeTableVC.enableNextPage = YES;
     }
-    return _activityListManager;
+    return _happinessTimeTableVC;
 }
 
 - (void)didReceiveMemoryWarning {

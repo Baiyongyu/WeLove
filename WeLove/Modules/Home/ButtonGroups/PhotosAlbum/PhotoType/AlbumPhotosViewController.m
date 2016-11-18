@@ -23,13 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = kDefaultViewBackgroundColor;
+    
     [self loadSubViews];
 }
 
 - (void)loadSubViews {
-    //[super loadSubViews];
-    //self.titleLabel.text = @"流式相册";
-    //self.leftBtn.hidden = NO;
     
     // 弹幕效果
     _manager = [[FFBarrageManager alloc] initWithComments:@[@"2016.1026.5.20，我们在一起~~~~~~~~~~~~~~", @"小v，我爱你~~~~~~~~~~~~~~~~~~", @"亲爱的，你说我为什么那么喜欢你的名字呢？~~~~~~~~~~~~~~~~~~~~~~~~",
@@ -46,7 +45,7 @@
     [_manager start];
     
     
-    
+    // 图片流
     self.photos = [[NSMutableArray alloc] init];
     NSMutableArray *photoPaths = [[NSMutableArray alloc] init];
     
@@ -73,7 +72,7 @@
             float H = IMAGEHEIGHT;
             
             ComAlbumPhoto *photo = [[ComAlbumPhoto alloc] initWithFrame:CGRectMake(X, Y, W, H)];
-            
+            //[photo updateImage:[UIImage imageNamed:photoPaths[i]]];
             [photo updateImage:[UIImage imageWithContentsOfFile:photoPaths[i]]];
             [self.view addSubview:photo];
             
@@ -133,7 +132,6 @@
         }
     }];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

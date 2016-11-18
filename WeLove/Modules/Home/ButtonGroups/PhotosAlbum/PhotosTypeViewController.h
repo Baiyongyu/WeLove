@@ -6,8 +6,8 @@
 //  Copyright © 2016年 anqianmo. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "WMPageController.h"
 
-@interface PhotosTypeViewController : BaseViewController
+@interface PhotosTypeViewController : WMPageController
 
 @end

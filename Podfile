@@ -13,5 +13,6 @@ pod 'RongCloudIMKit', '~> 2.7.3'
 pod 'DBSphereTagCloud', '~> 1.0.0'
 pod 'MJExtension', '~> 3.0.13'
 pod 'SDAutoLayout', '~> 2.1.1’
+pod 'WMPageController', '~> 2.0.2'
 
 end

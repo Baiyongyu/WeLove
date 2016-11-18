@@ -96,8 +96,8 @@ static NSString *cellTimeOne = @"DayTimeCell";
 }
 #pragma mark - 拉伸顶部图片
 - (void)lashenBgView {
-    UIImage *image = [UIImage imageNamed:@"homeBg"];
-    _backgroundImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, image.size.height*0.5)];
+    UIImage *image = [UIImage imageNamed:@"lbg41009"];
+    _backgroundImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 250)];
     _backgroundImgV.image = image;
     _backgroundImgV.userInteractionEnabled = YES;
     _backImgHeight = _backgroundImgV.frame.size.height;
@@ -190,8 +190,8 @@ static NSString *cellTimeOne = @"DayTimeCell";
 // 右按钮回调
 - (void)NavHeadToRight {
     NSLog(@"点击了右按钮");
-    BirdFlyViewController *birdVC = [[BirdFlyViewController alloc] init];
-    [kRootNavigation pushViewController:birdVC animated:YES];
+//    BirdFlyViewController *birdVC = [[BirdFlyViewController alloc] init];
+//    [kRootNavigation pushViewController:birdVC animated:YES];
 }
 
 #pragma mark ---- UITableViewDelegate ----

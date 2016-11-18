@@ -36,10 +36,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    //self.titleLabel.text = @"相册集";
-    //self.leftBtn.hidden = NO;
     
     self.allCards = [NSMutableArray array];
     self.sourceObject = [NSMutableArray array];
@@ -65,8 +61,6 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self requestSourceData:YES];
     });
-    
-    
 }
 
 - (void)addControls {
@@ -74,18 +68,19 @@
     UIButton *reloadBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [reloadBtn setTitle:@"么么哒" forState:UIControlStateNormal];
     [reloadBtn setTitleColor:kNavColor forState:UIControlStateNormal];
-    reloadBtn.frame = CGRectMake(self.view.center.x-25, self.view.frame.size.height - 120, 50, 30);
+    reloadBtn.titleLabel.font = XiHeiFont(18);
+    reloadBtn.frame = CGRectMake(self.view.center.x-25, kScreenHeight - 150, 60, 30);
     [reloadBtn addTarget:self action:@selector(refreshAllCards) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:reloadBtn];
     
     self.disLikeBtn       = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.disLikeBtn.frame = CGRectMake(lengthFit(80), CARD_HEIGHT+lengthFit(100), 60, 60);
+    self.disLikeBtn.frame = CGRectMake((80), CARD_HEIGHT + 70, 45, 45);
     [self.disLikeBtn setImage:[UIImage imageNamed:@"dislikeBtn"] forState:UIControlStateNormal];
     [self.disLikeBtn addTarget:self action:@selector(leftButtonClickAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.disLikeBtn];
     
     self.liekBtn       = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.liekBtn.frame = CGRectMake(self.view.frame.size.width-lengthFit(80)-60 , CARD_HEIGHT+lengthFit(100), 60, 60);
+    self.liekBtn.frame = CGRectMake(self.view.frame.size.width-(80)-60 , CARD_HEIGHT + 70, 45, 45);
     [self.liekBtn setImage:[UIImage imageNamed:@"likeBtn"] forState:UIControlStateNormal];
     [self.liekBtn addTarget:self action:@selector(rightButtonClickAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.liekBtn];
@@ -132,8 +127,8 @@
      */
     
     NSMutableArray *objectArray = [@[] mutableCopy];
-    for (int i = 1; i <= 10; i++) {
-        [objectArray addObject:@{@"number":[NSString stringWithFormat:@"%ld",self.page*10+i],@"image":[NSString stringWithFormat:@"%d.jpeg",i]}];
+    for (int i = 1; i <= 27; i++) {
+        [objectArray addObject:@{@"number":[NSString stringWithFormat:@"%ld",self.page*10+i],@"image":[NSString stringWithFormat:@"WechatIMG%d.jpeg",i]}];
     }
     
     [self.sourceObject addObjectsFromArray:objectArray];
@@ -203,7 +198,7 @@
 - (void)addCards {
     for (int i = 0; i < CARD_NUM; i++) {
         
-        DragCardView *draggableView = [[DragCardView alloc]initWithFrame:CGRectMake([[UIScreen mainScreen]bounds].size.width+CARD_WIDTH, self.view.center.y-CARD_HEIGHT/2, CARD_WIDTH, CARD_HEIGHT)];
+        DragCardView *draggableView = [[DragCardView alloc]initWithFrame:CGRectMake([[UIScreen mainScreen]bounds].size.width + CARD_WIDTH, self.view.center.y-CARD_HEIGHT/2, CARD_WIDTH, CARD_HEIGHT)];
         
         if (i > 0 && i < CARD_NUM - 1) {
             draggableView.transform = CGAffineTransformScale(draggableView.transform, pow(CARD_SCALE, i), pow(CARD_SCALE, i));

@@ -12,9 +12,17 @@
 #import "ComAnimationLayer.h"
 #import "MemoryDayViewController.h" // 纪念日
 #import "WishViewController.h"      // 心愿
+#import "PhotosTypeViewController.h"// 相册集
 #import "MusicListViewController.h" // 音乐库
+
+#import "PhotoAlbumViewController.h"  // 左右滑动模式
+#import "AlbumPhotosViewController.h" // 流式
+#import "ListPhotoViewController.h"   // 列表
+
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
+
+
 @interface LoveViewController ()
 {
     UIView *bgViewContainer;
@@ -53,7 +61,7 @@
     
     NSMutableArray *temp = [NSMutableArray new];
     
-    NSArray *titleArray = @[@"纪念日", @"心愿球", @"嘻嘻嘻", @"音乐库"];
+    NSArray *titleArray = @[@"纪念日", @"心愿球", @"相册集", @"音乐库"];
     NSArray *imgArray = @[@"indexPageIconAnni_26x26_", @"indexPageIconWish_26x26_", @"indexPageIconClock_26x26_", @"indexPageIconPunch_26x26_"];
     for (int i = 0; i < count; i++) {
         _centerButton = [UIButton new];
@@ -106,10 +114,24 @@
     if (btn.tag == 1) {
         MemoryDayViewController *memoryVC = [[MemoryDayViewController alloc] init];
         [kRootNavigation pushViewController:memoryVC animated:YES];
-    } else if (btn.tag == 2) {
+    }
+    else if (btn.tag == 2) {
         WishViewController *wishVC = [[WishViewController alloc] init];
         [kRootNavigation pushViewController:wishVC animated:YES];
-    } else if (btn.tag == 4) {
+    }
+    else if (btn.tag == 3) {
+        PhotosTypeViewController *typeVC = [[PhotosTypeViewController alloc] initWithViewControllerClasses:@[[PhotoAlbumViewController class], [ListPhotoViewController class], [AlbumPhotosViewController class]] andTheirTitles:@[@"陌陌模式", @"列表相册", @"流式相册"]];
+        typeVC.menuViewStyle = WMMenuViewStyleLine;
+        typeVC.menuItemWidth = 80;
+        typeVC.menuBGColor= [UIColor whiteColor];
+        typeVC.menuHeight = 40;
+        typeVC.titleColorSelected = kNavColor;
+        typeVC.titleSizeNormal = 14;
+        typeVC.titleSizeSelected = 14;
+        
+        [self.navigationController pushViewController:typeVC animated:YES];
+    }
+    else if (btn.tag == 4) {
         MusicListViewController *musicVC = [[MusicListViewController alloc] init];
         [kRootNavigation pushViewController:musicVC animated:YES];
     }
