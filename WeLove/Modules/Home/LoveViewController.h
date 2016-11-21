@@ -11,6 +11,8 @@
 @interface LoveViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *bgView;
 @property (weak, nonatomic) IBOutlet UIImageView *bgShadowView;
-@property (weak, nonatomic) IBOutlet UIButton *playBtn;
-- (IBAction)buttonAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *animaImg;
+@property (weak, nonatomic) IBOutlet UIImageView *meImg;
+@property (weak, nonatomic) IBOutlet UIImageView *vImg;
+
 @end

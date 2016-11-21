@@ -1,9 +1,9 @@
 //
 //  ANZLoginViewController.m
-//  anz
+//  WeLove
 //
-//  Created by KevinCao on 16/7/4.
-//  Copyright © 2016年 ahqianmo. All rights reserved.
+//  Created by 宇玄丶 on 2016/11/13.
+//  Copyright © 2016年 qianmo. All rights reserved.
 //
 
 #import "ANTLoginViewController.h"
@@ -125,6 +125,24 @@
         self.loginSuccessBlock();
     }
 }
+
+/**
+ *此方法中要提供给融云用户的信息，建议缓存到本地，然后改方法每次从您的缓存返回
+ */
+- (void)getUserInfoWithUserId:(NSString *)userId completion:(void(^)(RCUserInfo* userInfo))completion {
+    //此处为了演示写了一个用户信息
+    if ([@"yugeaixiaowei" isEqual:userId]) {
+        RCUserInfo *user = [[RCUserInfo alloc]init];
+        user.userId = @"yugeaixiaowei";
+        user.name = @"yugeaixiaowei";
+        
+        NSString *imgStr = (NSString *)[UIImage imageNamed:@"WechatIMG11.jpeg"];
+        user.portraitUri = imgStr;
+        
+        return completion(user);
+    }
+}
+
 
 - (void)managerCallAPIDidFailed:(BaseAPIManager *)manager
 {

@@ -70,8 +70,6 @@
 		F3FAE6F31DD9ED2A00CBB034 /* ComAlbumPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE56E1DD9ED2A00CBB034 /* ComAlbumPhoto.m */; };
 		F3FAE6F41DD9ED2A00CBB034 /* ComAnimationLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5701DD9ED2A00CBB034 /* ComAnimationLayer.m */; };
 		F3FAE6F51DD9ED2A00CBB034 /* ComDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5721DD9ED2A00CBB034 /* ComDrawView.m */; };
-		F3FAE6F61DD9ED2A00CBB034 /* ComDynamicHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5741DD9ED2A00CBB034 /* ComDynamicHeadView.m */; };
-		F3FAE6F71DD9ED2A00CBB034 /* FourPingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5761DD9ED2A00CBB034 /* FourPingTransition.m */; };
 		F3FAE6F81DD9ED2A00CBB034 /* ANTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5791DD9ED2A00CBB034 /* ANTTextField.m */; };
 		F3FAE6FA1DD9ED2A00CBB034 /* FFBarrageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE57F1DD9ED2A00CBB034 /* FFBarrageManager.m */; };
 		F3FAE6FB1DD9ED2A00CBB034 /* FFBarrageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5811DD9ED2A00CBB034 /* FFBarrageView.m */; };
@@ -125,10 +123,7 @@
 		F3FAE7381DD9ED2A00CBB034 /* LoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE60E1DD9ED2A00CBB034 /* LoveViewController.m */; };
 		F3FAE7391DD9ED2A00CBB034 /* LoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */; };
 		F3FAE73A1DD9ED2A00CBB034 /* HomeWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6121DD9ED2A00CBB034 /* HomeWeatherView.m */; };
-		F3FAE73B1DD9ED2A00CBB034 /* WeatherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6141DD9ED2A00CBB034 /* WeatherTableViewController.m */; };
-		F3FAE73C1DD9ED2A00CBB034 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6161DD9ED2A00CBB034 /* WeatherViewController.m */; };
 		F3FAE73D1DD9ED2A00CBB034 /* ANTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */; };
-		F3FAE73E1DD9ED2A00CBB034 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE61B1DD9ED2A00CBB034 /* LoginViewController.m */; };
 		F3FAE7421DD9ED2A00CBB034 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6211DD9ED2A00CBB034 /* NavigationController.m */; };
 		F3FAE7431DD9ED2A00CBB034 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6231DD9ED2A00CBB034 /* TabBarController.m */; };
 		F3FAE7581DD9ED2A00CBB034 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6411DD9ED2A00CBB034 /* MineViewController.m */; };
@@ -136,7 +131,6 @@
 		F3FAE7651DD9ED2A00CBB034 /* ANZAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE65C1DD9ED2A00CBB034 /* ANZAppContext.m */; };
 		F3FAE7661DD9ED2A00CBB034 /* ANZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE65E1DD9ED2A00CBB034 /* ANZResponse.m */; };
 		F3FAE7681DD9ED2A00CBB034 /* WeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6651DD9ED2A00CBB034 /* WeatherManager.m */; };
-		F3FAE76B1DD9ED2A00CBB034 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE66D1DD9ED2A00CBB034 /* LocationManager.m */; };
 		F3FAE76C1DD9ED2A00CBB034 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6701DD9ED2A00CBB034 /* LoginManager.m */; };
 		F3FAE76D1DD9ED2A00CBB034 /* LogoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6721DD9ED2A00CBB034 /* LogoutManager.m */; };
 		F3FAE7731DD9ED2A00CBB034 /* WeatherSensorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE67F1DD9ED2A00CBB034 /* WeatherSensorManager.m */; };
@@ -328,10 +322,6 @@
 		F3FAE5701DD9ED2A00CBB034 /* ComAnimationLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComAnimationLayer.m; sourceTree = "<group>"; };
 		F3FAE5711DD9ED2A00CBB034 /* ComDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComDrawView.h; sourceTree = "<group>"; };
 		F3FAE5721DD9ED2A00CBB034 /* ComDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComDrawView.m; sourceTree = "<group>"; };
-		F3FAE5731DD9ED2A00CBB034 /* ComDynamicHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComDynamicHeadView.h; sourceTree = "<group>"; };
-		F3FAE5741DD9ED2A00CBB034 /* ComDynamicHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComDynamicHeadView.m; sourceTree = "<group>"; };
-		F3FAE5751DD9ED2A00CBB034 /* FourPingTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourPingTransition.h; sourceTree = "<group>"; };
-		F3FAE5761DD9ED2A00CBB034 /* FourPingTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourPingTransition.m; sourceTree = "<group>"; };
 		F3FAE5781DD9ED2A00CBB034 /* ANTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTTextField.h; sourceTree = "<group>"; };
 		F3FAE5791DD9ED2A00CBB034 /* ANTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTTextField.m; sourceTree = "<group>"; };
 		F3FAE57E1DD9ED2A00CBB034 /* FFBarrageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBarrageManager.h; sourceTree = "<group>"; };
@@ -435,14 +425,8 @@
 		F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoveViewController.xib; sourceTree = "<group>"; };
 		F3FAE6111DD9ED2A00CBB034 /* HomeWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWeatherView.h; sourceTree = "<group>"; };
 		F3FAE6121DD9ED2A00CBB034 /* HomeWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWeatherView.m; sourceTree = "<group>"; };
-		F3FAE6131DD9ED2A00CBB034 /* WeatherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherTableViewController.h; sourceTree = "<group>"; };
-		F3FAE6141DD9ED2A00CBB034 /* WeatherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherTableViewController.m; sourceTree = "<group>"; };
-		F3FAE6151DD9ED2A00CBB034 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
-		F3FAE6161DD9ED2A00CBB034 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		F3FAE6181DD9ED2A00CBB034 /* ANTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLoginViewController.h; sourceTree = "<group>"; };
 		F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLoginViewController.m; sourceTree = "<group>"; };
-		F3FAE61A1DD9ED2A00CBB034 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		F3FAE61B1DD9ED2A00CBB034 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		F3FAE6201DD9ED2A00CBB034 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		F3FAE6211DD9ED2A00CBB034 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		F3FAE6221DD9ED2A00CBB034 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -458,8 +442,6 @@
 		F3FAE65F1DD9ED2A00CBB034 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
 		F3FAE6641DD9ED2A00CBB034 /* WeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherManager.h; sourceTree = "<group>"; };
 		F3FAE6651DD9ED2A00CBB034 /* WeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherManager.m; sourceTree = "<group>"; };
-		F3FAE66C1DD9ED2A00CBB034 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
-		F3FAE66D1DD9ED2A00CBB034 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		F3FAE66F1DD9ED2A00CBB034 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		F3FAE6701DD9ED2A00CBB034 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		F3FAE6711DD9ED2A00CBB034 /* LogoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutManager.h; sourceTree = "<group>"; };
@@ -678,19 +660,19 @@
 		F37E63A51DDD61040061D6BC /* MusicLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				F37E63AB1DDD61040061D6BC /* MusicListViewController.h */,
+				F37E63AC1DDD61040061D6BC /* MusicListViewController.m */,
+				F37E63B01DDD61040061D6BC /* MusicTableViewCell.h */,
+				F37E63B11DDD61040061D6BC /* MusicTableViewCell.m */,
+				F37E63B21DDD61040061D6BC /* MusicTableViewCell.xib */,
 				F37E63A61DDD61040061D6BC /* AudioPlayerController+methods.h */,
 				F37E63A71DDD61040061D6BC /* AudioPlayerController+methods.m */,
 				F37E63A81DDD61040061D6BC /* AudioPlayerController.h */,
 				F37E63A91DDD61040061D6BC /* AudioPlayerController.m */,
 				F37E63AA1DDD61040061D6BC /* AudioPlayerController.xib */,
-				F37E63AB1DDD61040061D6BC /* MusicListViewController.h */,
-				F37E63AC1DDD61040061D6BC /* MusicListViewController.m */,
 				F37E63AD1DDD61040061D6BC /* MusicModel.h */,
 				F37E63AE1DDD61040061D6BC /* MusicModel.m */,
 				F37E63AF1DDD61040061D6BC /* musicPaper.json */,
-				F37E63B01DDD61040061D6BC /* MusicTableViewCell.h */,
-				F37E63B11DDD61040061D6BC /* MusicTableViewCell.m */,
-				F37E63B21DDD61040061D6BC /* MusicTableViewCell.xib */,
 			);
 			path = MusicLibrary;
 			sourceTree = "<group>";
@@ -864,16 +846,12 @@
 		F3FAE56C1DD9ED2A00CBB034 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				F3FAE56D1DD9ED2A00CBB034 /* ComAlbumPhoto.h */,
-				F3FAE56E1DD9ED2A00CBB034 /* ComAlbumPhoto.m */,
 				F3FAE56F1DD9ED2A00CBB034 /* ComAnimationLayer.h */,
 				F3FAE5701DD9ED2A00CBB034 /* ComAnimationLayer.m */,
+				F3FAE56D1DD9ED2A00CBB034 /* ComAlbumPhoto.h */,
+				F3FAE56E1DD9ED2A00CBB034 /* ComAlbumPhoto.m */,
 				F3FAE5711DD9ED2A00CBB034 /* ComDrawView.h */,
 				F3FAE5721DD9ED2A00CBB034 /* ComDrawView.m */,
-				F3FAE5731DD9ED2A00CBB034 /* ComDynamicHeadView.h */,
-				F3FAE5741DD9ED2A00CBB034 /* ComDynamicHeadView.m */,
-				F3FAE5751DD9ED2A00CBB034 /* FourPingTransition.h */,
-				F3FAE5761DD9ED2A00CBB034 /* FourPingTransition.m */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1129,10 +1107,6 @@
 			children = (
 				F3FAE6111DD9ED2A00CBB034 /* HomeWeatherView.h */,
 				F3FAE6121DD9ED2A00CBB034 /* HomeWeatherView.m */,
-				F3FAE6131DD9ED2A00CBB034 /* WeatherTableViewController.h */,
-				F3FAE6141DD9ED2A00CBB034 /* WeatherTableViewController.m */,
-				F3FAE6151DD9ED2A00CBB034 /* WeatherViewController.h */,
-				F3FAE6161DD9ED2A00CBB034 /* WeatherViewController.m */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -1142,8 +1116,6 @@
 			children = (
 				F3FAE6181DD9ED2A00CBB034 /* ANTLoginViewController.h */,
 				F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */,
-				F3FAE61A1DD9ED2A00CBB034 /* LoginViewController.h */,
-				F3FAE61B1DD9ED2A00CBB034 /* LoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1192,7 +1164,6 @@
 			isa = PBXGroup;
 			children = (
 				F3FAE6611DD9ED2A00CBB034 /* Common */,
-				F3FAE66B1DD9ED2A00CBB034 /* Location */,
 				F3FAE66E1DD9ED2A00CBB034 /* Login */,
 				F3FAE6731DD9ED2A00CBB034 /* Sensor */,
 				F3FAE6801DD9ED2A00CBB034 /* User */,
@@ -1209,15 +1180,6 @@
 				F3FAE6651DD9ED2A00CBB034 /* WeatherManager.m */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		F3FAE66B1DD9ED2A00CBB034 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				F3FAE66C1DD9ED2A00CBB034 /* LocationManager.h */,
-				F3FAE66D1DD9ED2A00CBB034 /* LocationManager.m */,
-			);
-			path = Location;
 			sourceTree = "<group>";
 		};
 		F3FAE66E1DD9ED2A00CBB034 /* Login */ = {
@@ -1713,7 +1675,6 @@
 				F37E63BF1DDD61040061D6BC /* MusicTableViewCell.m in Sources */,
 				F3FAE7261DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m in Sources */,
 				F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */,
-				F3FAE6F61DD9ED2A00CBB034 /* ComDynamicHeadView.m in Sources */,
 				F3FAE70B1DD9ED2A00CBB034 /* QMPictureView.m in Sources */,
 				F3FAE6F81DD9ED2A00CBB034 /* ANTTextField.m in Sources */,
 				F35ADA311DDAD82F00800E43 /* DayTimeCell.m in Sources */,
@@ -1734,7 +1695,6 @@
 				F3FAE71B1DD9ED2A00CBB034 /* TZPhotoPickerController.m in Sources */,
 				F37E63F41DDD94C10061D6BC /* ListPhotoViewController.m in Sources */,
 				F3FAE71D1DD9ED2A00CBB034 /* TZPhotoPreviewController.m in Sources */,
-				F3FAE73B1DD9ED2A00CBB034 /* WeatherTableViewController.m in Sources */,
 				F3FAE7291DD9ED2A00CBB034 /* HappyTimeModel.m in Sources */,
 				F35ADA281DDAD73600800E43 /* LineDisplayModel.m in Sources */,
 				F3FAE71A1DD9ED2A00CBB034 /* TZImagePickerController.m in Sources */,
@@ -1746,14 +1706,12 @@
 				F37E63B91DDD61040061D6BC /* AudioPlayerController+methods.m in Sources */,
 				F3FAE7251DD9ED2A00CBB034 /* VideoCache.m in Sources */,
 				F3FAE6FE1DD9ED2A00CBB034 /* FFNumberScrollView.m in Sources */,
-				F3FAE6F71DD9ED2A00CBB034 /* FourPingTransition.m in Sources */,
 				F37E63BD1DDD61040061D6BC /* MusicModel.m in Sources */,
 				F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */,
 				F3FAE7641DD9ED2A00CBB034 /* ANZAPIProxy.m in Sources */,
 				F3FAE7131DD9ED2A00CBB034 /* TYWaterWaveView.m in Sources */,
 				F3FAE6F11DD9ED2A00CBB034 /* UIView+UIViewFrame.m in Sources */,
 				F3FAE70A1DD9ED2A00CBB034 /* QMPictureProgressView.m in Sources */,
-				F3FAE73C1DD9ED2A00CBB034 /* WeatherViewController.m in Sources */,
 				F3FAE6EF1DD9ED2A00CBB034 /* UIImageView+FullScreen.m in Sources */,
 				F3FAE71E1DD9ED2A00CBB034 /* TZVideoPlayerController.m in Sources */,
 				F3FAE7071DD9ED2A00CBB034 /* PictureFullScreenBrowser.m in Sources */,
@@ -1791,14 +1749,12 @@
 				F3FAE6ED1DD9ED2A00CBB034 /* UIAlertView+Object.m in Sources */,
 				F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */,
 				F3FAE72F1DD9ED2A00CBB034 /* WeatherModel.m in Sources */,
-				F3FAE73E1DD9ED2A00CBB034 /* LoginViewController.m in Sources */,
 				F3FAE70C1DD9ED2A00CBB034 /* QMShortVideoController.m in Sources */,
 				F3A5C4631DDBFEFE007E933C /* RotatingView.m in Sources */,
 				F3FAE7121DD9ED2A00CBB034 /* MTToViewTopButton.m in Sources */,
 				F3FAE7741DD9ED2A00CBB034 /* UserManager.m in Sources */,
 				F37E63F61DDD94C10061D6BC /* PhotoAlbumViewController.m in Sources */,
 				F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */,
-				F3FAE76B1DD9ED2A00CBB034 /* LocationManager.m in Sources */,
 				F37E63BA1DDD61040061D6BC /* AudioPlayerController.m in Sources */,
 				F3FAE7111DD9ED2A00CBB034 /* SRSlimeView.m in Sources */,
 				F3FAE6FC1DD9ED2A00CBB034 /* FFLntegralView.m in Sources */,

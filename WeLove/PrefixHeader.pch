@@ -45,7 +45,6 @@
 #import "APIConfig.h"
 #import "CoreData_Header.h"
 #import "UserManager.h"
-#import "LocationManager.h"
 
 /*-------------Components-------------*/
 #import "QMButton.h"

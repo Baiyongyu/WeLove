@@ -11,9 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoveViewController">
             <connections>
+                <outlet property="animaImg" destination="6NI-Bz-904" id="vAj-PR-xoy"/>
                 <outlet property="bgShadowView" destination="LUs-EU-YeD" id="UDI-l0-Ywn"/>
                 <outlet property="bgView" destination="cD9-dZ-EgI" id="BcF-4c-bYJ"/>
-                <outlet property="playBtn" destination="Zgf-hT-uhS" id="hhs-uj-JP4"/>
+                <outlet property="meImg" destination="L1G-ng-TGM" id="5sf-n0-Y3t"/>
+                <outlet property="vImg" destination="8dj-vE-fHh" id="i5V-48-wef"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,39 +40,73 @@
                         <constraint firstAttribute="width" constant="200" id="vZd-Vm-V6K"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgf-hT-uhS">
-                    <rect key="frame" x="323" y="488" width="30" height="30"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yinfu" translatesAutoresizingMaskIntoConstraints="NO" id="6NI-Bz-904">
+                    <rect key="frame" x="319" y="478" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="30" id="f4x-JA-U3l"/>
-                        <constraint firstAttribute="height" constant="30" id="wCu-Un-Bxk"/>
+                        <constraint firstAttribute="width" constant="40" id="hA6-4l-1Um"/>
+                        <constraint firstAttribute="height" constant="40" id="yKp-Jh-oTj"/>
                     </constraints>
-                    <state key="normal" image="indexPageIconPlay_30x30_"/>
-                    <connections>
-                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="TB5-wj-TXf"/>
-                    </connections>
-                </button>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woziij" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-ng-TGM">
+                    <rect key="frame" x="15" y="60" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="QQZ-oQ-eg6"/>
+                        <constraint firstAttribute="height" constant="40" id="WEK-Xw-TRc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WechatIMG10.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="8dj-vE-fHh">
+                    <rect key="frame" x="320" y="60" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="QGi-Kb-Z5a"/>
+                        <constraint firstAttribute="height" constant="40" id="YGS-Jc-K5B"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="6NI-Bz-904" secondAttribute="bottom" constant="149" id="16Y-gY-0zb"/>
                 <constraint firstAttribute="trailing" secondItem="LUs-EU-YeD" secondAttribute="trailing" id="1S6-vw-BPe"/>
-                <constraint firstAttribute="bottom" secondItem="Zgf-hT-uhS" secondAttribute="bottom" constant="149" id="CKg-ig-9HS"/>
                 <constraint firstAttribute="trailing" secondItem="cD9-dZ-EgI" secondAttribute="trailing" id="IF4-pp-X9Z"/>
+                <constraint firstItem="L1G-ng-TGM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Jxa-2Y-kFF"/>
+                <constraint firstAttribute="trailing" secondItem="6NI-Bz-904" secondAttribute="trailing" constant="16" id="Llh-mS-gpx"/>
+                <constraint firstAttribute="trailing" secondItem="8dj-vE-fHh" secondAttribute="trailing" constant="15" id="M9x-Zy-XxO"/>
                 <constraint firstAttribute="bottom" secondItem="cD9-dZ-EgI" secondAttribute="bottom" id="MJc-rN-6HW"/>
                 <constraint firstItem="LUs-EU-YeD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UBv-f9-SIq"/>
                 <constraint firstItem="5el-MW-lnf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vp1-Q7-QVS"/>
                 <constraint firstItem="cD9-dZ-EgI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b6r-gm-m2X"/>
+                <constraint firstItem="L1G-ng-TGM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="cJc-3P-bZ4"/>
                 <constraint firstItem="5el-MW-lnf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="lZr-d1-17i"/>
                 <constraint firstItem="cD9-dZ-EgI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tPh-JX-lae"/>
                 <constraint firstItem="LUs-EU-YeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="twF-zc-57B"/>
-                <constraint firstAttribute="trailing" secondItem="Zgf-hT-uhS" secondAttribute="trailing" constant="22" id="wtG-lU-0Rx"/>
+                <constraint firstItem="8dj-vE-fHh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="wAX-G5-EQe"/>
             </constraints>
-            <point key="canvasLocation" x="-611" y="-512"/>
+            <point key="canvasLocation" x="-535" y="-611"/>
         </view>
     </objects>
     <resources>
+        <image name="WechatIMG10.jpeg" width="800" height="600"/>
         <image name="about_desc" width="128" height="10"/>
         <image name="homeBg" width="320" height="480"/>
         <image name="home_feed_shadow" width="144" height="90"/>
-        <image name="indexPageIconPlay_30x30_" width="30" height="30"/>
+        <image name="woziij" width="960" height="1280"/>
+        <image name="yinfu" width="31" height="35"/>
     </resources>
 </document>

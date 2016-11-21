@@ -80,7 +80,6 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"
   install_resource "PKShortVideo/PKShortVideo/PKAsset/PK_Camera_Turn@2x.png"
   install_resource "PKShortVideo/PKShortVideo/PKAsset/PK_Delete@2x.png"
   install_resource "PKShortVideo/PKShortVideo/PKAsset/PK_Play@2x.png"
@@ -91,7 +90,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "RongCloudIMKit/Rong_Cloud_iOS_IMKit_SDK_v2_7_3_stable/RCConfig.plist"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle"
   install_resource "PKShortVideo/PKShortVideo/PKAsset/PK_Camera_Turn@2x.png"
   install_resource "PKShortVideo/PKShortVideo/PKAsset/PK_Delete@2x.png"
   install_resource "PKShortVideo/PKShortVideo/PKAsset/PK_Play@2x.png"

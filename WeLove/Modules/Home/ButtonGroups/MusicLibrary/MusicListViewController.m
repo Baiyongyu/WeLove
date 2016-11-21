@@ -31,8 +31,8 @@
 }
 
 - (void)dataJson {
-    NSString *str = [[NSBundle mainBundle]pathForResource:@"musicPaper" ofType:@"json"];
-    NSData *data = [[NSData alloc]initWithContentsOfFile:str];
+    NSString *str = [[NSBundle mainBundle] pathForResource:@"musicPaper" ofType:@"json"];
+    NSData *data = [[NSData alloc] initWithContentsOfFile:str];
     
     NSMutableArray *dataArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     NSLog(@"%@,  ---%ld",dataArray, dataArray.count);
@@ -88,7 +88,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 90;
 }
-
 
 - (NSMutableArray *)songArray {
     if (!_songArray) {

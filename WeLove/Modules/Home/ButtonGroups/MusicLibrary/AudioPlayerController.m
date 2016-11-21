@@ -36,13 +36,13 @@
 static AudioPlayerController *audioVC;
 @implementation AudioPlayerController
 
-+(AudioPlayerController *)audioPlayerController{
++ (AudioPlayerController *)audioPlayerController {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         audioVC = [[AudioPlayerController alloc] init];
         audioVC.view.backgroundColor = [UIColor whiteColor];
         audioVC.player = [[AVPlayer alloc]init];
-        //后台播放
+        // 后台播放
         AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:YES error:nil];
         [session setCategory:AVAudioSessionCategoryPlayback error:nil];
@@ -56,12 +56,12 @@ static AudioPlayerController *audioVC;
     [self creatViews];
 }
 
-- (void)viewWillLayoutSubviews{
+- (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     [self setRotatingViewFrame];
 }
 
-- (void)initWithArray:(NSArray *)array index:(NSInteger)index{
+- (void)initWithArray:(NSArray *)array index:(NSInteger)index {
     _index = index;
     _modelArray = array;
     _randomArray = nil;
@@ -105,14 +105,14 @@ static AudioPlayerController *audioVC;
 }
 
 // 各控件设初始值
-- (void)initialControls{
+- (void)initialControls {
     [self stop];
     self.playingTime.text = @"00:00";
     self.paceSlider.value = 0.0f;
     [self.rotatingView removeAnimation];
 }
 
-- (void)updateUIDataWith:(MusicModel *)model{
+- (void)updateUIDataWith:(MusicModel *)model {
     self.titleLabel.text = model.name;
     self.singerLabel.text = model.singer;
     [self setImageWith:model];
@@ -257,7 +257,7 @@ static AudioPlayerController *audioVC;
     }
 }
 
-- (void)play{
+- (void)play {
     isPlaying = YES;
     [self.player play];
     [self.playButton setImage:[UIImage imageNamed:@"MusicPlayer_播放"] forState:UIControlStateNormal];
@@ -265,7 +265,7 @@ static AudioPlayerController *audioVC;
     [self.rotatingView resumeLayer];
 }
 
-- (void)stop{
+- (void)stop {
     isPlaying = NO;
     [self.player pause];
     [self.playButton setImage:[UIImage imageNamed:@"MusicPlayer_暂停"] forState:UIControlStateNormal];
@@ -281,7 +281,7 @@ static AudioPlayerController *audioVC;
 }
 
 #pragma mark - 移除通知&KVO
-- (void)removeObserverAndNotification{
+- (void)removeObserverAndNotification {
     [self.player replaceCurrentItemWithPlayerItem:nil];
     [playerItem removeObserver:self forKeyPath:@"status"];
     [self.player removeTimeObserver:_playTimeObserver];
@@ -290,8 +290,7 @@ static AudioPlayerController *audioVC;
 }
 
 #pragma mark - 后台UI设置
-- (void)setLockViewWith:(MusicModel*)model currentTime:(CGFloat)currentTime
-{
+- (void)setLockViewWith:(MusicModel*)model currentTime:(CGFloat)currentTime {
     NSMutableDictionary *musicInfo = [NSMutableDictionary dictionary];
     // 设置Singer
     [musicInfo setObject:model.singer forKey:MPMediaItemPropertyArtist];

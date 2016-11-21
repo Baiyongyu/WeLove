@@ -66,7 +66,6 @@
             self.state = ComPhotoStateNormal;
         }
     }];
-    
 }
 
 - (void)swipImage {

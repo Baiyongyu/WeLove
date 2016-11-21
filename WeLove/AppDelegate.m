@@ -11,9 +11,7 @@
 typedef void (^RootContextSave)(void);
 
 @interface AppDelegate ()
-{
-    BMKMapManager *_mapManager;
-}
+
 @end
 
 @implementation AppDelegate
@@ -23,20 +21,11 @@ typedef void (^RootContextSave)(void);
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    /* 百度地图 */
-    _mapManager = [[BMKMapManager alloc]init];
-    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
-    BOOL ret = [_mapManager start:kBaiduMapKey  generalDelegate:nil];
-    if (!ret) {
-        NSLog(@"manager start failed!");
-    }
     
     self.tabBarController = [[TabBarController alloc] init];
     self.nav = [[NavigationController alloc] initWithRootViewController:self.tabBarController];
     self.nav.navigationBar.hidden = YES;
     self.window.rootViewController = self.nav;
-    
-    [locationManager startLocation];
     
     return YES;
 }

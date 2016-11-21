@@ -1,10 +1,9 @@
-
 //
 //  RotatingView.m
-//  AudioPlayer
+//  WeLove
 //
-//  Created by ClaudeLi on 16/4/12.
-//  Copyright © 2016年 ClaudeLi. All rights reserved.
+//  Created by 宇玄丶 on 2016/11/16.
+//  Copyright © 2016年 qianmo. All rights reserved.
 //
 
 #import "RotatingView.h"
@@ -12,7 +11,7 @@
 
 @implementation RotatingView
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
@@ -22,7 +21,7 @@
     return self;
 }
 
-- (void)setRotatingViewLayoutWithFrame:(CGRect)frame{
+- (void)setRotatingViewLayoutWithFrame:(CGRect)frame {
     self.layer.masksToBounds  = YES;
     self.layer.cornerRadius  = CGRectGetWidth(frame)/2.f;
     self.imageView.frame = CGRectMake(BorderWidth, BorderWidth, frame.size.width - BorderWidth*2, frame.size.width - BorderWidth*2);
@@ -31,7 +30,7 @@
 }
 
 /// 添加动画
-- (void)addAnimation{
+- (void)addAnimation {
     
     CABasicAnimation *monkeyAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     monkeyAnimation.toValue = [NSNumber numberWithFloat:2.0 *M_PI];
@@ -47,16 +46,14 @@
 }
 
 // 停止
--(void)pauseLayer
-{
+- (void)pauseLayer {
     CFTimeInterval pausedTime = [self.imageView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
     self.imageView.layer.speed = 0.0;
     self.imageView.layer.timeOffset = pausedTime;
 }
 
 // 恢复
--(void)resumeLayer
-{
+- (void)resumeLayer {
     CFTimeInterval pausedTime = self.imageView.layer.timeOffset;
     self.imageView.layer.speed = 1.0;
     self.imageView.layer.timeOffset = 0.0;
@@ -65,7 +62,7 @@
     self.imageView.layer.beginTime = timeSincePause;
 }
 
-- (void)removeAnimation{
+- (void)removeAnimation {
     [self.imageView.layer removeAllAnimations];
 }
 

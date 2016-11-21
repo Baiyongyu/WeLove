@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, AudioPlayerMode) {
 
 @interface AudioPlayerController : UIViewController
 
-+(AudioPlayerController *)audioPlayerController;
++ (AudioPlayerController *)audioPlayerController;
 
 /**
  *  旋转View
