@@ -16,7 +16,7 @@
 #import "ComponentsModel.h"
 #import "UserModel.h"
 #import "HappyTimeModel.h"
-#import "WeatherModel.h"
+//#import "WeatherModel.h"
 
 /*-------------Categories--------------*/
 #import "UIView+UIViewFrame.h"

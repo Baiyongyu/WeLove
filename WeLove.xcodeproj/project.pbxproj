@@ -35,7 +35,15 @@
 		F371A6D81DE4388400A70A77 /* WMVideoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6CF1DE4388400A70A77 /* WMVideoMessageCell.m */; };
 		F371A6E21DE43FF200A70A77 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6DE1DE43FF200A70A77 /* AudioStreamer.m */; };
 		F371A6E31DE43FF200A70A77 /* RotatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6E11DE43FF200A70A77 /* RotatingView.m */; };
-		F37E639C1DDD553B0061D6BC /* UploadPicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E639B1DDD553B0061D6BC /* UploadPicManager.m */; };
+		F371A6E71DE4458F00A70A77 /* HomeDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6E61DE4458F00A70A77 /* HomeDateView.m */; };
+		F371A6E91DE447A000A70A77 /* woziji.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F371A6E81DE447A000A70A77 /* woziji.jpeg */; };
+		F371A6F01DE449C600A70A77 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6EB1DE449C600A70A77 /* LoginManager.m */; };
+		F371A6F11DE449C600A70A77 /* UploadPicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6ED1DE449C600A70A77 /* UploadPicManager.m */; };
+		F371A6F21DE449C600A70A77 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6EF1DE449C600A70A77 /* UserManager.m */; };
+		F371A6FD1DE449EF00A70A77 /* ANZAPIProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6F51DE449EF00A70A77 /* ANZAPIProxy.m */; };
+		F371A6FE1DE449EF00A70A77 /* ANZAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6F71DE449EF00A70A77 /* ANZAppContext.m */; };
+		F371A6FF1DE449EF00A70A77 /* ANZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6F91DE449EF00A70A77 /* ANZResponse.m */; };
+		F371A7001DE449EF00A70A77 /* BaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6FC1DE449EF00A70A77 /* BaseAPIManager.m */; };
 		F37E63A01DDD58730061D6BC /* AnimaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E639F1DDD58730061D6BC /* AnimaViewController.m */; };
 		F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */; };
 		F37E63B81DDD61040061D6BC /* MemoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */; };
@@ -121,26 +129,15 @@
 		F3FAE7291DD9ED2A00CBB034 /* HappyTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5EC1DD9ED2A00CBB034 /* HappyTimeModel.m */; };
 		F3FAE72D1DD9ED2A00CBB034 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5F41DD9ED2A00CBB034 /* UserModel.m */; };
 		F3FAE72E1DD9ED2A00CBB034 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5F61DD9ED2A00CBB034 /* VideoModel.m */; };
-		F3FAE72F1DD9ED2A00CBB034 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5F81DD9ED2A00CBB034 /* WeatherModel.m */; };
 		F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5FC1DD9ED2A00CBB034 /* BaseTableViewController.m */; };
 		F3FAE7311DD9ED2A00CBB034 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5FE1DD9ED2A00CBB034 /* BaseViewController.m */; };
 		F3FAE7321DD9ED2A00CBB034 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6001DD9ED2A00CBB034 /* WebViewController.m */; };
 		F3FAE7381DD9ED2A00CBB034 /* LoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE60E1DD9ED2A00CBB034 /* LoveViewController.m */; };
 		F3FAE7391DD9ED2A00CBB034 /* LoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */; };
-		F3FAE73A1DD9ED2A00CBB034 /* HomeWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6121DD9ED2A00CBB034 /* HomeWeatherView.m */; };
 		F3FAE73D1DD9ED2A00CBB034 /* ANTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */; };
 		F3FAE7421DD9ED2A00CBB034 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6211DD9ED2A00CBB034 /* NavigationController.m */; };
 		F3FAE7431DD9ED2A00CBB034 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6231DD9ED2A00CBB034 /* TabBarController.m */; };
 		F3FAE7581DD9ED2A00CBB034 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6411DD9ED2A00CBB034 /* MineViewController.m */; };
-		F3FAE7641DD9ED2A00CBB034 /* ANZAPIProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE65A1DD9ED2A00CBB034 /* ANZAPIProxy.m */; };
-		F3FAE7651DD9ED2A00CBB034 /* ANZAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE65C1DD9ED2A00CBB034 /* ANZAppContext.m */; };
-		F3FAE7661DD9ED2A00CBB034 /* ANZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE65E1DD9ED2A00CBB034 /* ANZResponse.m */; };
-		F3FAE7681DD9ED2A00CBB034 /* WeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6651DD9ED2A00CBB034 /* WeatherManager.m */; };
-		F3FAE76C1DD9ED2A00CBB034 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6701DD9ED2A00CBB034 /* LoginManager.m */; };
-		F3FAE76D1DD9ED2A00CBB034 /* LogoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6721DD9ED2A00CBB034 /* LogoutManager.m */; };
-		F3FAE7731DD9ED2A00CBB034 /* WeatherSensorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE67F1DD9ED2A00CBB034 /* WeatherSensorManager.m */; };
-		F3FAE7741DD9ED2A00CBB034 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6821DD9ED2A00CBB034 /* UserManager.m */; };
-		F3FAE7751DD9ED2A00CBB034 /* BaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6841DD9ED2A00CBB034 /* BaseAPIManager.m */; };
 		F3FAE7761DD9ED2A00CBB034 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE6871DD9ED2A00CBB034 /* CodeScan.bundle */; };
 		F3FAE7771DD9ED2A00CBB034 /* Digital-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE6891DD9ED2A00CBB034 /* Digital-Regular.ttf */; };
 		F3FAE7781DD9ED2A00CBB034 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE68A1DD9ED2A00CBB034 /* Roboto-Medium.ttf */; };
@@ -273,8 +270,24 @@
 		F371A6DE1DE43FF200A70A77 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
 		F371A6E01DE43FF200A70A77 /* RotatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingView.h; sourceTree = "<group>"; };
 		F371A6E11DE43FF200A70A77 /* RotatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingView.m; sourceTree = "<group>"; };
-		F37E639A1DDD553B0061D6BC /* UploadPicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPicManager.h; sourceTree = "<group>"; };
-		F37E639B1DDD553B0061D6BC /* UploadPicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPicManager.m; sourceTree = "<group>"; };
+		F371A6E51DE4458F00A70A77 /* HomeDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDateView.h; sourceTree = "<group>"; };
+		F371A6E61DE4458F00A70A77 /* HomeDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDateView.m; sourceTree = "<group>"; };
+		F371A6E81DE447A000A70A77 /* woziji.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woziji.jpeg; sourceTree = "<group>"; };
+		F371A6EA1DE449C600A70A77 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		F371A6EB1DE449C600A70A77 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		F371A6EC1DE449C600A70A77 /* UploadPicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPicManager.h; sourceTree = "<group>"; };
+		F371A6ED1DE449C600A70A77 /* UploadPicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPicManager.m; sourceTree = "<group>"; };
+		F371A6EE1DE449C600A70A77 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		F371A6EF1DE449C600A70A77 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		F371A6F41DE449EF00A70A77 /* ANZAPIProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZAPIProxy.h; sourceTree = "<group>"; };
+		F371A6F51DE449EF00A70A77 /* ANZAPIProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZAPIProxy.m; sourceTree = "<group>"; };
+		F371A6F61DE449EF00A70A77 /* ANZAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZAppContext.h; sourceTree = "<group>"; };
+		F371A6F71DE449EF00A70A77 /* ANZAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZAppContext.m; sourceTree = "<group>"; };
+		F371A6F81DE449EF00A70A77 /* ANZResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZResponse.h; sourceTree = "<group>"; };
+		F371A6F91DE449EF00A70A77 /* ANZResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZResponse.m; sourceTree = "<group>"; };
+		F371A6FA1DE449EF00A70A77 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		F371A6FB1DE449EF00A70A77 /* BaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPIManager.h; sourceTree = "<group>"; };
+		F371A6FC1DE449EF00A70A77 /* BaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAPIManager.m; sourceTree = "<group>"; };
 		F37E639E1DDD58730061D6BC /* AnimaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimaViewController.h; sourceTree = "<group>"; };
 		F37E639F1DDD58730061D6BC /* AnimaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimaViewController.m; sourceTree = "<group>"; };
 		F37E63A21DDD61040061D6BC /* MemoryDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDayViewController.h; sourceTree = "<group>"; };
@@ -429,8 +442,6 @@
 		F3FAE5F41DD9ED2A00CBB034 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		F3FAE5F51DD9ED2A00CBB034 /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
 		F3FAE5F61DD9ED2A00CBB034 /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
-		F3FAE5F71DD9ED2A00CBB034 /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
-		F3FAE5F81DD9ED2A00CBB034 /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
 		F3FAE5FB1DD9ED2A00CBB034 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		F3FAE5FC1DD9ED2A00CBB034 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		F3FAE5FD1DD9ED2A00CBB034 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -440,8 +451,6 @@
 		F3FAE60D1DD9ED2A00CBB034 /* LoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveViewController.h; sourceTree = "<group>"; };
 		F3FAE60E1DD9ED2A00CBB034 /* LoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoveViewController.m; sourceTree = "<group>"; };
 		F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoveViewController.xib; sourceTree = "<group>"; };
-		F3FAE6111DD9ED2A00CBB034 /* HomeWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWeatherView.h; sourceTree = "<group>"; };
-		F3FAE6121DD9ED2A00CBB034 /* HomeWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWeatherView.m; sourceTree = "<group>"; };
 		F3FAE6181DD9ED2A00CBB034 /* ANTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLoginViewController.h; sourceTree = "<group>"; };
 		F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLoginViewController.m; sourceTree = "<group>"; };
 		F3FAE6201DD9ED2A00CBB034 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
@@ -450,25 +459,6 @@
 		F3FAE6231DD9ED2A00CBB034 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		F3FAE6401DD9ED2A00CBB034 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		F3FAE6411DD9ED2A00CBB034 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		F3FAE6591DD9ED2A00CBB034 /* ANZAPIProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZAPIProxy.h; sourceTree = "<group>"; };
-		F3FAE65A1DD9ED2A00CBB034 /* ANZAPIProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZAPIProxy.m; sourceTree = "<group>"; };
-		F3FAE65B1DD9ED2A00CBB034 /* ANZAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZAppContext.h; sourceTree = "<group>"; };
-		F3FAE65C1DD9ED2A00CBB034 /* ANZAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZAppContext.m; sourceTree = "<group>"; };
-		F3FAE65D1DD9ED2A00CBB034 /* ANZResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZResponse.h; sourceTree = "<group>"; };
-		F3FAE65E1DD9ED2A00CBB034 /* ANZResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZResponse.m; sourceTree = "<group>"; };
-		F3FAE65F1DD9ED2A00CBB034 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
-		F3FAE6641DD9ED2A00CBB034 /* WeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherManager.h; sourceTree = "<group>"; };
-		F3FAE6651DD9ED2A00CBB034 /* WeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherManager.m; sourceTree = "<group>"; };
-		F3FAE66F1DD9ED2A00CBB034 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
-		F3FAE6701DD9ED2A00CBB034 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
-		F3FAE6711DD9ED2A00CBB034 /* LogoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutManager.h; sourceTree = "<group>"; };
-		F3FAE6721DD9ED2A00CBB034 /* LogoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutManager.m; sourceTree = "<group>"; };
-		F3FAE67E1DD9ED2A00CBB034 /* WeatherSensorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherSensorManager.h; sourceTree = "<group>"; };
-		F3FAE67F1DD9ED2A00CBB034 /* WeatherSensorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherSensorManager.m; sourceTree = "<group>"; };
-		F3FAE6811DD9ED2A00CBB034 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
-		F3FAE6821DD9ED2A00CBB034 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
-		F3FAE6831DD9ED2A00CBB034 /* BaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPIManager.h; sourceTree = "<group>"; };
-		F3FAE6841DD9ED2A00CBB034 /* BaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAPIManager.m; sourceTree = "<group>"; };
 		F3FAE6851DD9ED2A00CBB034 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F3FAE6871DD9ED2A00CBB034 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		F3FAE6891DD9ED2A00CBB034 /* Digital-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Digital-Regular.ttf"; sourceTree = "<group>"; };
@@ -717,6 +707,31 @@
 				F371A6E11DE43FF200A70A77 /* RotatingView.m */,
 			);
 			path = XunzhaunView;
+			sourceTree = "<group>";
+		};
+		F371A6E41DE4458F00A70A77 /* DateView */ = {
+			isa = PBXGroup;
+			children = (
+				F371A6E51DE4458F00A70A77 /* HomeDateView.h */,
+				F371A6E61DE4458F00A70A77 /* HomeDateView.m */,
+			);
+			path = DateView;
+			sourceTree = "<group>";
+		};
+		F371A6F31DE449EF00A70A77 /* BaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				F371A6FB1DE449EF00A70A77 /* BaseAPIManager.h */,
+				F371A6FC1DE449EF00A70A77 /* BaseAPIManager.m */,
+				F371A6F41DE449EF00A70A77 /* ANZAPIProxy.h */,
+				F371A6F51DE449EF00A70A77 /* ANZAPIProxy.m */,
+				F371A6F61DE449EF00A70A77 /* ANZAppContext.h */,
+				F371A6F71DE449EF00A70A77 /* ANZAppContext.m */,
+				F371A6F81DE449EF00A70A77 /* ANZResponse.h */,
+				F371A6F91DE449EF00A70A77 /* ANZResponse.m */,
+				F371A6FA1DE449EF00A70A77 /* APIConfig.h */,
+			);
+			path = BaseManager;
 			sourceTree = "<group>";
 		};
 		F37E639D1DDD58730061D6BC /* Animation */ = {
@@ -1091,8 +1106,6 @@
 				F3FAE5F41DD9ED2A00CBB034 /* UserModel.m */,
 				F3FAE5F51DD9ED2A00CBB034 /* VideoModel.h */,
 				F3FAE5F61DD9ED2A00CBB034 /* VideoModel.m */,
-				F3FAE5F71DD9ED2A00CBB034 /* WeatherModel.h */,
-				F3FAE5F81DD9ED2A00CBB034 /* WeatherModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1129,8 +1142,8 @@
 				F3FAE60D1DD9ED2A00CBB034 /* LoveViewController.h */,
 				F3FAE60E1DD9ED2A00CBB034 /* LoveViewController.m */,
 				F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */,
+				F371A6E41DE4458F00A70A77 /* DateView */,
 				F3FAE6071DD9ED2A00CBB034 /* ButtonGroups */,
-				F3FAE6101DD9ED2A00CBB034 /* Weather */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1144,15 +1157,6 @@
 				F371A6BE1DE4388400A70A77 /* ChatList */,
 			);
 			path = ButtonGroups;
-			sourceTree = "<group>";
-		};
-		F3FAE6101DD9ED2A00CBB034 /* Weather */ = {
-			isa = PBXGroup;
-			children = (
-				F3FAE6111DD9ED2A00CBB034 /* HomeWeatherView.h */,
-				F3FAE6121DD9ED2A00CBB034 /* HomeWeatherView.m */,
-			);
-			path = Weather;
 			sourceTree = "<group>";
 		};
 		F3FAE6171DD9ED2A00CBB034 /* Login */ = {
@@ -1190,15 +1194,7 @@
 		F3FAE6581DD9ED2A00CBB034 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				F3FAE6831DD9ED2A00CBB034 /* BaseAPIManager.h */,
-				F3FAE6841DD9ED2A00CBB034 /* BaseAPIManager.m */,
-				F3FAE6591DD9ED2A00CBB034 /* ANZAPIProxy.h */,
-				F3FAE65A1DD9ED2A00CBB034 /* ANZAPIProxy.m */,
-				F3FAE65B1DD9ED2A00CBB034 /* ANZAppContext.h */,
-				F3FAE65C1DD9ED2A00CBB034 /* ANZAppContext.m */,
-				F3FAE65D1DD9ED2A00CBB034 /* ANZResponse.h */,
-				F3FAE65E1DD9ED2A00CBB034 /* ANZResponse.m */,
-				F3FAE65F1DD9ED2A00CBB034 /* APIConfig.h */,
+				F371A6F31DE449EF00A70A77 /* BaseManager */,
 				F3FAE6601DD9ED2A00CBB034 /* APIManagers */,
 			);
 			path = Networking;
@@ -1207,52 +1203,14 @@
 		F3FAE6601DD9ED2A00CBB034 /* APIManagers */ = {
 			isa = PBXGroup;
 			children = (
-				F3FAE6611DD9ED2A00CBB034 /* Common */,
-				F3FAE66E1DD9ED2A00CBB034 /* Login */,
-				F3FAE6731DD9ED2A00CBB034 /* Sensor */,
-				F3FAE6801DD9ED2A00CBB034 /* User */,
+				F371A6EA1DE449C600A70A77 /* LoginManager.h */,
+				F371A6EB1DE449C600A70A77 /* LoginManager.m */,
+				F371A6EC1DE449C600A70A77 /* UploadPicManager.h */,
+				F371A6ED1DE449C600A70A77 /* UploadPicManager.m */,
+				F371A6EE1DE449C600A70A77 /* UserManager.h */,
+				F371A6EF1DE449C600A70A77 /* UserManager.m */,
 			);
 			path = APIManagers;
-			sourceTree = "<group>";
-		};
-		F3FAE6611DD9ED2A00CBB034 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				F37E639A1DDD553B0061D6BC /* UploadPicManager.h */,
-				F37E639B1DDD553B0061D6BC /* UploadPicManager.m */,
-				F3FAE6641DD9ED2A00CBB034 /* WeatherManager.h */,
-				F3FAE6651DD9ED2A00CBB034 /* WeatherManager.m */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		F3FAE66E1DD9ED2A00CBB034 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				F3FAE66F1DD9ED2A00CBB034 /* LoginManager.h */,
-				F3FAE6701DD9ED2A00CBB034 /* LoginManager.m */,
-				F3FAE6711DD9ED2A00CBB034 /* LogoutManager.h */,
-				F3FAE6721DD9ED2A00CBB034 /* LogoutManager.m */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		F3FAE6731DD9ED2A00CBB034 /* Sensor */ = {
-			isa = PBXGroup;
-			children = (
-				F3FAE67E1DD9ED2A00CBB034 /* WeatherSensorManager.h */,
-				F3FAE67F1DD9ED2A00CBB034 /* WeatherSensorManager.m */,
-			);
-			path = Sensor;
-			sourceTree = "<group>";
-		};
-		F3FAE6801DD9ED2A00CBB034 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				F3FAE6811DD9ED2A00CBB034 /* UserManager.h */,
-				F3FAE6821DD9ED2A00CBB034 /* UserManager.m */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		F3FAE6861DD9ED2A00CBB034 /* Resourse */ = {
@@ -1282,6 +1240,7 @@
 		F3FAE68D1DD9ED2A00CBB034 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				F371A6E81DE447A000A70A77 /* woziji.jpeg */,
 				F3FAE68E1DD9ED2A00CBB034 /* WechatIMG1.jpeg */,
 				F3FAE68F1DD9ED2A00CBB034 /* WechatIMG10.jpeg */,
 				F3FAE6901DD9ED2A00CBB034 /* WechatIMG11.jpeg */,
@@ -1645,6 +1604,7 @@
 				F3FAE77D1DD9ED2A00CBB034 /* WechatIMG11.jpeg in Resources */,
 				F3FAE79F1DD9ED2A00CBB034 /* farm activity.json in Resources */,
 				F3FAE77E1DD9ED2A00CBB034 /* WechatIMG12.jpeg in Resources */,
+				F371A6E91DE447A000A70A77 /* woziji.jpeg in Resources */,
 				F371A6AC1DE3E98200A70A77 /* PPDragDropBadgeView.bundle in Resources */,
 				F3FAE7A91DD9ED2A00CBB034 /* arrow.png in Resources */,
 				F3FAE2E21DD9EAFC00CBB034 /* Main.storyboard in Resources */,
@@ -1719,21 +1679,23 @@
 				F3FAE7261DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m in Sources */,
 				F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */,
 				F3FAE70B1DD9ED2A00CBB034 /* QMPictureView.m in Sources */,
+				F371A6E71DE4458F00A70A77 /* HomeDateView.m in Sources */,
 				F3FAE6F81DD9ED2A00CBB034 /* ANTTextField.m in Sources */,
 				F35ADA311DDAD82F00800E43 /* DayTimeCell.m in Sources */,
+				F371A6FD1DE449EF00A70A77 /* ANZAPIProxy.m in Sources */,
 				F3FAE6FD1DD9ED2A00CBB034 /* FFMemberCenterHeadView.m in Sources */,
 				F371A6AE1DE3E98200A70A77 /* PRTween.m in Sources */,
 				F3FAE7051DD9ED2A00CBB034 /* QMButton.m in Sources */,
 				F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */,
 				F3A5C47F1DDC27C0007E933C /* UIImage+ImageEffects.m in Sources */,
 				F3FAE7181DD9ED2A00CBB034 /* TZImageManager.m in Sources */,
+				F371A6F11DE449C600A70A77 /* UploadPicManager.m in Sources */,
 				F3FAE7241DD9ED2A00CBB034 /* UserInfo.m in Sources */,
 				F3FAE7141DD9ED2A00CBB034 /* TYWaveProgressView.m in Sources */,
 				F3FAE7BD1DD9ED2A00CBB034 /* CacheManager.m in Sources */,
 				F3FAE6F51DD9ED2A00CBB034 /* ComDrawView.m in Sources */,
 				F371A6D11DE4388400A70A77 /* FriendCell.m in Sources */,
 				F37E63F31DDD94C10061D6BC /* DragCardView.m in Sources */,
-				F3FAE7661DD9ED2A00CBB034 /* ANZResponse.m in Sources */,
 				F3FAE73D1DD9ED2A00CBB034 /* ANTLoginViewController.m in Sources */,
 				F3FAE7C61DD9F5DE00CBB034 /* WeLove.xcdatamodeld in Sources */,
 				F37E63C11DDD61040061D6BC /* WishViewController.m in Sources */,
@@ -1752,7 +1714,6 @@
 				F3FAE6FE1DD9ED2A00CBB034 /* FFNumberScrollView.m in Sources */,
 				F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */,
 				F371A6AF1DE3E98200A70A77 /* PRTweenTimingFunctions.m in Sources */,
-				F3FAE7641DD9ED2A00CBB034 /* ANZAPIProxy.m in Sources */,
 				F3FAE7131DD9ED2A00CBB034 /* TYWaterWaveView.m in Sources */,
 				F3FAE6F11DD9ED2A00CBB034 /* UIView+UIViewFrame.m in Sources */,
 				F3FAE70A1DD9ED2A00CBB034 /* QMPictureProgressView.m in Sources */,
@@ -1765,22 +1726,19 @@
 				F371A6E21DE43FF200A70A77 /* AudioStreamer.m in Sources */,
 				F3FAE7231DD9ED2A00CBB034 /* UserInfo+CoreDataProperties.m in Sources */,
 				F35ADA271DDAD73600800E43 /* LineDayModel.m in Sources */,
-				F3FAE7751DD9ED2A00CBB034 /* BaseAPIManager.m in Sources */,
 				F371A6D61DE4388400A70A77 /* WMConversationViewController.m in Sources */,
+				F371A7001DE449EF00A70A77 /* BaseAPIManager.m in Sources */,
 				F35ADA081DDAB20D00800E43 /* HeadImageView.m in Sources */,
+				F371A6F01DE449C600A70A77 /* LoginManager.m in Sources */,
 				F371A6AD1DE3E98200A70A77 /* PPDragDropBadgeView.m in Sources */,
 				F3FAE6FF1DD9ED2A00CBB034 /* FFRectangleProgressView.m in Sources */,
-				F3FAE76D1DD9ED2A00CBB034 /* LogoutManager.m in Sources */,
 				F35AD9E51DDA9F3F00800E43 /* TimeViewController.m in Sources */,
-				F3FAE7651DD9ED2A00CBB034 /* ANZAppContext.m in Sources */,
-				F3FAE73A1DD9ED2A00CBB034 /* HomeWeatherView.m in Sources */,
 				F3FAE7001DD9ED2A00CBB034 /* FFUserLevelView.m in Sources */,
 				F3FAE7431DD9ED2A00CBB034 /* TabBarController.m in Sources */,
 				F3FAE7381DD9ED2A00CBB034 /* LoveViewController.m in Sources */,
 				F3FAE72E1DD9ED2A00CBB034 /* VideoModel.m in Sources */,
 				F37E63F21DDD94C10061D6BC /* AlbumPhotosViewController.m in Sources */,
 				F3FAE2DC1DD9EAFC00CBB034 /* AppDelegate.m in Sources */,
-				F3FAE76C1DD9ED2A00CBB034 /* LoginManager.m in Sources */,
 				F3FAE6EE1DD9ED2A00CBB034 /* UIColor+HexStringToColor.m in Sources */,
 				F3FAE2D91DD9EAFC00CBB034 /* main.m in Sources */,
 				F3FAE6F01DD9ED2A00CBB034 /* UIImageView+NetworkMonitor.m in Sources */,
@@ -1788,8 +1746,8 @@
 				F3FAE72D1DD9ED2A00CBB034 /* UserModel.m in Sources */,
 				F3FAE7321DD9ED2A00CBB034 /* WebViewController.m in Sources */,
 				F35ADA0A1DDAB20D00800E43 /* NavHeadTitleView.m in Sources */,
+				F371A6FE1DE449EF00A70A77 /* ANZAppContext.m in Sources */,
 				F3FAE6FB1DD9ED2A00CBB034 /* FFBarrageView.m in Sources */,
-				F3FAE7731DD9ED2A00CBB034 /* WeatherSensorManager.m in Sources */,
 				F35ADA091DDAB20D00800E43 /* HeadLineView.m in Sources */,
 				F371A6D51DE4388400A70A77 /* RCUserInfo+Addition.m in Sources */,
 				F3FAE7011DD9ED2A00CBB034 /* UIView+Extension.m in Sources */,
@@ -1799,16 +1757,16 @@
 				F35ADA001DDAB1D400800E43 /* BirdFlyViewController.m in Sources */,
 				F3FAE6ED1DD9ED2A00CBB034 /* UIAlertView+Object.m in Sources */,
 				F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */,
-				F3FAE72F1DD9ED2A00CBB034 /* WeatherModel.m in Sources */,
 				F3FAE70C1DD9ED2A00CBB034 /* QMShortVideoController.m in Sources */,
 				F3FAE7121DD9ED2A00CBB034 /* MTToViewTopButton.m in Sources */,
-				F3FAE7741DD9ED2A00CBB034 /* UserManager.m in Sources */,
 				F37E63F61DDD94C10061D6BC /* PhotoAlbumViewController.m in Sources */,
 				F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */,
 				F3FAE7111DD9ED2A00CBB034 /* SRSlimeView.m in Sources */,
 				F3FAE6FC1DD9ED2A00CBB034 /* FFLntegralView.m in Sources */,
+				F371A6F21DE449C600A70A77 /* UserManager.m in Sources */,
 				F3FAE7101DD9ED2A00CBB034 /* SRRefreshView.m in Sources */,
 				F37E63E51DDD86FD0061D6BC /* PhotosTypeViewController.m in Sources */,
+				F371A6FF1DE449EF00A70A77 /* ANZResponse.m in Sources */,
 				F3FAE71C1DD9ED2A00CBB034 /* TZPhotoPreviewCell.m in Sources */,
 				F3FAE7081DD9ED2A00CBB034 /* QMImagePickerView.m in Sources */,
 				F37E63A01DDD58730061D6BC /* AnimaViewController.m in Sources */,
@@ -1816,7 +1774,6 @@
 				F3FAE7BE1DD9ED2A00CBB034 /* LunarSolarConverter.m in Sources */,
 				F371A6D31DE4388400A70A77 /* RCCustomCell.m in Sources */,
 				F3FAE6FA1DD9ED2A00CBB034 /* FFBarrageManager.m in Sources */,
-				F37E639C1DDD553B0061D6BC /* UploadPicManager.m in Sources */,
 				F3FAE6F21DD9ED2A00CBB034 /* UIViewController+NavigationHandler.m in Sources */,
 				F3FAE6EC1DD9ED2A00CBB034 /* NSTimer+QM.m in Sources */,
 				F3FAE7BF1DD9ED2A00CBB034 /* QMUtil.m in Sources */,
@@ -1825,7 +1782,6 @@
 				F371A6E31DE43FF200A70A77 /* RotatingView.m in Sources */,
 				F3FAE7171DD9ED2A00CBB034 /* TZAssetModel.m in Sources */,
 				F3FAE6EA1DD9ED2A00CBB034 /* MBProgressHUD+QM.m in Sources */,
-				F3FAE7681DD9ED2A00CBB034 /* WeatherManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

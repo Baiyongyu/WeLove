@@ -7,7 +7,7 @@
 //
 
 #import "LoveViewController.h"
-#import "HomeWeatherView.h"         // 天气
+#import "HomeDateView.h"            // 天气
 #import "AnimaViewController.h"     // 动画
 #import "ComAnimationLayer.h"
 #import "MemoryDayViewController.h" // 纪念日
@@ -28,7 +28,7 @@
     AudioStreamer *streamer;
 }
 //天气
-@property(nonatomic,strong)HomeWeatherView *weatherView;
+@property(nonatomic,strong)HomeDateView *dateView;
 @end
 
 BOOL isPlay = YES;
@@ -39,13 +39,13 @@ BOOL isPlay = YES;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    [self.weatherView updateDate];
+    [self.dateView updateDate];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 天气
-    [self.bgShadowView addSubview:self.weatherView];
+    [self.bgShadowView addSubview:self.dateView];
     // 设置一排固定间距自动宽度子view
     [self setupAutoWidthViewsWithCount:4 margin:10];
     // 小头像
@@ -66,7 +66,7 @@ BOOL isPlay = YES;
     
     NSMutableArray *temp = [NSMutableArray new];
     
-    NSArray *titleArray = @[@"纪念日", @"心愿球", @"相册集", @"聊天吧"];
+    NSArray *titleArray = @[@"纪念日", @"故事球", @"相册集", @"聊天吧"];
     NSArray *imgArray = @[@"indexPageIconAnni_26x26_", @"indexPageIconWish_26x26_", @"indexPageIconClock_26x26_", @"indexPageIconPunch_26x26_"];
     for (int i = 0; i < count; i++) {
         _centerButton = [UIButton new];
@@ -260,31 +260,12 @@ BOOL isPlay = YES;
     self.animaImg.transform = CGAffineTransformIdentity;
 }
 
-//- (void)getUserInfoWithUserId:(NSString *)userId completion:(void(^)(RCUserInfo* userInfo))completion {
-//    //此处为了演示写了一个用户信息
-//    if ([@"1" isEqual:userId]) {
-//        RCUserInfo *user = [[RCUserInfo alloc]init];
-//        user.userId = @"yuge";
-//        user.name = @"宇哥";
-//        user.portraitUri = @"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008";
-//        
-//        return completion(user);
-//    }else if([@"2" isEqual:userId]) {
-//        RCUserInfo *user = [[RCUserInfo alloc]init];
-//        user.userId = @"xiaowei";
-//        user.name = @"小v";
-//        user.portraitUri = @"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008";
-//        return completion(user);
-//    }
-//}
 
-
-
-- (HomeWeatherView *)weatherView {
-    if (!_weatherView) {
-        _weatherView = [[HomeWeatherView alloc] initWithFrame:CGRectMake(0, 25, kScreenWidth, 170)];
+- (HomeDateView *)dateView {
+    if (!_dateView) {
+        _dateView = [[HomeDateView alloc] initWithFrame:CGRectMake(0, 25, kScreenWidth, 170)];
     }
-    return _weatherView;
+    return _dateView;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

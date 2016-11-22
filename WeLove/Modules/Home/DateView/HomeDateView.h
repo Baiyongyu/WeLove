@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeWeatherView : UIView
+@interface HomeDateView : UIView
 -(void)updateDate;
 @end

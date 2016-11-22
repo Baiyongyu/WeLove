@@ -47,7 +47,7 @@
                         <constraint firstAttribute="height" constant="40" id="yKp-Jh-oTj"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woziij" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-ng-TGM">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woziji.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-ng-TGM">
                     <rect key="frame" x="15" y="60" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="QQZ-oQ-eg6"/>
@@ -98,7 +98,7 @@
                 <constraint firstItem="LUs-EU-YeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="twF-zc-57B"/>
                 <constraint firstItem="8dj-vE-fHh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="wAX-G5-EQe"/>
             </constraints>
-            <point key="canvasLocation" x="-614" y="-647"/>
+            <point key="canvasLocation" x="-751" y="-720"/>
         </view>
     </objects>
     <resources>
@@ -106,7 +106,7 @@
         <image name="about_desc" width="128" height="10"/>
         <image name="homeBg" width="320" height="480"/>
         <image name="home_feed_shadow" width="144" height="90"/>
-        <image name="woziij" width="960" height="1280"/>
+        <image name="woziji.jpeg" width="960" height="1280"/>
         <image name="yinfu" width="31" height="35"/>
     </resources>
 </document>

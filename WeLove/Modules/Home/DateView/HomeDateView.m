@@ -6,10 +6,10 @@
 //  Copyright © 2016年 qianmo. All rights reserved.
 //
 
-#import "HomeWeatherView.h"
+#import "HomeDateView.h"
 #import "LunarSolarConverter.h"
 
-@interface HomeWeatherView ()
+@interface HomeDateView ()
 //背景图片
 @property(nonatomic,strong)UIImageView *bgView;
 //日期
@@ -18,7 +18,7 @@
 @property(nonatomic,strong)UILabel *lunarDateLabel;
 @end
 
-@implementation HomeWeatherView
+@implementation HomeDateView
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
