@@ -61,8 +61,10 @@
 //百度地图key
 #define kBaiduMapKey @"L6Kv0BwUw7abheRGDYskVGKWoenl3qpy"
 //融云 key
-#define RONGCLOUD_AppKey @"8luwapkvuap3l"
-#define RONGCLOUD_Token @"Aviibb7Ousp5W/U0ikBWEj/ecnUASLKZpRVQp5BUS95X+Zc1Ve/BbLR+hZBFRc/tLJbomsVXNhxRoHSn+SAB3Gtqa4Dxw4V7cdBPoYDnmjc="
+#define RONGCLOUD_AppKey @"e0x9wycfed23q"
+#define RONGCLOUD_TokenY @"JG3tL/VpRU/h+mdxepDZA9O71edud+MM+6xXrbw4gbMSAPSlArTtw6akhltL7d5rvB4QLcs6E+7hWhhM94p5kg==" // 宇哥
+
+#define RONGCLOUD_TokenW @"JfukmMOGpPxyOrKMF0r8ZDXm6C475QYWljt7S8FHv/uyf0pKKHN6sQqpua7kQ9YFUiLc2x69VHIjBDGefoBmwSoFVDVKUg6g" // 小v
 
 /*----------------------------本地持久化------------------------------*/
 //Cookie

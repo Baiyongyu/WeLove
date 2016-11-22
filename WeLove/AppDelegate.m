@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LoveViewController.h"
+#import "WMVideoMessage.h"
 typedef void (^RootContextSave)(void);
 
 @interface AppDelegate ()
@@ -17,6 +18,20 @@ typedef void (^RootContextSave)(void);
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 初始化融云SDK
+    [self initRongClould];
+
+    
+#ifdef __IPHONE_8_0
+    // 在 iOS 8 下注册苹果推送，申请推送权限。
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+#else
+    // 注册苹果推送，申请推送权限。
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+#endif
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -26,9 +41,43 @@ typedef void (^RootContextSave)(void);
     self.nav = [[NavigationController alloc] initWithRootViewController:self.tabBarController];
     self.nav.navigationBar.hidden = YES;
     self.window.rootViewController = self.nav;
-    
+
     return YES;
 }
+
+- (void)initRongClould {
+    [[RCIM sharedRCIM] initWithAppKey:RONGCLOUD_AppKey];
+    
+    self.friendsArray = [[NSMutableArray alloc]init];
+    self.groupsArray = [[NSMutableArray alloc]init];
+    //设置用户信息提供者为 [RCDataManager shareManager]
+    [RCIM sharedRCIM].userInfoDataSource = [RCDataManager shareManager];
+    //设置群组信息提供者为 [RCDataManager shareManager]
+    [RCIM sharedRCIM].groupInfoDataSource = [RCDataManager shareManager];
+    [RCIM sharedRCIM].enableMessageAttachUserInfo = YES;
+    [[RCIM sharedRCIM] registerMessageType:WMVideoMessage.class];
+}
+
+#ifdef __IPHONE_8_0
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    // Register to receive notifications.
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler {
+    // Handle the actions.
+    if ([identifier isEqualToString:@"declineAction"]){
+    }
+    else if ([identifier isEqualToString:@"answerAction"]){
+    }
+}
+#endif
+// 获取苹果推送权限成功。
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // 设置 deviceToken。
+}
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -40,11 +89,14 @@ typedef void (^RootContextSave)(void);
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSInteger ToatalunreadMsgCount = (NSInteger)[[RCIMClient sharedRCIMClient] getUnreadCount:@[@(ConversationType_PRIVATE),@(ConversationType_DISCUSSION),@(ConversationType_GROUP),@(ConversationType_CHATROOM)]];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = ToatalunreadMsgCount;
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 
@@ -57,6 +109,10 @@ typedef void (^RootContextSave)(void);
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
++ (AppDelegate* )shareAppDelegate {
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
 #pragma mark - Core Data stack

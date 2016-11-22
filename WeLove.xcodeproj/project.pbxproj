@@ -19,18 +19,26 @@
 		F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA261DDAD73600800E43 /* LineMonthModel.m */; };
 		F35ADA311DDAD82F00800E43 /* DayTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA2C1DDAD82F00800E43 /* DayTimeCell.m */; };
 		F35ADA321DDAD82F00800E43 /* DayTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35ADA2D1DDAD82F00800E43 /* DayTimeCell.xib */; };
+		F371A6AC1DE3E98200A70A77 /* PPDragDropBadgeView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F371A6A41DE3E98200A70A77 /* PPDragDropBadgeView.bundle */; };
+		F371A6AD1DE3E98200A70A77 /* PPDragDropBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6A61DE3E98200A70A77 /* PPDragDropBadgeView.m */; };
+		F371A6AE1DE3E98200A70A77 /* PRTween.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6A91DE3E98200A70A77 /* PRTween.m */; };
+		F371A6AF1DE3E98200A70A77 /* PRTweenTimingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6AB1DE3E98200A70A77 /* PRTweenTimingFunctions.m */; };
+		F371A6BA1DE410F900A70A77 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6B91DE410F900A70A77 /* UIAlertController+Blocks.m */; };
+		F371A6D01DE4388400A70A77 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6C01DE4388400A70A77 /* ChatListViewController.m */; };
+		F371A6D11DE4388400A70A77 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6C21DE4388400A70A77 /* FriendCell.m */; };
+		F371A6D21DE4388400A70A77 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F371A6C31DE4388400A70A77 /* FriendCell.xib */; };
+		F371A6D31DE4388400A70A77 /* RCCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6C51DE4388400A70A77 /* RCCustomCell.m */; };
+		F371A6D41DE4388400A70A77 /* RCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6C71DE4388400A70A77 /* RCDataManager.m */; };
+		F371A6D51DE4388400A70A77 /* RCUserInfo+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6C91DE4388400A70A77 /* RCUserInfo+Addition.m */; };
+		F371A6D61DE4388400A70A77 /* WMConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6CB1DE4388400A70A77 /* WMConversationViewController.m */; };
+		F371A6D71DE4388400A70A77 /* WMVideoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6CD1DE4388400A70A77 /* WMVideoMessage.m */; };
+		F371A6D81DE4388400A70A77 /* WMVideoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6CF1DE4388400A70A77 /* WMVideoMessageCell.m */; };
+		F371A6E21DE43FF200A70A77 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6DE1DE43FF200A70A77 /* AudioStreamer.m */; };
+		F371A6E31DE43FF200A70A77 /* RotatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6E11DE43FF200A70A77 /* RotatingView.m */; };
 		F37E639C1DDD553B0061D6BC /* UploadPicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E639B1DDD553B0061D6BC /* UploadPicManager.m */; };
 		F37E63A01DDD58730061D6BC /* AnimaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E639F1DDD58730061D6BC /* AnimaViewController.m */; };
 		F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */; };
 		F37E63B81DDD61040061D6BC /* MemoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */; };
-		F37E63B91DDD61040061D6BC /* AudioPlayerController+methods.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63A71DDD61040061D6BC /* AudioPlayerController+methods.m */; };
-		F37E63BA1DDD61040061D6BC /* AudioPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63A91DDD61040061D6BC /* AudioPlayerController.m */; };
-		F37E63BB1DDD61040061D6BC /* AudioPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37E63AA1DDD61040061D6BC /* AudioPlayerController.xib */; };
-		F37E63BC1DDD61040061D6BC /* MusicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63AC1DDD61040061D6BC /* MusicListViewController.m */; };
-		F37E63BD1DDD61040061D6BC /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63AE1DDD61040061D6BC /* MusicModel.m */; };
-		F37E63BE1DDD61040061D6BC /* musicPaper.json in Resources */ = {isa = PBXBuildFile; fileRef = F37E63AF1DDD61040061D6BC /* musicPaper.json */; };
-		F37E63BF1DDD61040061D6BC /* MusicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63B11DDD61040061D6BC /* MusicTableViewCell.m */; };
-		F37E63C01DDD61040061D6BC /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37E63B21DDD61040061D6BC /* MusicTableViewCell.xib */; };
 		F37E63C11DDD61040061D6BC /* WishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63B61DDD61040061D6BC /* WishViewController.m */; };
 		F37E63D71DDD72B40061D6BC /* 10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63CC1DDD72B40061D6BC /* 10.jpeg */; };
 		F37E63D81DDD72B40061D6BC /* 5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63CD1DDD72B40061D6BC /* 5.jpeg */; };
@@ -48,8 +56,6 @@
 		F37E63F31DDD94C10061D6BC /* DragCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63EB1DDD94C10061D6BC /* DragCardView.m */; };
 		F37E63F41DDD94C10061D6BC /* ListPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63ED1DDD94C10061D6BC /* ListPhotoViewController.m */; };
 		F37E63F61DDD94C10061D6BC /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63F11DDD94C10061D6BC /* PhotoAlbumViewController.m */; };
-		F3A5C45F1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3A5C45E1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 */; };
-		F3A5C4631DDBFEFE007E933C /* RotatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C4621DDBFEFE007E933C /* RotatingView.m */; };
 		F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C47B1DDC27C0007E933C /* NSString+time.m */; };
 		F3A5C47F1DDC27C0007E933C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C47D1DDC27C0007E933C /* UIImage+ImageEffects.m */; };
 		F3FAE2D91DD9EAFC00CBB034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2D81DD9EAFC00CBB034 /* main.m */; };
@@ -106,7 +112,6 @@
 		F3FAE71D1DD9ED2A00CBB034 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5CF1DD9ED2A00CBB034 /* TZPhotoPreviewController.m */; };
 		F3FAE71E1DD9ED2A00CBB034 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5D11DD9ED2A00CBB034 /* TZVideoPlayerController.m */; };
 		F3FAE71F1DD9ED2A00CBB034 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5D31DD9ED2A00CBB034 /* UIView+Layout.m */; };
-		F3FAE7201DD9ED2A00CBB034 /* WZFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5D61DD9ED2A00CBB034 /* WZFlashButton.m */; };
 		F3FAE7231DD9ED2A00CBB034 /* UserInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5E01DD9ED2A00CBB034 /* UserInfo+CoreDataProperties.m */; };
 		F3FAE7241DD9ED2A00CBB034 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5E21DD9ED2A00CBB034 /* UserInfo.m */; };
 		F3FAE7251DD9ED2A00CBB034 /* VideoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5E41DD9ED2A00CBB034 /* VideoCache.m */; };
@@ -238,6 +243,36 @@
 		F35ADA2B1DDAD82F00800E43 /* DayTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTimeCell.h; sourceTree = "<group>"; };
 		F35ADA2C1DDAD82F00800E43 /* DayTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTimeCell.m; sourceTree = "<group>"; };
 		F35ADA2D1DDAD82F00800E43 /* DayTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayTimeCell.xib; sourceTree = "<group>"; };
+		F371A6A41DE3E98200A70A77 /* PPDragDropBadgeView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PPDragDropBadgeView.bundle; sourceTree = "<group>"; };
+		F371A6A51DE3E98200A70A77 /* PPDragDropBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDragDropBadgeView.h; sourceTree = "<group>"; };
+		F371A6A61DE3E98200A70A77 /* PPDragDropBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDragDropBadgeView.m; sourceTree = "<group>"; };
+		F371A6A81DE3E98200A70A77 /* PRTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTween.h; sourceTree = "<group>"; };
+		F371A6A91DE3E98200A70A77 /* PRTween.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRTween.m; sourceTree = "<group>"; };
+		F371A6AA1DE3E98200A70A77 /* PRTweenTimingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRTweenTimingFunctions.h; sourceTree = "<group>"; };
+		F371A6AB1DE3E98200A70A77 /* PRTweenTimingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRTweenTimingFunctions.m; sourceTree = "<group>"; };
+		F371A6B81DE410F900A70A77 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		F371A6B91DE410F900A70A77 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
+		F371A6BF1DE4388400A70A77 /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		F371A6C01DE4388400A70A77 /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
+		F371A6C11DE4388400A70A77 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		F371A6C21DE4388400A70A77 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		F371A6C31DE4388400A70A77 /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		F371A6C41DE4388400A70A77 /* RCCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCustomCell.h; sourceTree = "<group>"; };
+		F371A6C51DE4388400A70A77 /* RCCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCustomCell.m; sourceTree = "<group>"; };
+		F371A6C61DE4388400A70A77 /* RCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDataManager.h; sourceTree = "<group>"; };
+		F371A6C71DE4388400A70A77 /* RCDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDataManager.m; sourceTree = "<group>"; };
+		F371A6C81DE4388400A70A77 /* RCUserInfo+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCUserInfo+Addition.h"; sourceTree = "<group>"; };
+		F371A6C91DE4388400A70A77 /* RCUserInfo+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCUserInfo+Addition.m"; sourceTree = "<group>"; };
+		F371A6CA1DE4388400A70A77 /* WMConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMConversationViewController.h; sourceTree = "<group>"; };
+		F371A6CB1DE4388400A70A77 /* WMConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMConversationViewController.m; sourceTree = "<group>"; };
+		F371A6CC1DE4388400A70A77 /* WMVideoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMVideoMessage.h; sourceTree = "<group>"; };
+		F371A6CD1DE4388400A70A77 /* WMVideoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMVideoMessage.m; sourceTree = "<group>"; };
+		F371A6CE1DE4388400A70A77 /* WMVideoMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMVideoMessageCell.h; sourceTree = "<group>"; };
+		F371A6CF1DE4388400A70A77 /* WMVideoMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMVideoMessageCell.m; sourceTree = "<group>"; };
+		F371A6DD1DE43FF200A70A77 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		F371A6DE1DE43FF200A70A77 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		F371A6E01DE43FF200A70A77 /* RotatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingView.h; sourceTree = "<group>"; };
+		F371A6E11DE43FF200A70A77 /* RotatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingView.m; sourceTree = "<group>"; };
 		F37E639A1DDD553B0061D6BC /* UploadPicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadPicManager.h; sourceTree = "<group>"; };
 		F37E639B1DDD553B0061D6BC /* UploadPicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadPicManager.m; sourceTree = "<group>"; };
 		F37E639E1DDD58730061D6BC /* AnimaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimaViewController.h; sourceTree = "<group>"; };
@@ -245,19 +280,6 @@
 		F37E63A21DDD61040061D6BC /* MemoryDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDayViewController.h; sourceTree = "<group>"; };
 		F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryDayViewController.m; sourceTree = "<group>"; };
 		F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDayViewController.xib; sourceTree = "<group>"; };
-		F37E63A61DDD61040061D6BC /* AudioPlayerController+methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioPlayerController+methods.h"; sourceTree = "<group>"; };
-		F37E63A71DDD61040061D6BC /* AudioPlayerController+methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AudioPlayerController+methods.m"; sourceTree = "<group>"; };
-		F37E63A81DDD61040061D6BC /* AudioPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerController.h; sourceTree = "<group>"; };
-		F37E63A91DDD61040061D6BC /* AudioPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerController.m; sourceTree = "<group>"; };
-		F37E63AA1DDD61040061D6BC /* AudioPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioPlayerController.xib; sourceTree = "<group>"; };
-		F37E63AB1DDD61040061D6BC /* MusicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListViewController.h; sourceTree = "<group>"; };
-		F37E63AC1DDD61040061D6BC /* MusicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListViewController.m; sourceTree = "<group>"; };
-		F37E63AD1DDD61040061D6BC /* MusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModel.h; sourceTree = "<group>"; };
-		F37E63AE1DDD61040061D6BC /* MusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
-		F37E63AF1DDD61040061D6BC /* musicPaper.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = musicPaper.json; sourceTree = "<group>"; };
-		F37E63B01DDD61040061D6BC /* MusicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTableViewCell.h; sourceTree = "<group>"; };
-		F37E63B11DDD61040061D6BC /* MusicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTableViewCell.m; sourceTree = "<group>"; };
-		F37E63B21DDD61040061D6BC /* MusicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		F37E63B51DDD61040061D6BC /* WishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishViewController.h; sourceTree = "<group>"; };
 		F37E63B61DDD61040061D6BC /* WishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishViewController.m; sourceTree = "<group>"; };
 		F37E63CC1DDD72B40061D6BC /* 10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpeg; sourceTree = "<group>"; };
@@ -282,9 +304,6 @@
 		F37E63ED1DDD94C10061D6BC /* ListPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPhotoViewController.m; sourceTree = "<group>"; };
 		F37E63F01DDD94C10061D6BC /* PhotoAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumViewController.h; sourceTree = "<group>"; };
 		F37E63F11DDD94C10061D6BC /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
-		F3A5C45E1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "齐晨-咱们结婚吧.mp3"; sourceTree = "<group>"; };
-		F3A5C4611DDBFEFE007E933C /* RotatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingView.h; sourceTree = "<group>"; };
-		F3A5C4621DDBFEFE007E933C /* RotatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingView.m; sourceTree = "<group>"; };
 		F3A5C47A1DDC27C0007E933C /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
 		F3A5C47B1DDC27C0007E933C /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
 		F3A5C47C1DDC27C0007E933C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -392,8 +411,6 @@
 		F3FAE5D11DD9ED2A00CBB034 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
 		F3FAE5D21DD9ED2A00CBB034 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		F3FAE5D31DD9ED2A00CBB034 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-		F3FAE5D51DD9ED2A00CBB034 /* WZFlashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZFlashButton.h; sourceTree = "<group>"; };
-		F3FAE5D61DD9ED2A00CBB034 /* WZFlashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZFlashButton.m; sourceTree = "<group>"; };
 		F3FAE5DD1DD9ED2A00CBB034 /* CoreData_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData_Header.h; sourceTree = "<group>"; };
 		F3FAE5DF1DD9ED2A00CBB034 /* UserInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
 		F3FAE5E01DD9ED2A00CBB034 /* UserInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
@@ -638,6 +655,70 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F371A6A31DE3E98200A70A77 /* PPDragDropBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				F371A6A41DE3E98200A70A77 /* PPDragDropBadgeView.bundle */,
+				F371A6A51DE3E98200A70A77 /* PPDragDropBadgeView.h */,
+				F371A6A61DE3E98200A70A77 /* PPDragDropBadgeView.m */,
+				F371A6A71DE3E98200A70A77 /* PRTween */,
+			);
+			path = PPDragDropBadgeView;
+			sourceTree = "<group>";
+		};
+		F371A6A71DE3E98200A70A77 /* PRTween */ = {
+			isa = PBXGroup;
+			children = (
+				F371A6A81DE3E98200A70A77 /* PRTween.h */,
+				F371A6A91DE3E98200A70A77 /* PRTween.m */,
+				F371A6AA1DE3E98200A70A77 /* PRTweenTimingFunctions.h */,
+				F371A6AB1DE3E98200A70A77 /* PRTweenTimingFunctions.m */,
+			);
+			path = PRTween;
+			sourceTree = "<group>";
+		};
+		F371A6BE1DE4388400A70A77 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				F371A6BF1DE4388400A70A77 /* ChatListViewController.h */,
+				F371A6C01DE4388400A70A77 /* ChatListViewController.m */,
+				F371A6C11DE4388400A70A77 /* FriendCell.h */,
+				F371A6C21DE4388400A70A77 /* FriendCell.m */,
+				F371A6C31DE4388400A70A77 /* FriendCell.xib */,
+				F371A6C41DE4388400A70A77 /* RCCustomCell.h */,
+				F371A6C51DE4388400A70A77 /* RCCustomCell.m */,
+				F371A6C61DE4388400A70A77 /* RCDataManager.h */,
+				F371A6C71DE4388400A70A77 /* RCDataManager.m */,
+				F371A6C81DE4388400A70A77 /* RCUserInfo+Addition.h */,
+				F371A6C91DE4388400A70A77 /* RCUserInfo+Addition.m */,
+				F371A6CA1DE4388400A70A77 /* WMConversationViewController.h */,
+				F371A6CB1DE4388400A70A77 /* WMConversationViewController.m */,
+				F371A6CC1DE4388400A70A77 /* WMVideoMessage.h */,
+				F371A6CD1DE4388400A70A77 /* WMVideoMessage.m */,
+				F371A6CE1DE4388400A70A77 /* WMVideoMessageCell.h */,
+				F371A6CF1DE4388400A70A77 /* WMVideoMessageCell.m */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		F371A6DC1DE43FF200A70A77 /* AudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				F371A6DD1DE43FF200A70A77 /* AudioStreamer.h */,
+				F371A6DE1DE43FF200A70A77 /* AudioStreamer.m */,
+			);
+			path = AudioStreamer;
+			sourceTree = "<group>";
+		};
+		F371A6DF1DE43FF200A70A77 /* XunzhaunView */ = {
+			isa = PBXGroup;
+			children = (
+				F371A6E01DE43FF200A70A77 /* RotatingView.h */,
+				F371A6E11DE43FF200A70A77 /* RotatingView.m */,
+			);
+			path = XunzhaunView;
+			sourceTree = "<group>";
+		};
 		F37E639D1DDD58730061D6BC /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,26 +736,6 @@
 				F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */,
 			);
 			path = MemoryDay;
-			sourceTree = "<group>";
-		};
-		F37E63A51DDD61040061D6BC /* MusicLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				F37E63AB1DDD61040061D6BC /* MusicListViewController.h */,
-				F37E63AC1DDD61040061D6BC /* MusicListViewController.m */,
-				F37E63B01DDD61040061D6BC /* MusicTableViewCell.h */,
-				F37E63B11DDD61040061D6BC /* MusicTableViewCell.m */,
-				F37E63B21DDD61040061D6BC /* MusicTableViewCell.xib */,
-				F37E63A61DDD61040061D6BC /* AudioPlayerController+methods.h */,
-				F37E63A71DDD61040061D6BC /* AudioPlayerController+methods.m */,
-				F37E63A81DDD61040061D6BC /* AudioPlayerController.h */,
-				F37E63A91DDD61040061D6BC /* AudioPlayerController.m */,
-				F37E63AA1DDD61040061D6BC /* AudioPlayerController.xib */,
-				F37E63AD1DDD61040061D6BC /* MusicModel.h */,
-				F37E63AE1DDD61040061D6BC /* MusicModel.m */,
-				F37E63AF1DDD61040061D6BC /* musicPaper.json */,
-			);
-			path = MusicLibrary;
 			sourceTree = "<group>";
 		};
 		F37E63B31DDD61040061D6BC /* PhotosAlbum */ = {
@@ -731,15 +792,6 @@
 			path = PhotoType;
 			sourceTree = "<group>";
 		};
-		F3A5C4601DDBFEEE007E933C /* XunzhaunView */ = {
-			isa = PBXGroup;
-			children = (
-				F3A5C4611DDBFEFE007E933C /* RotatingView.h */,
-				F3A5C4621DDBFEFE007E933C /* RotatingView.m */,
-			);
-			name = XunzhaunView;
-			sourceTree = "<group>";
-		};
 		F3FAE2CB1DD9EAFC00CBB034 = {
 			isa = PBXGroup;
 			children = (
@@ -772,7 +824,6 @@
 				F3FAE6861DD9ED2A00CBB034 /* Resourse */,
 				F3FAE6DF1DD9ED2A00CBB034 /* Utils */,
 				F3FAE6851DD9ED2A00CBB034 /* PrefixHeader.pch */,
-				F3A5C45E1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 */,
 				F3FAE5571DD9ED2900CBB034 /* 3DBallPlist.plist */,
 				F3FAE5E71DD9ED2A00CBB034 /* HomeDatasList.plist */,
 				F3FAE7C41DD9F5DE00CBB034 /* WeLove.xcdatamodeld */,
@@ -796,6 +847,8 @@
 		F3FAE5581DD9ED2900CBB034 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F371A6B81DE410F900A70A77 /* UIAlertController+Blocks.h */,
+				F371A6B91DE410F900A70A77 /* UIAlertController+Blocks.m */,
 				F3A5C47A1DDC27C0007E933C /* NSString+time.h */,
 				F3A5C47B1DDC27C0007E933C /* NSString+time.m */,
 				F3A5C47C1DDC27C0007E933C /* UIImage+ImageEffects.h */,
@@ -825,7 +878,8 @@
 		F3FAE56B1DD9ED2A00CBB034 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F3A5C4601DDBFEEE007E933C /* XunzhaunView */,
+				F371A6DC1DE43FF200A70A77 /* AudioStreamer */,
+				F371A6DF1DE43FF200A70A77 /* XunzhaunView */,
 				F3FAE56C1DD9ED2A00CBB034 /* Animation */,
 				F3FAE5771DD9ED2A00CBB034 /* ANTTextField */,
 				F3FAE57D1DD9ED2A00CBB034 /* DanMu */,
@@ -838,7 +892,6 @@
 				F3FAE5B61DD9ED2A00CBB034 /* ToTopButton */,
 				F3FAE5B91DD9ED2A00CBB034 /* TYWaveProgressView */,
 				F3FAE5BE1DD9ED2A00CBB034 /* TZImagePickerController */,
-				F3FAE5D41DD9ED2A00CBB034 /* 自定义按钮 */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1003,15 +1056,6 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
-		F3FAE5D41DD9ED2A00CBB034 /* 自定义按钮 */ = {
-			isa = PBXGroup;
-			children = (
-				F3FAE5D51DD9ED2A00CBB034 /* WZFlashButton.h */,
-				F3FAE5D61DD9ED2A00CBB034 /* WZFlashButton.m */,
-			);
-			path = "自定义按钮";
-			sourceTree = "<group>";
-		};
 		F3FAE5DC1DD9ED2A00CBB034 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1097,7 +1141,7 @@
 				F37E63A11DDD61040061D6BC /* MemoryDay */,
 				F37E63B41DDD61040061D6BC /* WishBall */,
 				F37E63B31DDD61040061D6BC /* PhotosAlbum */,
-				F37E63A51DDD61040061D6BC /* MusicLibrary */,
+				F371A6BE1DE4388400A70A77 /* ChatList */,
 			);
 			path = ButtonGroups;
 			sourceTree = "<group>";
@@ -1214,6 +1258,7 @@
 		F3FAE6861DD9ED2A00CBB034 /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
+				F371A6A31DE3E98200A70A77 /* PPDragDropBadgeView */,
 				F3FAE6871DD9ED2A00CBB034 /* CodeScan.bundle */,
 				F3FAE6881DD9ED2A00CBB034 /* fonts */,
 				F3FAE68D1DD9ED2A00CBB034 /* Photos */,
@@ -1538,7 +1583,6 @@
 				F37E63DE1DDD72B40061D6BC /* 7.jpeg in Resources */,
 				F3FAE7B01DD9ED2A00CBB034 /* leaflet.js in Resources */,
 				F3FAE77F1DD9ED2A00CBB034 /* WechatIMG13.jpeg in Resources */,
-				F37E63C01DDD61040061D6BC /* MusicTableViewCell.xib in Resources */,
 				F3FAE78E1DD9ED2A00CBB034 /* WechatIMG27.jpeg in Resources */,
 				F3FAE7961DD9ED2A00CBB034 /* animates.css in Resources */,
 				F3FAE7861DD9ED2A00CBB034 /* WechatIMG2.jpeg in Resources */,
@@ -1574,6 +1618,7 @@
 				F3FAE7B91DD9ED2A00CBB034 /* sensorWeather.html in Resources */,
 				F3FAE7AA1DD9ED2A00CBB034 /* sprites.gif in Resources */,
 				F3FAE7A81DD9ED2A00CBB034 /* line.png in Resources */,
+				F371A6D21DE4388400A70A77 /* FriendCell.xib in Resources */,
 				F3FAE7851DD9ED2A00CBB034 /* WechatIMG19.jpeg in Resources */,
 				F3FAE7B51DD9ED2A00CBB034 /* vue.min.js in Resources */,
 				F3FAE7A61DD9ED2A00CBB034 /* bg.jpg in Resources */,
@@ -1582,9 +1627,6 @@
 				F3FAE6E91DD9ED2A00CBB034 /* 3DBallPlist.plist in Resources */,
 				F3FAE70E1DD9ED2A00CBB034 /* sr_refresh.png in Resources */,
 				F37E63DB1DDD72B40061D6BC /* 6.jpeg in Resources */,
-				F37E63BE1DDD61040061D6BC /* musicPaper.json in Resources */,
-				F3A5C45F1DDBF74F007E933C /* 齐晨-咱们结婚吧.mp3 in Resources */,
-				F37E63BB1DDD61040061D6BC /* AudioPlayerController.xib in Resources */,
 				F3FAE77A1DD9ED2A00CBB034 /* youyuan.ttf in Resources */,
 				F3FAE7191DD9ED2A00CBB034 /* TZImagePickerController.bundle in Resources */,
 				F3FAE79B1DD9ED2A00CBB034 /* normalize.min.css in Resources */,
@@ -1603,6 +1645,7 @@
 				F3FAE77D1DD9ED2A00CBB034 /* WechatIMG11.jpeg in Resources */,
 				F3FAE79F1DD9ED2A00CBB034 /* farm activity.json in Resources */,
 				F3FAE77E1DD9ED2A00CBB034 /* WechatIMG12.jpeg in Resources */,
+				F371A6AC1DE3E98200A70A77 /* PPDragDropBadgeView.bundle in Resources */,
 				F3FAE7A91DD9ED2A00CBB034 /* arrow.png in Resources */,
 				F3FAE2E21DD9EAFC00CBB034 /* Main.storyboard in Resources */,
 				F3FAE7271DD9ED2A00CBB034 /* HomeDatasList.plist in Resources */,
@@ -1669,16 +1712,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F371A6BA1DE410F900A70A77 /* UIAlertController+Blocks.m in Sources */,
 				F3FAE7311DD9ED2A00CBB034 /* BaseViewController.m in Sources */,
 				F3FAE7031DD9ED2A00CBB034 /* ZYQAssetPickerController.m in Sources */,
 				F3FAE7581DD9ED2A00CBB034 /* MineViewController.m in Sources */,
-				F37E63BF1DDD61040061D6BC /* MusicTableViewCell.m in Sources */,
 				F3FAE7261DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m in Sources */,
 				F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */,
 				F3FAE70B1DD9ED2A00CBB034 /* QMPictureView.m in Sources */,
 				F3FAE6F81DD9ED2A00CBB034 /* ANTTextField.m in Sources */,
 				F35ADA311DDAD82F00800E43 /* DayTimeCell.m in Sources */,
 				F3FAE6FD1DD9ED2A00CBB034 /* FFMemberCenterHeadView.m in Sources */,
+				F371A6AE1DE3E98200A70A77 /* PRTween.m in Sources */,
 				F3FAE7051DD9ED2A00CBB034 /* QMButton.m in Sources */,
 				F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */,
 				F3A5C47F1DDC27C0007E933C /* UIImage+ImageEffects.m in Sources */,
@@ -1687,6 +1731,7 @@
 				F3FAE7141DD9ED2A00CBB034 /* TYWaveProgressView.m in Sources */,
 				F3FAE7BD1DD9ED2A00CBB034 /* CacheManager.m in Sources */,
 				F3FAE6F51DD9ED2A00CBB034 /* ComDrawView.m in Sources */,
+				F371A6D11DE4388400A70A77 /* FriendCell.m in Sources */,
 				F37E63F31DDD94C10061D6BC /* DragCardView.m in Sources */,
 				F3FAE7661DD9ED2A00CBB034 /* ANZResponse.m in Sources */,
 				F3FAE73D1DD9ED2A00CBB034 /* ANTLoginViewController.m in Sources */,
@@ -1695,30 +1740,35 @@
 				F3FAE71B1DD9ED2A00CBB034 /* TZPhotoPickerController.m in Sources */,
 				F37E63F41DDD94C10061D6BC /* ListPhotoViewController.m in Sources */,
 				F3FAE71D1DD9ED2A00CBB034 /* TZPhotoPreviewController.m in Sources */,
+				F371A6D71DE4388400A70A77 /* WMVideoMessage.m in Sources */,
 				F3FAE7291DD9ED2A00CBB034 /* HappyTimeModel.m in Sources */,
 				F35ADA281DDAD73600800E43 /* LineDisplayModel.m in Sources */,
 				F3FAE71A1DD9ED2A00CBB034 /* TZImagePickerController.m in Sources */,
-				F37E63BC1DDD61040061D6BC /* MusicListViewController.m in Sources */,
 				F3FAE7BC1DD9ED2A00CBB034 /* ANZKeyChain.m in Sources */,
 				F3FAE7151DD9ED2A00CBB034 /* NSBundle+TZImagePicker.m in Sources */,
 				F3FAE71F1DD9ED2A00CBB034 /* UIView+Layout.m in Sources */,
 				F3FAE6EB1DD9ED2A00CBB034 /* NSObject+PerformBlockAfterDelay.m in Sources */,
-				F37E63B91DDD61040061D6BC /* AudioPlayerController+methods.m in Sources */,
 				F3FAE7251DD9ED2A00CBB034 /* VideoCache.m in Sources */,
 				F3FAE6FE1DD9ED2A00CBB034 /* FFNumberScrollView.m in Sources */,
-				F37E63BD1DDD61040061D6BC /* MusicModel.m in Sources */,
 				F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */,
+				F371A6AF1DE3E98200A70A77 /* PRTweenTimingFunctions.m in Sources */,
 				F3FAE7641DD9ED2A00CBB034 /* ANZAPIProxy.m in Sources */,
 				F3FAE7131DD9ED2A00CBB034 /* TYWaterWaveView.m in Sources */,
 				F3FAE6F11DD9ED2A00CBB034 /* UIView+UIViewFrame.m in Sources */,
 				F3FAE70A1DD9ED2A00CBB034 /* QMPictureProgressView.m in Sources */,
+				F371A6D01DE4388400A70A77 /* ChatListViewController.m in Sources */,
 				F3FAE6EF1DD9ED2A00CBB034 /* UIImageView+FullScreen.m in Sources */,
 				F3FAE71E1DD9ED2A00CBB034 /* TZVideoPlayerController.m in Sources */,
+				F371A6D41DE4388400A70A77 /* RCDataManager.m in Sources */,
+				F371A6D81DE4388400A70A77 /* WMVideoMessageCell.m in Sources */,
 				F3FAE7071DD9ED2A00CBB034 /* PictureFullScreenBrowser.m in Sources */,
+				F371A6E21DE43FF200A70A77 /* AudioStreamer.m in Sources */,
 				F3FAE7231DD9ED2A00CBB034 /* UserInfo+CoreDataProperties.m in Sources */,
 				F35ADA271DDAD73600800E43 /* LineDayModel.m in Sources */,
 				F3FAE7751DD9ED2A00CBB034 /* BaseAPIManager.m in Sources */,
+				F371A6D61DE4388400A70A77 /* WMConversationViewController.m in Sources */,
 				F35ADA081DDAB20D00800E43 /* HeadImageView.m in Sources */,
+				F371A6AD1DE3E98200A70A77 /* PPDragDropBadgeView.m in Sources */,
 				F3FAE6FF1DD9ED2A00CBB034 /* FFRectangleProgressView.m in Sources */,
 				F3FAE76D1DD9ED2A00CBB034 /* LogoutManager.m in Sources */,
 				F35AD9E51DDA9F3F00800E43 /* TimeViewController.m in Sources */,
@@ -1741,6 +1791,7 @@
 				F3FAE6FB1DD9ED2A00CBB034 /* FFBarrageView.m in Sources */,
 				F3FAE7731DD9ED2A00CBB034 /* WeatherSensorManager.m in Sources */,
 				F35ADA091DDAB20D00800E43 /* HeadLineView.m in Sources */,
+				F371A6D51DE4388400A70A77 /* RCUserInfo+Addition.m in Sources */,
 				F3FAE7011DD9ED2A00CBB034 /* UIView+Extension.m in Sources */,
 				F3FAE6F41DD9ED2A00CBB034 /* ComAnimationLayer.m in Sources */,
 				F3FAE7091DD9ED2A00CBB034 /* QMPictureBrowser.m in Sources */,
@@ -1750,15 +1801,12 @@
 				F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */,
 				F3FAE72F1DD9ED2A00CBB034 /* WeatherModel.m in Sources */,
 				F3FAE70C1DD9ED2A00CBB034 /* QMShortVideoController.m in Sources */,
-				F3A5C4631DDBFEFE007E933C /* RotatingView.m in Sources */,
 				F3FAE7121DD9ED2A00CBB034 /* MTToViewTopButton.m in Sources */,
 				F3FAE7741DD9ED2A00CBB034 /* UserManager.m in Sources */,
 				F37E63F61DDD94C10061D6BC /* PhotoAlbumViewController.m in Sources */,
 				F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */,
-				F37E63BA1DDD61040061D6BC /* AudioPlayerController.m in Sources */,
 				F3FAE7111DD9ED2A00CBB034 /* SRSlimeView.m in Sources */,
 				F3FAE6FC1DD9ED2A00CBB034 /* FFLntegralView.m in Sources */,
-				F3FAE7201DD9ED2A00CBB034 /* WZFlashButton.m in Sources */,
 				F3FAE7101DD9ED2A00CBB034 /* SRRefreshView.m in Sources */,
 				F37E63E51DDD86FD0061D6BC /* PhotosTypeViewController.m in Sources */,
 				F3FAE71C1DD9ED2A00CBB034 /* TZPhotoPreviewCell.m in Sources */,
@@ -1766,6 +1814,7 @@
 				F37E63A01DDD58730061D6BC /* AnimaViewController.m in Sources */,
 				F3FAE7161DD9ED2A00CBB034 /* TZAssetCell.m in Sources */,
 				F3FAE7BE1DD9ED2A00CBB034 /* LunarSolarConverter.m in Sources */,
+				F371A6D31DE4388400A70A77 /* RCCustomCell.m in Sources */,
 				F3FAE6FA1DD9ED2A00CBB034 /* FFBarrageManager.m in Sources */,
 				F37E639C1DDD553B0061D6BC /* UploadPicManager.m in Sources */,
 				F3FAE6F21DD9ED2A00CBB034 /* UIViewController+NavigationHandler.m in Sources */,
@@ -1773,6 +1822,7 @@
 				F3FAE7BF1DD9ED2A00CBB034 /* QMUtil.m in Sources */,
 				F3FAE7421DD9ED2A00CBB034 /* NavigationController.m in Sources */,
 				F3FAE7281DD9ED2A00CBB034 /* ComponentsModel.m in Sources */,
+				F371A6E31DE43FF200A70A77 /* RotatingView.m in Sources */,
 				F3FAE7171DD9ED2A00CBB034 /* TZAssetModel.m in Sources */,
 				F3FAE6EA1DD9ED2A00CBB034 /* MBProgressHUD+QM.m in Sources */,
 				F3FAE7681DD9ED2A00CBB034 /* WeatherManager.m in Sources */,
@@ -1898,6 +1948,7 @@
 				DEVELOPMENT_TEAM = KK59AKUJZC;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = WeLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianmo.WeLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1913,6 +1964,7 @@
 				DEVELOPMENT_TEAM = KK59AKUJZC;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = WeLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianmo.WeLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";

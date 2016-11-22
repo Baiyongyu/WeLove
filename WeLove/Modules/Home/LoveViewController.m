@@ -13,21 +13,19 @@
 #import "MemoryDayViewController.h" // 纪念日
 #import "WishViewController.h"      // 心愿
 #import "PhotosTypeViewController.h"// 相册集
-#import "MusicListViewController.h" // 音乐库
+#import "ChatListViewController.h"  // 聊天吧
 
 #import "PhotoAlbumViewController.h"  // 左右滑动模式
 #import "AlbumPhotosViewController.h" // 流式
 #import "ListPhotoViewController.h"   // 列表
 
-#import <AVFoundation/AVFoundation.h>
-#import <MediaPlayer/MediaPlayer.h>
+#import "AudioStreamer.h"   // 播放音乐
 
-
-@interface LoveViewController ()
+@interface LoveViewController () 
 {
     UIView *bgViewContainer;
     UIButton *_centerButton;
-    AVAudioPlayer *_audioPlayer;
+    AudioStreamer *streamer;
 }
 //天气
 @property(nonatomic,strong)HomeWeatherView *weatherView;
@@ -68,7 +66,7 @@ BOOL isPlay = YES;
     
     NSMutableArray *temp = [NSMutableArray new];
     
-    NSArray *titleArray = @[@"纪念日", @"心愿球", @"相册集", @"音乐库"];
+    NSArray *titleArray = @[@"纪念日", @"心愿球", @"相册集", @"聊天吧"];
     NSArray *imgArray = @[@"indexPageIconAnni_26x26_", @"indexPageIconWish_26x26_", @"indexPageIconClock_26x26_", @"indexPageIconPunch_26x26_"];
     for (int i = 0; i < count; i++) {
         _centerButton = [UIButton new];
@@ -139,23 +137,108 @@ BOOL isPlay = YES;
         [self.navigationController pushViewController:typeVC animated:YES];
     }
     else if (btn.tag == 4) {
-        MusicListViewController *musicVC = [[MusicListViewController alloc] init];
-        [kRootNavigation pushViewController:musicVC animated:YES];
+        
+        
+        [UIAlertController showActionSheetInViewController:self withTitle:@"选择登录账户" message:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@[@"宇哥",@"小v"] popoverPresentationControllerBlock:^(UIPopoverPresentationController * _Nonnull popover) {
+            
+        } tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+            if (buttonIndex == controller.firstOtherButtonIndex) {
+                NSString *token = RONGCLOUD_TokenY;
+                [[RCIM sharedRCIM] connectWithToken:token success:^(NSString *userId) {
+                    // 设置用户信息提供者,页面展现的用户头像及昵称都会从此代理取
+//                    [[RCIM sharedRCIM] setUserInfoDataSource:self];
+                    NSLog(@"Login successfully with userId: %@.", userId);
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        // 登录成功之后，跳转到主页面
+                        NSLog(@"登录成功");
+                        //                [MBProgressHUD showTip:@"登录成功"];
+                        ChatListViewController *chatVC = [[ChatListViewController alloc] init];
+                        [kRootNavigation pushViewController:chatVC animated:YES];
+                        
+                    });
+                } error:^(RCConnectErrorCode status) {
+                    NSLog(@"login error status: %ld.", (long)status);
+                } tokenIncorrect:^{
+                    NSLog(@"token 无效 ，请确保生成token 使用的appkey 和初始化时的appkey 一致");
+                }];
+            }else if (buttonIndex == controller.secondOtherButtonIndex) {
+                NSString *token = RONGCLOUD_TokenW;
+                [[RCIM sharedRCIM] connectWithToken:token success:^(NSString *userId) {
+                    // 设置用户信息提供者,页面展现的用户头像及昵称都会从此代理取
+//                    [[RCIM sharedRCIM] setUserInfoDataSource:self];
+                    NSLog(@"Login successfully with userId: %@.", userId);
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        // 登录成功之后，跳转到主页面
+                        NSLog(@"登录成功");
+                        //                [MBProgressHUD showTip:@"登录成功"];
+                        ChatListViewController *chatVC = [[ChatListViewController alloc] init];
+                        [kRootNavigation pushViewController:chatVC animated:YES];
+                        
+                    });
+                } error:^(RCConnectErrorCode status) {
+                    NSLog(@"login error status: %ld.", (long)status);
+                } tokenIncorrect:^{
+                    NSLog(@"token 无效 ，请确保生成token 使用的appkey 和初始化时的appkey 一致");
+                }];
+            }
+        }];
     }
 }
 
 #pragma mark - 点击播放音符
 - (void)animaAction:(UITapGestureRecognizer *)tap {
+    
+    
+    
     if (isPlay == YES) {
         // 音乐播放
-        [self MP3Player];
-        [_audioPlayer play];
+//        [self MP3Player];
+//        [_audioPlayer play];
+        if (!streamer) {
+            [self createStreamer];
+        }
+        [streamer start];
+        
         [self creatAnimation];
         isPlay = NO;
     } else {
-        [_audioPlayer pause];
+//        [_audioPlayer pause];
+        [streamer pause];
         [self animationStop];
         isPlay = YES;
+    }
+}
+
+- (void)createStreamer {
+    [self destroyStreamer];
+    
+    
+    NSURL *musicUrl = [NSURL URLWithString:@"http://cdn.y.baidu.com/746dd400ec21750107a8cfd227d999f0.mp3"];
+    NSString *str = musicUrl.absoluteString;
+    
+    NSString *escapedValue =
+    ( NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+                                                                           nil,
+                                                                           (CFStringRef)str,
+                                                                           NULL,
+                                                                           NULL,
+                                                                           kCFStringEncodingUTF8)) ;
+    ;
+    NSURL *url = [NSURL URLWithString:escapedValue];
+    streamer = [[AudioStreamer alloc] initWithURL:url];
+}
+
+- (void)destroyStreamer {
+    if (streamer) {
+        [[NSNotificationCenter defaultCenter]
+         removeObserver:self
+         name:ASStatusChangedNotification
+         object:streamer];
+        
+        [streamer stop];
+        streamer = nil;
     }
 }
 
@@ -177,71 +260,25 @@ BOOL isPlay = YES;
     self.animaImg.transform = CGAffineTransformIdentity;
 }
 
-#pragma mark - 音乐播放
-- (void)MP3Player {
-    //后台播放音频设置
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setActive:YES error:nil];
-    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    
-    //让app支持接受远程控制事件
-    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-    [self becomeFirstResponder];
-    
-    //播放背景音乐
-    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"齐晨-咱们结婚吧" ofType:@"mp3"];
-//    NSURL *url = [[NSURL alloc] initWithString:@"http://music.163.com/outchain/player?type=2&id=28029509&auto=1&height=66"];
-    NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
-    
-    // 创建播放器
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    [_audioPlayer prepareToPlay];
-    [_audioPlayer setVolume:1];
-    _audioPlayer.numberOfLoops = -1; //设置音乐播放次数  -1为一直循环
-//    [_audioPlayer play]; //播放
-    
-    [self setLockScreenNowPlayingInfo];
-}
+//- (void)getUserInfoWithUserId:(NSString *)userId completion:(void(^)(RCUserInfo* userInfo))completion {
+//    //此处为了演示写了一个用户信息
+//    if ([@"1" isEqual:userId]) {
+//        RCUserInfo *user = [[RCUserInfo alloc]init];
+//        user.userId = @"yuge";
+//        user.name = @"宇哥";
+//        user.portraitUri = @"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008";
+//        
+//        return completion(user);
+//    }else if([@"2" isEqual:userId]) {
+//        RCUserInfo *user = [[RCUserInfo alloc]init];
+//        user.userId = @"xiaowei";
+//        user.name = @"小v";
+//        user.portraitUri = @"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=1756054607,4047938258&fm=96&s=94D712D20AA1875519EB37BE0300C008";
+//        return completion(user);
+//    }
+//}
 
-- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
-    if (event.type == UIEventTypeRemoteControl) {
-        
-        switch (event.subtype) {
-                
-            case UIEventSubtypeRemoteControlPause:
-                [_audioPlayer pause];
-                NSLog(@"RemoteControlEvents: pause");
-                break;
-            case UIEventSubtypeRemoteControlPlay:
-                [_audioPlayer play];
-                NSLog(@"RemoteControlEvents: play");
-                break;
-            case UIEventSubtypeRemoteControlNextTrack:
-                [_audioPlayer play];
-                NSLog(@"RemoteControlEvents: playModeNext");
-                break;
-            case UIEventSubtypeRemoteControlPreviousTrack:
-                [_audioPlayer play];
-                NSLog(@"RemoteControlEvents: playPrev");
-                break;
-            default:
-                break;
-        }
-    }
-}
 
-- (void)setLockScreenNowPlayingInfo {
-    //更新锁屏时的歌曲信息
-    if (NSClassFromString(@"MPNowPlayingInfoCenter")) {
-        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-        
-        [dict setObject:@"歌曲名111" forKey:MPMediaItemPropertyTitle];
-        [dict setObject:@"演唱者1111" forKey:MPMediaItemPropertyArtist];
-        [dict setObject:@"专辑名1111" forKey:MPMediaItemPropertyAlbumTitle];
-        
-        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:dict];
-    }
-}
 
 - (HomeWeatherView *)weatherView {
     if (!_weatherView) {

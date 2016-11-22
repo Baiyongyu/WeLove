@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "TabBarController.h"
 #import "NavigationController.h"
+#import "RCDataManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -22,9 +23,15 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property(nonatomic,retain) NSMutableArray *friendsArray;
+@property(nonatomic,retain) NSMutableArray *groupsArray;
+
 - (void)saveContext;
 - (void)saveContextWithWait:(BOOL)needWait;
 - (NSURL *)applicationDocumentsDirectory;
+
+/// func
++ (AppDelegate* )shareAppDelegate;
 
 @end
 

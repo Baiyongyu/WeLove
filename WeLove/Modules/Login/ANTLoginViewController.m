@@ -19,7 +19,6 @@
 @property(nonatomic,strong)ANTTextField *passwordTextField;
 //登录按钮
 @property(nonatomic,strong)UIButton *loginBtn;
-
 //登录APIManager
 @property(nonatomic,strong)LoginManager *loginManager;
 @end
@@ -100,7 +99,7 @@
     [userManager saveUserInfo];
     [userManager updatePassword:self.passwordTextField.text];
     
-    NSString *token = RONGCLOUD_Token;
+    NSString *token = RONGCLOUD_TokenY;
     [[RCIM sharedRCIM] connectWithToken:token success:^(NSString *userId) {
         // 设置用户信息提供者,页面展现的用户头像及昵称都会从此代理取
         [[RCIM sharedRCIM] setUserInfoDataSource:self];

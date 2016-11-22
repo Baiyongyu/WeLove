@@ -26,6 +26,7 @@
 #import "UIViewController+NavigationHandler.h"
 #import "UIImageView+NetworkMonitor.h"
 #import "UIImageView+FullScreen.h"
+#import "UIAlertController+Blocks.h"
 
 /*----------ThirdFrameworks----------*/
 #import "Masonry.h"

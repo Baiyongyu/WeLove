@@ -98,7 +98,7 @@
                 <constraint firstItem="LUs-EU-YeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="twF-zc-57B"/>
                 <constraint firstItem="8dj-vE-fHh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="wAX-G5-EQe"/>
             </constraints>
-            <point key="canvasLocation" x="-535" y="-611"/>
+            <point key="canvasLocation" x="-614" y="-647"/>
         </view>
     </objects>
     <resources>

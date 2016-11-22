@@ -12,7 +12,6 @@
 #import "HappinessTimeTableViewController.h"    // 幸福时光
 #import "MTToViewTopButton.h"                   // 回到顶部
 #import "TYWaveProgressView.h"  // 波浪
-#import "WZFlashButton.h"
 
 @interface TimeViewController ()
 

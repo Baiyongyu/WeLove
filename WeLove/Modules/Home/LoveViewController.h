@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AudioStreamer;
 
 @interface LoveViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *bgView;
