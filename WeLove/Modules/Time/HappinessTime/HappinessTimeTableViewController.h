@@ -13,5 +13,5 @@
 
 @interface HappinessTimeCell : UITableViewCell
 @property(nonatomic,assign)NSInteger index;
-@property(nonatomic,retain)HappyTimeModel *activityData;
+@property(nonatomic,retain)HappyTimeModel *happyData;
 @end

@@ -20,14 +20,10 @@
 - (id)copyWithZone:(NSZone *)zone
 {
     HappyTimeModel *newItem = [[HappyTimeModel allocWithZone:zone] init];
-    newItem.activityId = self.activityId;
-    newItem.activityName = self.activityName;
-    newItem.activityDetailInfo = self.activityDetailInfo;
+    newItem.time = self.time;
+    newItem.titleName = self.titleName;
+    newItem.detailInfo = self.detailInfo;
     newItem.pictureArray = [self.pictureArray copy];
-    newItem.activityDate = [self.activityDate copy];
-    newItem.activityPerson = self.activityPerson;
-    newItem.fields = [self.fields copy];
-    newItem.activityInput = self.activityInput;
     newItem.contentHeight = self.contentHeight;
     return newItem;
 }

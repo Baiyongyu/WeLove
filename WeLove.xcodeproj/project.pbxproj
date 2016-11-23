@@ -67,6 +67,7 @@
 		F37E63F41DDD94C10061D6BC /* ListPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63ED1DDD94C10061D6BC /* ListPhotoViewController.m */; };
 		F37E63F61DDD94C10061D6BC /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63F11DDD94C10061D6BC /* PhotoAlbumViewController.m */; };
 		F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C47B1DDC27C0007E933C /* NSString+time.m */; };
+		F3D23EBA1DE52F4300D5CFE5 /* HappyTime.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3D23EB91DE52F4300D5CFE5 /* HappyTime.plist */; };
 		F3FAE2D91DD9EAFC00CBB034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2D81DD9EAFC00CBB034 /* main.m */; };
 		F3FAE2DC1DD9EAFC00CBB034 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2DB1DD9EAFC00CBB034 /* AppDelegate.m */; };
 		F3FAE2E21DD9EAFC00CBB034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE2E01DD9EAFC00CBB034 /* Main.storyboard */; };
@@ -123,7 +124,7 @@
 		F3FAE7241DD9ED2A00CBB034 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5E21DD9ED2A00CBB034 /* UserInfo.m */; };
 		F3FAE7251DD9ED2A00CBB034 /* VideoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5E41DD9ED2A00CBB034 /* VideoCache.m */; };
 		F3FAE7261DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5E61DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m */; };
-		F3FAE7271DD9ED2A00CBB034 /* HomeDatasList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE5E71DD9ED2A00CBB034 /* HomeDatasList.plist */; };
+		F3FAE7271DD9ED2A00CBB034 /* HappyTimeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE5E71DD9ED2A00CBB034 /* HappyTimeList.plist */; };
 		F3FAE7281DD9ED2A00CBB034 /* ComponentsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5EA1DD9ED2A00CBB034 /* ComponentsModel.m */; };
 		F3FAE7291DD9ED2A00CBB034 /* HappyTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5EC1DD9ED2A00CBB034 /* HappyTimeModel.m */; };
 		F3FAE72D1DD9ED2A00CBB034 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5F41DD9ED2A00CBB034 /* UserModel.m */; };
@@ -320,6 +321,7 @@
 		F37E63F11DDD94C10061D6BC /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
 		F3A5C47A1DDC27C0007E933C /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
 		F3A5C47B1DDC27C0007E933C /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
+		F3D23EB91DE52F4300D5CFE5 /* HappyTime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HappyTime.plist; sourceTree = "<group>"; };
 		F3FAE2D41DD9EAFC00CBB034 /* WeLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FAE2D81DD9EAFC00CBB034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3FAE2DA1DD9EAFC00CBB034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -428,7 +430,7 @@
 		F3FAE5E41DD9ED2A00CBB034 /* VideoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCache.m; sourceTree = "<group>"; };
 		F3FAE5E51DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+GenerateContext.h"; sourceTree = "<group>"; };
 		F3FAE5E61DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+GenerateContext.m"; sourceTree = "<group>"; };
-		F3FAE5E71DD9ED2A00CBB034 /* HomeDatasList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeDatasList.plist; sourceTree = "<group>"; };
+		F3FAE5E71DD9ED2A00CBB034 /* HappyTimeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HappyTimeList.plist; sourceTree = "<group>"; };
 		F3FAE5E91DD9ED2A00CBB034 /* ComponentsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentsModel.h; sourceTree = "<group>"; };
 		F3FAE5EA1DD9ED2A00CBB034 /* ComponentsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentsModel.m; sourceTree = "<group>"; };
 		F3FAE5EB1DD9ED2A00CBB034 /* HappyTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappyTimeModel.h; sourceTree = "<group>"; };
@@ -831,7 +833,8 @@
 				F3FAE6DF1DD9ED2A00CBB034 /* Utils */,
 				F3FAE6851DD9ED2A00CBB034 /* PrefixHeader.pch */,
 				F3FAE5571DD9ED2900CBB034 /* 3DBallPlist.plist */,
-				F3FAE5E71DD9ED2A00CBB034 /* HomeDatasList.plist */,
+				F3D23EB91DE52F4300D5CFE5 /* HappyTime.plist */,
+				F3FAE5E71DD9ED2A00CBB034 /* HappyTimeList.plist */,
 				F3FAE7C41DD9F5DE00CBB034 /* WeLove.xcdatamodeld */,
 				F3FAE2E01DD9EAFC00CBB034 /* Main.storyboard */,
 				F3FAE2E31DD9EAFC00CBB034 /* Assets.xcassets */,
@@ -1522,6 +1525,7 @@
 				F3FAE78E1DD9ED2A00CBB034 /* WechatIMG27.jpeg in Resources */,
 				F3FAE7961DD9ED2A00CBB034 /* animates.css in Resources */,
 				F3FAE7861DD9ED2A00CBB034 /* WechatIMG2.jpeg in Resources */,
+				F3D23EBA1DE52F4300D5CFE5 /* HappyTime.plist in Resources */,
 				F3FAE7791DD9ED2A00CBB034 /* Roboto-Regular.ttf in Resources */,
 				F3FAE7911DD9ED2A00CBB034 /* WechatIMG5.jpeg in Resources */,
 				F3FAE78A1DD9ED2A00CBB034 /* WechatIMG23.jpeg in Resources */,
@@ -1585,7 +1589,7 @@
 				F371A6AC1DE3E98200A70A77 /* PPDragDropBadgeView.bundle in Resources */,
 				F3FAE7A91DD9ED2A00CBB034 /* arrow.png in Resources */,
 				F3FAE2E21DD9EAFC00CBB034 /* Main.storyboard in Resources */,
-				F3FAE7271DD9ED2A00CBB034 /* HomeDatasList.plist in Resources */,
+				F3FAE7271DD9ED2A00CBB034 /* HappyTimeList.plist in Resources */,
 				F3FAE7AF1DD9ED2A00CBB034 /* jquery.min.js in Resources */,
 				F37E63DA1DDD72B40061D6BC /* 3.jpeg in Resources */,
 				F3FAE7AC1DD9ED2A00CBB034 /* tempdata.json in Resources */,

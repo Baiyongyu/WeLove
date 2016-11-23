@@ -55,7 +55,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.index = indexPath.row;
-    cell.activityData = self.dataArray[indexPath.row];
+    cell.happyData = self.dataArray[indexPath.row];
     return cell;
 }
 
@@ -200,17 +200,17 @@
 }
 
 #pragma mark - getters and setters
-- (void)setActivityData:(HappyTimeModel *)activityData {
-    _activityData = activityData;
-//    self.timeLabel.text = [QMUtil formatter:@"yyyy-MM-dd" fromeDate:_activityData.activityDate];
-    self.timeLabel.text = _activityData.activityTime;
-    self.activityNameLabel.text = _activityData.activityName;
-    self.detailInfoLabel.text = _activityData.activityDetailInfo;
-    if (!_activityData.pictureArray.count) {
+
+- (void)setHappyData:(HappyTimeModel *)happyData {
+    _happyData = happyData;
+    self.timeLabel.text = _happyData.time;
+    self.activityNameLabel.text = _happyData.titleName;
+    self.detailInfoLabel.text = _happyData.detailInfo;
+    if (!_happyData.pictureArray.count) {
         self.pictureBrowser.hidden = YES;
     } else {
-        self.pictureBrowser.pictureArray = _activityData.pictureArray;
-        self.pictureBrowser.top = _activityData.contentHeight-55-self.pictureBrowser.height;
+        self.pictureBrowser.pictureArray = _happyData.pictureArray;
+        self.pictureBrowser.top = _happyData.contentHeight-55-self.pictureBrowser.height;
         self.pictureBrowser.hidden = NO;
     }
 }
