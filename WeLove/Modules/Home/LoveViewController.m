@@ -145,8 +145,6 @@ BOOL isPlay = YES;
             if (buttonIndex == controller.firstOtherButtonIndex) {
                 NSString *token = RONGCLOUD_TokenY;
                 [[RCIM sharedRCIM] connectWithToken:token success:^(NSString *userId) {
-                    // 设置用户信息提供者,页面展现的用户头像及昵称都会从此代理取
-//                    [[RCIM sharedRCIM] setUserInfoDataSource:self];
                     NSLog(@"Login successfully with userId: %@.", userId);
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -155,7 +153,6 @@ BOOL isPlay = YES;
                         //                [MBProgressHUD showTip:@"登录成功"];
                         ChatListViewController *chatVC = [[ChatListViewController alloc] init];
                         [kRootNavigation pushViewController:chatVC animated:YES];
-                        
                     });
                 } error:^(RCConnectErrorCode status) {
                     NSLog(@"login error status: %ld.", (long)status);
@@ -165,8 +162,6 @@ BOOL isPlay = YES;
             }else if (buttonIndex == controller.secondOtherButtonIndex) {
                 NSString *token = RONGCLOUD_TokenW;
                 [[RCIM sharedRCIM] connectWithToken:token success:^(NSString *userId) {
-                    // 设置用户信息提供者,页面展现的用户头像及昵称都会从此代理取
-//                    [[RCIM sharedRCIM] setUserInfoDataSource:self];
                     NSLog(@"Login successfully with userId: %@.", userId);
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -190,12 +185,7 @@ BOOL isPlay = YES;
 #pragma mark - 点击播放音符
 - (void)animaAction:(UITapGestureRecognizer *)tap {
     
-    
-    
     if (isPlay == YES) {
-        // 音乐播放
-//        [self MP3Player];
-//        [_audioPlayer play];
         if (!streamer) {
             [self createStreamer];
         }
@@ -204,7 +194,6 @@ BOOL isPlay = YES;
         [self creatAnimation];
         isPlay = NO;
     } else {
-//        [_audioPlayer pause];
         [streamer pause];
         [self animationStop];
         isPlay = YES;
@@ -214,28 +203,17 @@ BOOL isPlay = YES;
 - (void)createStreamer {
     [self destroyStreamer];
     
-    
     NSURL *musicUrl = [NSURL URLWithString:@"http://cdn.y.baidu.com/746dd400ec21750107a8cfd227d999f0.mp3"];
     NSString *str = musicUrl.absoluteString;
     
-    NSString *escapedValue =
-    ( NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-                                                                           nil,
-                                                                           (CFStringRef)str,
-                                                                           NULL,
-                                                                           NULL,
-                                                                           kCFStringEncodingUTF8)) ;
-    ;
+    NSString *escapedValue = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(nil, (CFStringRef)str, NULL, NULL, kCFStringEncodingUTF8));
     NSURL *url = [NSURL URLWithString:escapedValue];
     streamer = [[AudioStreamer alloc] initWithURL:url];
 }
 
 - (void)destroyStreamer {
     if (streamer) {
-        [[NSNotificationCenter defaultCenter]
-         removeObserver:self
-         name:ASStatusChangedNotification
-         object:streamer];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:ASStatusChangedNotification object:streamer];
         
         [streamer stop];
         streamer = nil;

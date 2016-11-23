@@ -34,10 +34,10 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_desc" translatesAutoresizingMaskIntoConstraints="NO" id="5el-MW-lnf">
-                    <rect key="frame" x="88" y="30" width="200" height="23"/>
+                    <rect key="frame" x="78" y="40" width="220" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="23" id="cam-Rw-CZR"/>
-                        <constraint firstAttribute="width" constant="200" id="vZd-Vm-V6K"/>
+                        <constraint firstAttribute="height" constant="20" id="cam-Rw-CZR"/>
+                        <constraint firstAttribute="width" constant="220" id="vZd-Vm-V6K"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yinfu" translatesAutoresizingMaskIntoConstraints="NO" id="6NI-Bz-904">
@@ -93,12 +93,12 @@
                 <constraint firstItem="5el-MW-lnf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vp1-Q7-QVS"/>
                 <constraint firstItem="cD9-dZ-EgI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b6r-gm-m2X"/>
                 <constraint firstItem="L1G-ng-TGM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="cJc-3P-bZ4"/>
-                <constraint firstItem="5el-MW-lnf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="lZr-d1-17i"/>
+                <constraint firstItem="5el-MW-lnf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="lZr-d1-17i"/>
                 <constraint firstItem="cD9-dZ-EgI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tPh-JX-lae"/>
                 <constraint firstItem="LUs-EU-YeD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="twF-zc-57B"/>
                 <constraint firstItem="8dj-vE-fHh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="wAX-G5-EQe"/>
             </constraints>
-            <point key="canvasLocation" x="-751" y="-720"/>
+            <point key="canvasLocation" x="-923" y="-713"/>
         </view>
     </objects>
     <resources>

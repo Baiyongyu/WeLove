@@ -44,6 +44,8 @@
 		F371A6FE1DE449EF00A70A77 /* ANZAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6F71DE449EF00A70A77 /* ANZAppContext.m */; };
 		F371A6FF1DE449EF00A70A77 /* ANZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6F91DE449EF00A70A77 /* ANZResponse.m */; };
 		F371A7001DE449EF00A70A77 /* BaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6FC1DE449EF00A70A77 /* BaseAPIManager.m */; };
+		F371A7031DE44E8300A70A77 /* NSTimer+QM.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A7021DE44E8300A70A77 /* NSTimer+QM.m */; };
+		F371A7061DE44F0300A70A77 /* ANZKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A7051DE44F0300A70A77 /* ANZKeyChain.m */; };
 		F37E63A01DDD58730061D6BC /* AnimaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E639F1DDD58730061D6BC /* AnimaViewController.m */; };
 		F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */; };
 		F37E63B81DDD61040061D6BC /* MemoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */; };
@@ -65,7 +67,6 @@
 		F37E63F41DDD94C10061D6BC /* ListPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63ED1DDD94C10061D6BC /* ListPhotoViewController.m */; };
 		F37E63F61DDD94C10061D6BC /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63F11DDD94C10061D6BC /* PhotoAlbumViewController.m */; };
 		F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C47B1DDC27C0007E933C /* NSString+time.m */; };
-		F3A5C47F1DDC27C0007E933C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A5C47D1DDC27C0007E933C /* UIImage+ImageEffects.m */; };
 		F3FAE2D91DD9EAFC00CBB034 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2D81DD9EAFC00CBB034 /* main.m */; };
 		F3FAE2DC1DD9EAFC00CBB034 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE2DB1DD9EAFC00CBB034 /* AppDelegate.m */; };
 		F3FAE2E21DD9EAFC00CBB034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE2E01DD9EAFC00CBB034 /* Main.storyboard */; };
@@ -74,8 +75,6 @@
 		F3FAE6E91DD9ED2A00CBB034 /* 3DBallPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE5571DD9ED2900CBB034 /* 3DBallPlist.plist */; };
 		F3FAE6EA1DD9ED2A00CBB034 /* MBProgressHUD+QM.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE55A1DD9ED2900CBB034 /* MBProgressHUD+QM.m */; };
 		F3FAE6EB1DD9ED2A00CBB034 /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE55C1DD9ED2900CBB034 /* NSObject+PerformBlockAfterDelay.m */; };
-		F3FAE6EC1DD9ED2A00CBB034 /* NSTimer+QM.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE55E1DD9ED2900CBB034 /* NSTimer+QM.m */; };
-		F3FAE6ED1DD9ED2A00CBB034 /* UIAlertView+Object.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5601DD9ED2900CBB034 /* UIAlertView+Object.m */; };
 		F3FAE6EE1DD9ED2A00CBB034 /* UIColor+HexStringToColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5621DD9ED2900CBB034 /* UIColor+HexStringToColor.m */; };
 		F3FAE6EF1DD9ED2A00CBB034 /* UIImageView+FullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5641DD9ED2A00CBB034 /* UIImageView+FullScreen.m */; };
 		F3FAE6F01DD9ED2A00CBB034 /* UIImageView+NetworkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE5661DD9ED2A00CBB034 /* UIImageView+NetworkMonitor.m */; };
@@ -134,7 +133,6 @@
 		F3FAE7321DD9ED2A00CBB034 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6001DD9ED2A00CBB034 /* WebViewController.m */; };
 		F3FAE7381DD9ED2A00CBB034 /* LoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE60E1DD9ED2A00CBB034 /* LoveViewController.m */; };
 		F3FAE7391DD9ED2A00CBB034 /* LoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */; };
-		F3FAE73D1DD9ED2A00CBB034 /* ANTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */; };
 		F3FAE7421DD9ED2A00CBB034 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6211DD9ED2A00CBB034 /* NavigationController.m */; };
 		F3FAE7431DD9ED2A00CBB034 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6231DD9ED2A00CBB034 /* TabBarController.m */; };
 		F3FAE7581DD9ED2A00CBB034 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6411DD9ED2A00CBB034 /* MineViewController.m */; };
@@ -208,7 +206,6 @@
 		F3FAE7B91DD9ED2A00CBB034 /* sensorWeather.html in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE6DC1DD9ED2A00CBB034 /* sensorWeather.html */; };
 		F3FAE7BA1DD9ED2A00CBB034 /* timeline.html in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE6DD1DD9ED2A00CBB034 /* timeline.html */; };
 		F3FAE7BB1DD9ED2A00CBB034 /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE6DE1DD9ED2A00CBB034 /* Thumbs.db */; };
-		F3FAE7BC1DD9ED2A00CBB034 /* ANZKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6E11DD9ED2A00CBB034 /* ANZKeyChain.m */; };
 		F3FAE7BD1DD9ED2A00CBB034 /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6E31DD9ED2A00CBB034 /* CacheManager.m */; };
 		F3FAE7BE1DD9ED2A00CBB034 /* LunarSolarConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6E61DD9ED2A00CBB034 /* LunarSolarConverter.m */; };
 		F3FAE7BF1DD9ED2A00CBB034 /* QMUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6E81DD9ED2A00CBB034 /* QMUtil.m */; };
@@ -288,6 +285,10 @@
 		F371A6FA1DE449EF00A70A77 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
 		F371A6FB1DE449EF00A70A77 /* BaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPIManager.h; sourceTree = "<group>"; };
 		F371A6FC1DE449EF00A70A77 /* BaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAPIManager.m; sourceTree = "<group>"; };
+		F371A7011DE44E8300A70A77 /* NSTimer+QM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+QM.h"; sourceTree = "<group>"; };
+		F371A7021DE44E8300A70A77 /* NSTimer+QM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+QM.m"; sourceTree = "<group>"; };
+		F371A7041DE44F0300A70A77 /* ANZKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZKeyChain.h; sourceTree = "<group>"; };
+		F371A7051DE44F0300A70A77 /* ANZKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZKeyChain.m; sourceTree = "<group>"; };
 		F37E639E1DDD58730061D6BC /* AnimaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimaViewController.h; sourceTree = "<group>"; };
 		F37E639F1DDD58730061D6BC /* AnimaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimaViewController.m; sourceTree = "<group>"; };
 		F37E63A21DDD61040061D6BC /* MemoryDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDayViewController.h; sourceTree = "<group>"; };
@@ -319,8 +320,6 @@
 		F37E63F11DDD94C10061D6BC /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
 		F3A5C47A1DDC27C0007E933C /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
 		F3A5C47B1DDC27C0007E933C /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
-		F3A5C47C1DDC27C0007E933C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		F3A5C47D1DDC27C0007E933C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		F3FAE2D41DD9EAFC00CBB034 /* WeLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FAE2D81DD9EAFC00CBB034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3FAE2DA1DD9EAFC00CBB034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -334,10 +333,6 @@
 		F3FAE55A1DD9ED2900CBB034 /* MBProgressHUD+QM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+QM.m"; sourceTree = "<group>"; };
 		F3FAE55B1DD9ED2900CBB034 /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
 		F3FAE55C1DD9ED2900CBB034 /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
-		F3FAE55D1DD9ED2900CBB034 /* NSTimer+QM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+QM.h"; sourceTree = "<group>"; };
-		F3FAE55E1DD9ED2900CBB034 /* NSTimer+QM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+QM.m"; sourceTree = "<group>"; };
-		F3FAE55F1DD9ED2900CBB034 /* UIAlertView+Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Object.h"; sourceTree = "<group>"; };
-		F3FAE5601DD9ED2900CBB034 /* UIAlertView+Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Object.m"; sourceTree = "<group>"; };
 		F3FAE5611DD9ED2900CBB034 /* UIColor+HexStringToColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexStringToColor.h"; sourceTree = "<group>"; };
 		F3FAE5621DD9ED2900CBB034 /* UIColor+HexStringToColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexStringToColor.m"; sourceTree = "<group>"; };
 		F3FAE5631DD9ED2A00CBB034 /* UIImageView+FullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FullScreen.h"; sourceTree = "<group>"; };
@@ -451,8 +446,6 @@
 		F3FAE60D1DD9ED2A00CBB034 /* LoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveViewController.h; sourceTree = "<group>"; };
 		F3FAE60E1DD9ED2A00CBB034 /* LoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoveViewController.m; sourceTree = "<group>"; };
 		F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoveViewController.xib; sourceTree = "<group>"; };
-		F3FAE6181DD9ED2A00CBB034 /* ANTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANTLoginViewController.h; sourceTree = "<group>"; };
-		F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANTLoginViewController.m; sourceTree = "<group>"; };
 		F3FAE6201DD9ED2A00CBB034 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		F3FAE6211DD9ED2A00CBB034 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		F3FAE6221DD9ED2A00CBB034 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -530,8 +523,6 @@
 		F3FAE6DC1DD9ED2A00CBB034 /* sensorWeather.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sensorWeather.html; sourceTree = "<group>"; };
 		F3FAE6DD1DD9ED2A00CBB034 /* timeline.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timeline.html; sourceTree = "<group>"; };
 		F3FAE6DE1DD9ED2A00CBB034 /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
-		F3FAE6E01DD9ED2A00CBB034 /* ANZKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANZKeyChain.h; sourceTree = "<group>"; };
-		F3FAE6E11DD9ED2A00CBB034 /* ANZKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANZKeyChain.m; sourceTree = "<group>"; };
 		F3FAE6E21DD9ED2A00CBB034 /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
 		F3FAE6E31DD9ED2A00CBB034 /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		F3FAE6E41DD9ED2A00CBB034 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
@@ -866,22 +857,18 @@
 				F371A6B91DE410F900A70A77 /* UIAlertController+Blocks.m */,
 				F3A5C47A1DDC27C0007E933C /* NSString+time.h */,
 				F3A5C47B1DDC27C0007E933C /* NSString+time.m */,
-				F3A5C47C1DDC27C0007E933C /* UIImage+ImageEffects.h */,
-				F3A5C47D1DDC27C0007E933C /* UIImage+ImageEffects.m */,
 				F3FAE5591DD9ED2900CBB034 /* MBProgressHUD+QM.h */,
 				F3FAE55A1DD9ED2900CBB034 /* MBProgressHUD+QM.m */,
 				F3FAE55B1DD9ED2900CBB034 /* NSObject+PerformBlockAfterDelay.h */,
 				F3FAE55C1DD9ED2900CBB034 /* NSObject+PerformBlockAfterDelay.m */,
-				F3FAE55D1DD9ED2900CBB034 /* NSTimer+QM.h */,
-				F3FAE55E1DD9ED2900CBB034 /* NSTimer+QM.m */,
-				F3FAE55F1DD9ED2900CBB034 /* UIAlertView+Object.h */,
-				F3FAE5601DD9ED2900CBB034 /* UIAlertView+Object.m */,
 				F3FAE5611DD9ED2900CBB034 /* UIColor+HexStringToColor.h */,
 				F3FAE5621DD9ED2900CBB034 /* UIColor+HexStringToColor.m */,
 				F3FAE5631DD9ED2A00CBB034 /* UIImageView+FullScreen.h */,
 				F3FAE5641DD9ED2A00CBB034 /* UIImageView+FullScreen.m */,
 				F3FAE5651DD9ED2A00CBB034 /* UIImageView+NetworkMonitor.h */,
 				F3FAE5661DD9ED2A00CBB034 /* UIImageView+NetworkMonitor.m */,
+				F371A7011DE44E8300A70A77 /* NSTimer+QM.h */,
+				F371A7021DE44E8300A70A77 /* NSTimer+QM.m */,
 				F3FAE5671DD9ED2A00CBB034 /* UIView+UIViewFrame.h */,
 				F3FAE5681DD9ED2A00CBB034 /* UIView+UIViewFrame.m */,
 				F3FAE5691DD9ED2A00CBB034 /* UIViewController+NavigationHandler.h */,
@@ -1115,7 +1102,6 @@
 			children = (
 				F3FAE5FA1DD9ED2A00CBB034 /* Base */,
 				F3FAE61C1DD9ED2A00CBB034 /* Main */,
-				F3FAE6171DD9ED2A00CBB034 /* Login */,
 				F3FAE6031DD9ED2A00CBB034 /* Home */,
 				F35AD9D41DDA9F3F00800E43 /* Time */,
 				F3FAE62B1DD9ED2A00CBB034 /* Mine */,
@@ -1157,15 +1143,6 @@
 				F371A6BE1DE4388400A70A77 /* ChatList */,
 			);
 			path = ButtonGroups;
-			sourceTree = "<group>";
-		};
-		F3FAE6171DD9ED2A00CBB034 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				F3FAE6181DD9ED2A00CBB034 /* ANTLoginViewController.h */,
-				F3FAE6191DD9ED2A00CBB034 /* ANTLoginViewController.m */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		F3FAE61C1DD9ED2A00CBB034 /* Main */ = {
@@ -1439,8 +1416,8 @@
 		F3FAE6DF1DD9ED2A00CBB034 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F3FAE6E01DD9ED2A00CBB034 /* ANZKeyChain.h */,
-				F3FAE6E11DD9ED2A00CBB034 /* ANZKeyChain.m */,
+				F371A7041DE44F0300A70A77 /* ANZKeyChain.h */,
+				F371A7051DE44F0300A70A77 /* ANZKeyChain.m */,
 				F3FAE6E21DD9ED2A00CBB034 /* CacheManager.h */,
 				F3FAE6E31DD9ED2A00CBB034 /* CacheManager.m */,
 				F3FAE6E41DD9ED2A00CBB034 /* Globals.h */,
@@ -1687,7 +1664,6 @@
 				F371A6AE1DE3E98200A70A77 /* PRTween.m in Sources */,
 				F3FAE7051DD9ED2A00CBB034 /* QMButton.m in Sources */,
 				F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */,
-				F3A5C47F1DDC27C0007E933C /* UIImage+ImageEffects.m in Sources */,
 				F3FAE7181DD9ED2A00CBB034 /* TZImageManager.m in Sources */,
 				F371A6F11DE449C600A70A77 /* UploadPicManager.m in Sources */,
 				F3FAE7241DD9ED2A00CBB034 /* UserInfo.m in Sources */,
@@ -1696,7 +1672,6 @@
 				F3FAE6F51DD9ED2A00CBB034 /* ComDrawView.m in Sources */,
 				F371A6D11DE4388400A70A77 /* FriendCell.m in Sources */,
 				F37E63F31DDD94C10061D6BC /* DragCardView.m in Sources */,
-				F3FAE73D1DD9ED2A00CBB034 /* ANTLoginViewController.m in Sources */,
 				F3FAE7C61DD9F5DE00CBB034 /* WeLove.xcdatamodeld in Sources */,
 				F37E63C11DDD61040061D6BC /* WishViewController.m in Sources */,
 				F3FAE71B1DD9ED2A00CBB034 /* TZPhotoPickerController.m in Sources */,
@@ -1706,7 +1681,7 @@
 				F3FAE7291DD9ED2A00CBB034 /* HappyTimeModel.m in Sources */,
 				F35ADA281DDAD73600800E43 /* LineDisplayModel.m in Sources */,
 				F3FAE71A1DD9ED2A00CBB034 /* TZImagePickerController.m in Sources */,
-				F3FAE7BC1DD9ED2A00CBB034 /* ANZKeyChain.m in Sources */,
+				F371A7031DE44E8300A70A77 /* NSTimer+QM.m in Sources */,
 				F3FAE7151DD9ED2A00CBB034 /* NSBundle+TZImagePicker.m in Sources */,
 				F3FAE71F1DD9ED2A00CBB034 /* UIView+Layout.m in Sources */,
 				F3FAE6EB1DD9ED2A00CBB034 /* NSObject+PerformBlockAfterDelay.m in Sources */,
@@ -1754,8 +1729,8 @@
 				F3FAE6F41DD9ED2A00CBB034 /* ComAnimationLayer.m in Sources */,
 				F3FAE7091DD9ED2A00CBB034 /* QMPictureBrowser.m in Sources */,
 				F3FAE6F31DD9ED2A00CBB034 /* ComAlbumPhoto.m in Sources */,
+				F371A7061DE44F0300A70A77 /* ANZKeyChain.m in Sources */,
 				F35ADA001DDAB1D400800E43 /* BirdFlyViewController.m in Sources */,
-				F3FAE6ED1DD9ED2A00CBB034 /* UIAlertView+Object.m in Sources */,
 				F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */,
 				F3FAE70C1DD9ED2A00CBB034 /* QMShortVideoController.m in Sources */,
 				F3FAE7121DD9ED2A00CBB034 /* MTToViewTopButton.m in Sources */,
@@ -1775,7 +1750,6 @@
 				F371A6D31DE4388400A70A77 /* RCCustomCell.m in Sources */,
 				F3FAE6FA1DD9ED2A00CBB034 /* FFBarrageManager.m in Sources */,
 				F3FAE6F21DD9ED2A00CBB034 /* UIViewController+NavigationHandler.m in Sources */,
-				F3FAE6EC1DD9ED2A00CBB034 /* NSTimer+QM.m in Sources */,
 				F3FAE7BF1DD9ED2A00CBB034 /* QMUtil.m in Sources */,
 				F3FAE7421DD9ED2A00CBB034 /* NavigationController.m in Sources */,
 				F3FAE7281DD9ED2A00CBB034 /* ComponentsModel.m in Sources */,

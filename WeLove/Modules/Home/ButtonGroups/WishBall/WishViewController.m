@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.titleLabel.text = @"心愿球";
+    self.titleLabel.text = @"故事球";
     self.leftBtn.hidden = NO;
 }
 

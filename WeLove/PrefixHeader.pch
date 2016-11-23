@@ -16,7 +16,6 @@
 #import "ComponentsModel.h"
 #import "UserModel.h"
 #import "HappyTimeModel.h"
-//#import "WeatherModel.h"
 
 /*-------------Categories--------------*/
 #import "UIView+UIViewFrame.h"
@@ -54,7 +53,6 @@
 #import "BaseViewController.h"
 #import "BaseTableViewController.h"
 #import "WebViewController.h"
-#import "ANTLoginViewController.h"
 
 
 #endif /* PrefixHeader_pch */
