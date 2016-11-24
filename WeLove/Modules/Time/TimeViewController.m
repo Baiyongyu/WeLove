@@ -69,6 +69,62 @@
 
 #pragma mark - 加载3D球数据
 - (void)loadData {
+    
+    // 2016-11-24
+    HappyTimeModel *activityData25 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData25 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData25 ActivityTime:@"2016-11-24" activityName:@"老婆回京啦" activityDetailInfo:@"好开心、老婆回京了，好几天没有视频了，想你..." imageData:imageData25 imageUrl:nil];
+    
+    // 2016-11-23
+    HappyTimeModel *activityData24 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData24 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData24 ActivityTime:@"2016-11-23" activityName:@"两支烟的痛" activityDetailInfo:@"如题、两支烟的痛..." imageData:imageData24 imageUrl:nil];
+    
+    // 2016-11-22
+    HappyTimeModel *activityData23 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData23 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData23 ActivityTime:@"2016-11-22" activityName:@"赌注" activityDetailInfo:@"老婆为了我、赌下了她一生的幸福；为了我、改变了初衷；为了我、放低了所有要求...我爱你、我们会永远幸福哒😘" imageData:imageData23 imageUrl:nil];
+    
+    // 2016-11-21
+    HappyTimeModel *activityData22 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData22 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData22 ActivityTime:@"2016-11-21" activityName:@"小v突然回家" activityDetailInfo:@"没有一点点防备，也没有一丝顾虑，就这么回家了。虽然没有告诉我原由，但隐约中猜到了大概。老婆很可怜，这一天基本没有工作，都在陪老婆，聊天、讲笑话，希望老婆能开心..." imageData:imageData22 imageUrl:nil];
+    
+    // 2016-11-20
+    HappyTimeModel *activityData21 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData21 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData21 ActivityTime:@"2016-11-20" activityName:@"妹妹、弟弟、幸福房子" activityDetailInfo:@"朋友说，来北京这段岁月，我是爱情事业双丰收，我们狠性福；并且丽姐也神奇的恋爱了，从此三姐妹都找到了归宿，我们有着一个群聊，叫做：永远的、幸福房子..." imageData:imageData21 imageUrl:nil];
+    
+    // 2016-11-18
+    HappyTimeModel *activityData20 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData20 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData20 ActivityTime:@"2016-11-18" activityName:@"肚子犯病了" activityDetailInfo:@"最近消化又不好了，天天吃完东西涨肚，不消化、难受..." imageData:imageData20 imageUrl:nil];
+    
+    // 2016-11-17
+    HappyTimeModel *activityData19 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData19 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData19 ActivityTime:@"2016-11-17" activityName:@"电话应邀" activityDetailInfo:@"总感觉小v工作，打电话约人，说的有问题，所以昨晚我们讨论了一个点，今天把电子版发来，我当起了小老师，帮小v参谋，改改词儿..." imageData:imageData19 imageUrl:nil];
+    
+    // 2016-11-15
+    HappyTimeModel *activityData18 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData18 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData18 ActivityTime:@"2016-11-15" activityName:@"微爱上传到GitHub" activityDetailInfo:@"之前都是用SVN，要不是第一次跟小v约会，让我给她讲Git，可能不会这么早接触。这下好了，啥都会啦，嘿嘿..." imageData:imageData18 imageUrl:nil];
+    
+    // 2016-11-14
+    HappyTimeModel *activityData17 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData17 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData17 ActivityTime:@"2016-11-14" activityName:@"第一次不开心" activityDetailInfo:@"因为宇哥回京消息暴露，小v不开心；剪发一事不开心，哎、14，真是要死啊..." imageData:imageData17 imageUrl:nil];
+    
+    // 2016-11-12
+    HappyTimeModel *activityData16 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData16 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData16 ActivityTime:@"2016-11-12" activityName:@"练习做菜" activityDetailInfo:@"小v喜欢吃鱼、可乐鸡翅，我要做好..." imageData:imageData16 imageUrl:nil];
+    
+    // 2016-11-11
+    HappyTimeModel *activityData15 = [[HappyTimeModel alloc] init];
+    QMImageModel *imageData15 = [[QMImageModel alloc] init];
+    [self loadActivityData:activityData15 ActivityTime:@"2016-11-11" activityName:@"今年双11不过节" activityDetailInfo:@"今年双11不过节，不只要你。亲爱的、有你真好！🌹🌹" imageData:imageData15 imageUrl:nil];
+    
     // 2016-11-9
     HappyTimeModel *activityData14 = [[HappyTimeModel alloc] init];
     QMImageModel *imageData14 = [[QMImageModel alloc] init];
@@ -146,7 +202,7 @@
     [self loadActivityData:activityData0 ActivityTime:@"2016-10-23" activityName:@"第一次相遇" activityDetailInfo:@"这是我们第一次相遇的日子，感谢义哥，感谢阡陌！" imageData:imageData0
                  imageUrl:@"http://a2.qpic.cn/psb?/V10xIXyj3VXuB8/BSgEAx714JqT6OlgKV6UjETe7BmrHHlru426AXdU7QQ!/m/dAkBAAAAAAAAnull&bo=IgIgAyICIAMFCSo!&rf=photolist&t=5"];
     
-    self.happinessTimeTableVC.dataArray = [@[activityData14, activityData13, activityData12, activityData11, activityData10, activityData9, activityData8, activityData7, activityData6, activityData5, activityData4, activityData3, activityData2, activityData1, activityData0] mutableCopy];
+    self.happinessTimeTableVC.dataArray = [@[activityData25, activityData24, activityData23, activityData22, activityData21, activityData20, activityData19, activityData18, activityData17, activityData16, activityData15, activityData14, activityData13, activityData12, activityData11, activityData10, activityData9, activityData8, activityData7, activityData6, activityData5, activityData4, activityData3, activityData2, activityData1, activityData0] mutableCopy];
 }
 
 

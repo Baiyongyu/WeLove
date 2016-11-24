@@ -11,22 +11,14 @@
 #import "NavHeadTitleView.h"
 /** headView */
 #import "HeadImageView.h"
-#import "HeadLineView.h"
 
-#import "DayTimeCell.h"
-
-#import "LineDayModel.h"
-#import "LineMonthModel.h"
-#import "LineDisplayModel.h"
-
-#import "BirdFlyViewController.h" // 飞翔小鸟
 #import "WebViewController.h"
 #import "PhotosTypeViewController.h"
 #import "PhotoAlbumViewController.h"  // 左右滑动模式
 #import "AlbumPhotosViewController.h" // 流式
 #import "ListPhotoViewController.h"   // 列表
 
-@interface MineViewController ()<NavHeadTitleViewDelegate,headLineDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface MineViewController () <UITableViewDataSource,UITableViewDelegate,NavHeadTitleViewDelegate>
 {
     //头像
     UIImageView *_headerImg;
@@ -43,7 +35,7 @@
 @property(nonatomic,assign)float backImgOrgy;
 @property(nonatomic,strong)NavHeadTitleView *NavView;//导航栏
 @property(nonatomic,strong)HeadImageView *headImageView;//头视图
-@property(nonatomic,strong)HeadLineView *headLineView;//
+//@property(nonatomic,strong)HeadLineView *headLineView;//
 @property(nonatomic,assign)int rowHeight;
 @property(nonatomic,strong)UITableView *tableView;
 

@@ -17,15 +17,8 @@
 		F3090FE61DE6D28200A73DBC /* MemoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3090FE51DE6D28200A73DBC /* MemoryDayViewController.xib */; };
 		F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9D71DDA9F3F00800E43 /* HappinessTimeTableViewController.m */; };
 		F35AD9E51DDA9F3F00800E43 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9E01DDA9F3F00800E43 /* TimeViewController.m */; };
-		F35ADA001DDAB1D400800E43 /* BirdFlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9FF1DDAB1D400800E43 /* BirdFlyViewController.m */; };
 		F35ADA081DDAB20D00800E43 /* HeadImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA031DDAB20D00800E43 /* HeadImageView.m */; };
-		F35ADA091DDAB20D00800E43 /* HeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA051DDAB20D00800E43 /* HeadLineView.m */; };
 		F35ADA0A1DDAB20D00800E43 /* NavHeadTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA071DDAB20D00800E43 /* NavHeadTitleView.m */; };
-		F35ADA271DDAD73600800E43 /* LineDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA221DDAD73600800E43 /* LineDayModel.m */; };
-		F35ADA281DDAD73600800E43 /* LineDisplayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA241DDAD73600800E43 /* LineDisplayModel.m */; };
-		F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA261DDAD73600800E43 /* LineMonthModel.m */; };
-		F35ADA311DDAD82F00800E43 /* DayTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F35ADA2C1DDAD82F00800E43 /* DayTimeCell.m */; };
-		F35ADA321DDAD82F00800E43 /* DayTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F35ADA2D1DDAD82F00800E43 /* DayTimeCell.xib */; };
 		F371A6AC1DE3E98200A70A77 /* PPDragDropBadgeView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F371A6A41DE3E98200A70A77 /* PPDragDropBadgeView.bundle */; };
 		F371A6AD1DE3E98200A70A77 /* PPDragDropBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6A61DE3E98200A70A77 /* PPDragDropBadgeView.m */; };
 		F371A6AE1DE3E98200A70A77 /* PRTween.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A6A91DE3E98200A70A77 /* PRTween.m */; };
@@ -226,23 +219,10 @@
 		F35AD9D71DDA9F3F00800E43 /* HappinessTimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessTimeTableViewController.m; sourceTree = "<group>"; };
 		F35AD9DF1DDA9F3F00800E43 /* TimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
 		F35AD9E01DDA9F3F00800E43 /* TimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
-		F35AD9FE1DDAB1D400800E43 /* BirdFlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdFlyViewController.h; sourceTree = "<group>"; };
-		F35AD9FF1DDAB1D400800E43 /* BirdFlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdFlyViewController.m; sourceTree = "<group>"; };
 		F35ADA021DDAB20D00800E43 /* HeadImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadImageView.h; sourceTree = "<group>"; };
 		F35ADA031DDAB20D00800E43 /* HeadImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadImageView.m; sourceTree = "<group>"; };
-		F35ADA041DDAB20D00800E43 /* HeadLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadLineView.h; sourceTree = "<group>"; };
-		F35ADA051DDAB20D00800E43 /* HeadLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadLineView.m; sourceTree = "<group>"; };
 		F35ADA061DDAB20D00800E43 /* NavHeadTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavHeadTitleView.h; sourceTree = "<group>"; };
 		F35ADA071DDAB20D00800E43 /* NavHeadTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavHeadTitleView.m; sourceTree = "<group>"; };
-		F35ADA211DDAD73600800E43 /* LineDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDayModel.h; sourceTree = "<group>"; };
-		F35ADA221DDAD73600800E43 /* LineDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDayModel.m; sourceTree = "<group>"; };
-		F35ADA231DDAD73600800E43 /* LineDisplayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDisplayModel.h; sourceTree = "<group>"; };
-		F35ADA241DDAD73600800E43 /* LineDisplayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDisplayModel.m; sourceTree = "<group>"; };
-		F35ADA251DDAD73600800E43 /* LineMonthModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineMonthModel.h; sourceTree = "<group>"; };
-		F35ADA261DDAD73600800E43 /* LineMonthModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineMonthModel.m; sourceTree = "<group>"; };
-		F35ADA2B1DDAD82F00800E43 /* DayTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTimeCell.h; sourceTree = "<group>"; };
-		F35ADA2C1DDAD82F00800E43 /* DayTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTimeCell.m; sourceTree = "<group>"; };
-		F35ADA2D1DDAD82F00800E43 /* DayTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayTimeCell.xib; sourceTree = "<group>"; };
 		F371A6A41DE3E98200A70A77 /* PPDragDropBadgeView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PPDragDropBadgeView.bundle; sourceTree = "<group>"; };
 		F371A6A51DE3E98200A70A77 /* PPDragDropBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDragDropBadgeView.h; sourceTree = "<group>"; };
 		F371A6A61DE3E98200A70A77 /* PPDragDropBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDragDropBadgeView.m; sourceTree = "<group>"; };
@@ -576,58 +556,15 @@
 			path = HappinessTime;
 			sourceTree = "<group>";
 		};
-		F35AD9FD1DDAB1D400800E43 /* Games */ = {
-			isa = PBXGroup;
-			children = (
-				F35AD9FE1DDAB1D400800E43 /* BirdFlyViewController.h */,
-				F35AD9FF1DDAB1D400800E43 /* BirdFlyViewController.m */,
-			);
-			path = Games;
-			sourceTree = "<group>";
-		};
 		F35ADA011DDAB20D00800E43 /* HeadView */ = {
 			isa = PBXGroup;
 			children = (
 				F35ADA021DDAB20D00800E43 /* HeadImageView.h */,
 				F35ADA031DDAB20D00800E43 /* HeadImageView.m */,
-				F35ADA041DDAB20D00800E43 /* HeadLineView.h */,
-				F35ADA051DDAB20D00800E43 /* HeadLineView.m */,
 				F35ADA061DDAB20D00800E43 /* NavHeadTitleView.h */,
 				F35ADA071DDAB20D00800E43 /* NavHeadTitleView.m */,
 			);
 			path = HeadView;
-			sourceTree = "<group>";
-		};
-		F35ADA0B1DDAD43600800E43 /* DayInspect */ = {
-			isa = PBXGroup;
-			children = (
-				F35ADA2A1DDAD82F00800E43 /* View */,
-				F35ADA201DDAD73600800E43 /* Model */,
-			);
-			path = DayInspect;
-			sourceTree = "<group>";
-		};
-		F35ADA201DDAD73600800E43 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F35ADA211DDAD73600800E43 /* LineDayModel.h */,
-				F35ADA221DDAD73600800E43 /* LineDayModel.m */,
-				F35ADA231DDAD73600800E43 /* LineDisplayModel.h */,
-				F35ADA241DDAD73600800E43 /* LineDisplayModel.m */,
-				F35ADA251DDAD73600800E43 /* LineMonthModel.h */,
-				F35ADA261DDAD73600800E43 /* LineMonthModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F35ADA2A1DDAD82F00800E43 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F35ADA2B1DDAD82F00800E43 /* DayTimeCell.h */,
-				F35ADA2C1DDAD82F00800E43 /* DayTimeCell.m */,
-				F35ADA2D1DDAD82F00800E43 /* DayTimeCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F371A6A31DE3E98200A70A77 /* PPDragDropBadgeView */ = {
@@ -1146,9 +1083,7 @@
 			children = (
 				F3090FCF1DE66AD800A73DBC /* MineViewController.h */,
 				F3090FD91DE6797E00A73DBC /* MineViewController.m */,
-				F35ADA0B1DDAD43600800E43 /* DayInspect */,
 				F35ADA011DDAB20D00800E43 /* HeadView */,
-				F35AD9FD1DDAB1D400800E43 /* Games */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1512,7 +1447,6 @@
 				F3FAE7941DD9ED2A00CBB034 /* WechatIMG8.jpeg in Resources */,
 				F3FAE7811DD9ED2A00CBB034 /* WechatIMG15.jpeg in Resources */,
 				F3FAE7821DD9ED2A00CBB034 /* WechatIMG16.jpeg in Resources */,
-				F35ADA321DDAD82F00800E43 /* DayTimeCell.xib in Resources */,
 				F3FAE78C1DD9ED2A00CBB034 /* WechatIMG25.jpeg in Resources */,
 				F3FAE7901DD9ED2A00CBB034 /* WechatIMG4.jpeg in Resources */,
 				F3FAE7971DD9ED2A00CBB034 /* iconfont.svg in Resources */,
@@ -1634,12 +1568,10 @@
 				F3FAE70B1DD9ED2A00CBB034 /* QMPictureView.m in Sources */,
 				F371A6E71DE4458F00A70A77 /* HomeDateView.m in Sources */,
 				F3FAE6F81DD9ED2A00CBB034 /* ANTTextField.m in Sources */,
-				F35ADA311DDAD82F00800E43 /* DayTimeCell.m in Sources */,
 				F371A6FD1DE449EF00A70A77 /* ANZAPIProxy.m in Sources */,
 				F3FAE6FD1DD9ED2A00CBB034 /* FFMemberCenterHeadView.m in Sources */,
 				F371A6AE1DE3E98200A70A77 /* PRTween.m in Sources */,
 				F3FAE7051DD9ED2A00CBB034 /* QMButton.m in Sources */,
-				F35ADA291DDAD73600800E43 /* LineMonthModel.m in Sources */,
 				F3FAE7181DD9ED2A00CBB034 /* TZImageManager.m in Sources */,
 				F371A6F11DE449C600A70A77 /* UploadPicManager.m in Sources */,
 				F3FAE7241DD9ED2A00CBB034 /* UserInfo.m in Sources */,
@@ -1656,7 +1588,6 @@
 				F3FAE71D1DD9ED2A00CBB034 /* TZPhotoPreviewController.m in Sources */,
 				F371A6D71DE4388400A70A77 /* WMVideoMessage.m in Sources */,
 				F3FAE7291DD9ED2A00CBB034 /* HappyTimeModel.m in Sources */,
-				F35ADA281DDAD73600800E43 /* LineDisplayModel.m in Sources */,
 				F3FAE71A1DD9ED2A00CBB034 /* TZImagePickerController.m in Sources */,
 				F371A7031DE44E8300A70A77 /* NSTimer+QM.m in Sources */,
 				F3090FD81DE6770A00A73DBC /* UIImage+ImageEffects.m in Sources */,
@@ -1679,7 +1610,6 @@
 				F3FAE7071DD9ED2A00CBB034 /* PictureFullScreenBrowser.m in Sources */,
 				F371A6E21DE43FF200A70A77 /* AudioStreamer.m in Sources */,
 				F3FAE7231DD9ED2A00CBB034 /* UserInfo+CoreDataProperties.m in Sources */,
-				F35ADA271DDAD73600800E43 /* LineDayModel.m in Sources */,
 				F371A6D61DE4388400A70A77 /* WMConversationViewController.m in Sources */,
 				F371A7001DE449EF00A70A77 /* BaseAPIManager.m in Sources */,
 				F35ADA081DDAB20D00800E43 /* HeadImageView.m in Sources */,
@@ -1702,14 +1632,12 @@
 				F35ADA0A1DDAB20D00800E43 /* NavHeadTitleView.m in Sources */,
 				F371A6FE1DE449EF00A70A77 /* ANZAppContext.m in Sources */,
 				F3FAE6FB1DD9ED2A00CBB034 /* FFBarrageView.m in Sources */,
-				F35ADA091DDAB20D00800E43 /* HeadLineView.m in Sources */,
 				F371A6D51DE4388400A70A77 /* RCUserInfo+Addition.m in Sources */,
 				F3FAE7011DD9ED2A00CBB034 /* UIView+Extension.m in Sources */,
 				F3FAE6F41DD9ED2A00CBB034 /* ComAnimationLayer.m in Sources */,
 				F3FAE7091DD9ED2A00CBB034 /* QMPictureBrowser.m in Sources */,
 				F3FAE6F31DD9ED2A00CBB034 /* ComAlbumPhoto.m in Sources */,
 				F371A7061DE44F0300A70A77 /* ANZKeyChain.m in Sources */,
-				F35ADA001DDAB1D400800E43 /* BirdFlyViewController.m in Sources */,
 				F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */,
 				F3FAE70C1DD9ED2A00CBB034 /* QMShortVideoController.m in Sources */,
 				F3FAE7121DD9ED2A00CBB034 /* MTToViewTopButton.m in Sources */,
