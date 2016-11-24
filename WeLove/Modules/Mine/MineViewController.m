@@ -93,11 +93,13 @@
         _headerView.backgroundColor = [UIColor clearColor];
         
         // 头像
-        _headerImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_headerView.frame) - 40, 80, 80)];
+        _headerImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_headerView.frame) - 40, 100, 100)];
         _headerImg.center = CGPointMake(kScreenWidth/2, 100);
         [_headerImg setImage:[UIImage imageNamed:@"WechatIMG11.jpeg"]];
         [_headerImg.layer setMasksToBounds:YES];
         [_headerImg.layer setCornerRadius:2.0f];
+        [_headerImg.layer setBorderWidth:2.0f];
+        [_headerImg.layer setBorderColor:[UIColor whiteColor].CGColor];
         _headerImg.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
         [_headerImg addGestureRecognizer:tap];
@@ -169,25 +171,25 @@
     }
     
     if (indexPath.row == 0) {
-        cell.imageView.image = [UIImage imageNamed:@"ICON_wodedingdan"];
+        cell.imageView.image = [UIImage imageNamed:@"register_m_selected"];
         cell.textLabel.text = @"宇哥资料";
     }
     else if (indexPath.row == 1) {
-        cell.imageView.image = [UIImage imageNamed:@"ICON_dizhi"];
+        cell.imageView.image = [UIImage imageNamed:@"register_f_selected"];
         cell.textLabel.text = @"小v资料";
     }
     else if (indexPath.row == 2) {
-        cell.imageView.image = [UIImage imageNamed:@"ICON_jilu"];
+        cell.imageView.image = [UIImage imageNamed:@"setting-9"];
         cell.textLabel.text = @"相册";
     }
     else if (indexPath.row == 3) {
-        cell.imageView.image = [UIImage imageNamed:@"ICON_kefu"];
+        cell.imageView.image = [UIImage imageNamed:@"setting-2"];
         cell.textLabel.text = @"清理缓存";
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     else if (indexPath.row == 4) {
-        cell.imageView.image = [UIImage imageNamed:@"ICON_setting"];
-        cell.textLabel.text = @"我们家在哈尔滨";
+        cell.imageView.image = [UIImage imageNamed:@"profile_3"];
+        cell.textLabel.text = @"我们的家乡";
     }
     return cell;
 }
@@ -245,6 +247,19 @@
         [kRootNavigation pushViewController:webVC animated:YES];
     }
 }
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+//        [tableView setSeparatorInset:UIEdgeInsetsZero];
+//    }
+//    if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+//        [tableView setLayoutMargins:UIEdgeInsetsZero];
+//    }
+//}
+
+
+
+
 
 //计算单个文件夹的大小
 - (float)fileSizeAtPath:(NSString *)path{

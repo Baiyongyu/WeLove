@@ -10,6 +10,11 @@
 		384A6D8B6A8499C303297944 /* libPods-WeLove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ADB022CCEB32BD4198DC8F /* libPods-WeLove.a */; };
 		F3090FD81DE6770A00A73DBC /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F3090FD71DE6770A00A73DBC /* UIImage+ImageEffects.m */; };
 		F3090FDA1DE6797E00A73DBC /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3090FD91DE6797E00A73DBC /* MineViewController.m */; };
+		F3090FDE1DE6C93C00A73DBC /* MemoryOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3090FDC1DE6C93C00A73DBC /* MemoryOneCell.m */; };
+		F3090FDF1DE6C93C00A73DBC /* MemoryOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3090FDD1DE6C93C00A73DBC /* MemoryOneCell.xib */; };
+		F3090FE31DE6D1D700A73DBC /* MemoryTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3090FE11DE6D1D700A73DBC /* MemoryTwoCell.m */; };
+		F3090FE41DE6D1D700A73DBC /* MemoryTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3090FE21DE6D1D700A73DBC /* MemoryTwoCell.xib */; };
+		F3090FE61DE6D28200A73DBC /* MemoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3090FE51DE6D28200A73DBC /* MemoryDayViewController.xib */; };
 		F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9D71DDA9F3F00800E43 /* HappinessTimeTableViewController.m */; };
 		F35AD9E51DDA9F3F00800E43 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9E01DDA9F3F00800E43 /* TimeViewController.m */; };
 		F35ADA001DDAB1D400800E43 /* BirdFlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9FF1DDAB1D400800E43 /* BirdFlyViewController.m */; };
@@ -50,7 +55,6 @@
 		F371A7061DE44F0300A70A77 /* ANZKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = F371A7051DE44F0300A70A77 /* ANZKeyChain.m */; };
 		F37E63A01DDD58730061D6BC /* AnimaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E639F1DDD58730061D6BC /* AnimaViewController.m */; };
 		F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */; };
-		F37E63B81DDD61040061D6BC /* MemoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */; };
 		F37E63C11DDD61040061D6BC /* WishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63B61DDD61040061D6BC /* WishViewController.m */; };
 		F37E63E51DDD86FD0061D6BC /* PhotosTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63E41DDD86FD0061D6BC /* PhotosTypeViewController.m */; };
 		F37E63F21DDD94C10061D6BC /* AlbumPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63E81DDD94C10061D6BC /* AlbumPhotosViewController.m */; };
@@ -211,6 +215,13 @@
 		F3090FD61DE6770A00A73DBC /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		F3090FD71DE6770A00A73DBC /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		F3090FD91DE6797E00A73DBC /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F3090FDB1DE6C93C00A73DBC /* MemoryOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryOneCell.h; sourceTree = "<group>"; };
+		F3090FDC1DE6C93C00A73DBC /* MemoryOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryOneCell.m; sourceTree = "<group>"; };
+		F3090FDD1DE6C93C00A73DBC /* MemoryOneCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryOneCell.xib; sourceTree = "<group>"; };
+		F3090FE01DE6D1D700A73DBC /* MemoryTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryTwoCell.h; sourceTree = "<group>"; };
+		F3090FE11DE6D1D700A73DBC /* MemoryTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryTwoCell.m; sourceTree = "<group>"; };
+		F3090FE21DE6D1D700A73DBC /* MemoryTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryTwoCell.xib; sourceTree = "<group>"; };
+		F3090FE51DE6D28200A73DBC /* MemoryDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDayViewController.xib; sourceTree = "<group>"; };
 		F35AD9D61DDA9F3F00800E43 /* HappinessTimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappinessTimeTableViewController.h; sourceTree = "<group>"; };
 		F35AD9D71DDA9F3F00800E43 /* HappinessTimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessTimeTableViewController.m; sourceTree = "<group>"; };
 		F35AD9DF1DDA9F3F00800E43 /* TimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
@@ -288,7 +299,6 @@
 		F37E639F1DDD58730061D6BC /* AnimaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimaViewController.m; sourceTree = "<group>"; };
 		F37E63A21DDD61040061D6BC /* MemoryDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryDayViewController.h; sourceTree = "<group>"; };
 		F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryDayViewController.m; sourceTree = "<group>"; };
-		F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDayViewController.xib; sourceTree = "<group>"; };
 		F37E63B51DDD61040061D6BC /* WishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishViewController.h; sourceTree = "<group>"; };
 		F37E63B61DDD61040061D6BC /* WishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishViewController.m; sourceTree = "<group>"; };
 		F37E63E31DDD86FD0061D6BC /* PhotosTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTypeViewController.h; sourceTree = "<group>"; };
@@ -723,7 +733,13 @@
 			children = (
 				F37E63A21DDD61040061D6BC /* MemoryDayViewController.h */,
 				F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */,
-				F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */,
+				F3090FE51DE6D28200A73DBC /* MemoryDayViewController.xib */,
+				F3090FDB1DE6C93C00A73DBC /* MemoryOneCell.h */,
+				F3090FDC1DE6C93C00A73DBC /* MemoryOneCell.m */,
+				F3090FDD1DE6C93C00A73DBC /* MemoryOneCell.xib */,
+				F3090FE01DE6D1D700A73DBC /* MemoryTwoCell.h */,
+				F3090FE11DE6D1D700A73DBC /* MemoryTwoCell.m */,
+				F3090FE21DE6D1D700A73DBC /* MemoryTwoCell.xib */,
 			);
 			path = MemoryDay;
 			sourceTree = "<group>";
@@ -1128,11 +1144,11 @@
 		F3FAE62B1DD9ED2A00CBB034 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				F3090FCF1DE66AD800A73DBC /* MineViewController.h */,
+				F3090FD91DE6797E00A73DBC /* MineViewController.m */,
 				F35ADA0B1DDAD43600800E43 /* DayInspect */,
 				F35ADA011DDAB20D00800E43 /* HeadView */,
 				F35AD9FD1DDAB1D400800E43 /* Games */,
-				F3090FCF1DE66AD800A73DBC /* MineViewController.h */,
-				F3090FD91DE6797E00A73DBC /* MineViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1465,6 +1481,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3090FE41DE6D1D700A73DBC /* MemoryTwoCell.xib in Resources */,
 				F3FAE7A31DD9ED2A00CBB034 /* icomoon.ttf in Resources */,
 				F3FAE7881DD9ED2A00CBB034 /* WechatIMG21.jpeg in Resources */,
 				F3FAE7BA1DD9ED2A00CBB034 /* timeline.html in Resources */,
@@ -1492,7 +1509,6 @@
 				F3FAE7911DD9ED2A00CBB034 /* WechatIMG5.jpeg in Resources */,
 				F3FAE78A1DD9ED2A00CBB034 /* WechatIMG23.jpeg in Resources */,
 				F3FAE7AE1DD9ED2A00CBB034 /* echarts.common.min.js in Resources */,
-				F37E63B81DDD61040061D6BC /* MemoryDayViewController.xib in Resources */,
 				F3FAE7941DD9ED2A00CBB034 /* WechatIMG8.jpeg in Resources */,
 				F3FAE7811DD9ED2A00CBB034 /* WechatIMG15.jpeg in Resources */,
 				F3FAE7821DD9ED2A00CBB034 /* WechatIMG16.jpeg in Resources */,
@@ -1500,8 +1516,10 @@
 				F3FAE78C1DD9ED2A00CBB034 /* WechatIMG25.jpeg in Resources */,
 				F3FAE7901DD9ED2A00CBB034 /* WechatIMG4.jpeg in Resources */,
 				F3FAE7971DD9ED2A00CBB034 /* iconfont.svg in Resources */,
+				F3090FDF1DE6C93C00A73DBC /* MemoryOneCell.xib in Resources */,
 				F3FAE77C1DD9ED2A00CBB034 /* WechatIMG10.jpeg in Resources */,
 				F3FAE7A41DD9ED2A00CBB034 /* icomoon.woff in Resources */,
+				F3090FE61DE6D28200A73DBC /* MemoryDayViewController.xib in Resources */,
 				F3FAE7A01DD9ED2A00CBB034 /* farm.json in Resources */,
 				F3FAE7781DD9ED2A00CBB034 /* Roboto-Medium.ttf in Resources */,
 				F3FAE79E1DD9ED2A00CBB034 /* timeline.css in Resources */,
@@ -1630,6 +1648,7 @@
 				F3FAE6F51DD9ED2A00CBB034 /* ComDrawView.m in Sources */,
 				F371A6D11DE4388400A70A77 /* FriendCell.m in Sources */,
 				F37E63F31DDD94C10061D6BC /* DragCardView.m in Sources */,
+				F3090FDE1DE6C93C00A73DBC /* MemoryOneCell.m in Sources */,
 				F3FAE7C61DD9F5DE00CBB034 /* WeLove.xcdatamodeld in Sources */,
 				F37E63C11DDD61040061D6BC /* WishViewController.m in Sources */,
 				F3FAE71B1DD9ED2A00CBB034 /* TZPhotoPickerController.m in Sources */,
@@ -1694,6 +1713,7 @@
 				F3FAE7301DD9ED2A00CBB034 /* BaseTableViewController.m in Sources */,
 				F3FAE70C1DD9ED2A00CBB034 /* QMShortVideoController.m in Sources */,
 				F3FAE7121DD9ED2A00CBB034 /* MTToViewTopButton.m in Sources */,
+				F3090FE31DE6D1D700A73DBC /* MemoryTwoCell.m in Sources */,
 				F37E63F61DDD94C10061D6BC /* PhotoAlbumViewController.m in Sources */,
 				F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */,
 				F3FAE7111DD9ED2A00CBB034 /* SRSlimeView.m in Sources */,
