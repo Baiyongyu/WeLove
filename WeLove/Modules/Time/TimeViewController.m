@@ -214,7 +214,7 @@
     happyData.detailInfo = activityDetailInfo;
     
     imageData.imageUrl = imageUrl;
-#warning 先不显示图片
+    
 //    activityData.pictureArray = @[imageData,imageData,imageData];
     
     // 布局计算

@@ -25,15 +25,4 @@
 //获取用户信息
 #define User_Info_Url @""
 
-//图片上传
-#define Upload_Pic_Url @""
-
-
-//视频通道
-#define Video_List_Url @""
-//视频上传
-#define Video_Upload_Url @""
-
-
-
 #endif /* APIConfig_h */

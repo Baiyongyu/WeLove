@@ -7,7 +7,6 @@
 //
 
 #import "HappinessTimeTableViewController.h"
-#import "QMPictureBrowser.h"
 #import "AnimaViewController.h"
 
 @interface HappinessTimeTableViewController ()
@@ -125,8 +124,6 @@
 @property(nonatomic,strong)UILabel *activityNameLabel;
 //详细信息
 @property(nonatomic,strong)UILabel *detailInfoLabel;
-//图片列表
-@property(nonatomic,strong)QMPictureBrowser *pictureBrowser;
 @end
 
 @implementation HappinessTimeCell
@@ -142,7 +139,6 @@
         [self.contentView addSubview:self.bgView];
         [self.bgView addSubview:self.activityNameLabel];
         [self.bgView addSubview:self.detailInfoLabel];
-        [self.bgView addSubview:self.pictureBrowser];
         [self layoutConstraints];
     }
     return self;
@@ -206,13 +202,6 @@
     self.timeLabel.text = _happyData.time;
     self.activityNameLabel.text = _happyData.titleName;
     self.detailInfoLabel.text = _happyData.detailInfo;
-    if (!_happyData.pictureArray.count) {
-        self.pictureBrowser.hidden = YES;
-    } else {
-        self.pictureBrowser.pictureArray = _happyData.pictureArray;
-        self.pictureBrowser.top = _happyData.contentHeight-55-self.pictureBrowser.height;
-        self.pictureBrowser.hidden = NO;
-    }
 }
 
 - (void)setIndex:(NSInteger)index {
@@ -229,7 +218,6 @@
     self.numberLabel.backgroundColor = color;
     self.roundImageView.backgroundColor = color;
     self.lineImageView.backgroundColor = color;
-    self.pictureBrowser.indexFlag = index;
 }
 
 - (UILabel *)timeLabel {
@@ -293,14 +281,6 @@
         _detailInfoLabel.numberOfLines = 0;
     }
     return _detailInfoLabel;
-}
-
-- (QMPictureBrowser *)pictureBrowser {
-    if (!_pictureBrowser) {
-        _pictureBrowser = [[QMPictureBrowser alloc] initWithFrame:CGRectMake(21, 0, kScreenWidth-100, (kScreenWidth-100-20)/3)];
-        _pictureBrowser.hidden = YES;
-    }
-    return _pictureBrowser;
 }
 
 @end

@@ -45,7 +45,7 @@ const static NSString *websiteRegex = @"((http|https|Http|Https|rtsp|Rtsp|http|w
 /**
  *  检查手机号码是否合法
  *
- *  @param number 手机号码
+ *  @param mobileNumber 手机号码
  *
  *  @return 是否合法
  */
@@ -63,7 +63,7 @@ const static NSString *websiteRegex = @"((http|https|Http|Https|rtsp|Rtsp|http|w
 /**
  *  校验数字
  *
- *  @param num 校验对象
+ *  @param number 校验对象
  *
  *  @return 数字
  */
