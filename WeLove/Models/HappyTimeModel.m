@@ -1,8 +1,8 @@
 //
-//  FarmActivityModel.m
-//  ant
+//  HappyTimeModel.m
+//  WeLove
 //
-//  Created by KevinCao on 16/8/16.
+//  Created by 宇玄丶 on 16/11/18.
 //  Copyright © 2016年 ahqianmo. All rights reserved.
 //
 

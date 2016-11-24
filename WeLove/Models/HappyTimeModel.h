@@ -1,13 +1,13 @@
 //
-//  FarmActivityModel.h
-//  ant
+//  HappyTimeModel.h
+//  WeLove
 //
-//  Created by KevinCao on 16/8/16.
+//  Created by 宇玄丶 on 16/11/18.
 //  Copyright © 2016年 ahqianmo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface HappyTimeModel : NSObject
 
 // 时间

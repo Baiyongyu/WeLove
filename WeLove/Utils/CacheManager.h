@@ -24,10 +24,4 @@
  */
 - (void)clearCache;
 
--(void)savaVideoLocalPath:(NSString *)videoLocalPath forUrl:(NSString *)videoUrl;
-
-- (NSString *)inquiryVideoCache:(NSString *)videoUrl;
-
-- (void)removeVideoCache:(NSString *)videoUrl;
-
 @end

@@ -13,8 +13,6 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 /*---------------Models---------------*/
-#import "ComponentsModel.h"
-#import "UserModel.h"
 #import "HappyTimeModel.h"
 
 /*-------------Categories--------------*/
@@ -41,10 +39,6 @@
 #import "QMUtil.h"
 #import "AppDelegate.h"
 #import "Globals.h"
-#import "BaseAPIManager.h"
-#import "APIConfig.h"
-#import "CoreData_Header.h"
-#import "UserManager.h"
 
 /*-------------Components-------------*/
 #import "QMButton.h"

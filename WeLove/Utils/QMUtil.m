@@ -168,29 +168,6 @@
     }
 }
 
-+(void)deleteCoreDataWithEntity:(NSString*)entityName
-{
-    NSManagedObjectContext *workContext = [NSManagedObjectContext generatePrivateContextWithParent:rootContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSError *error;
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:workContext];
-    [fetchRequest setEntity:entity];
-    NSArray *fetchedObjects = [workContext executeFetchRequest:fetchRequest error:&error];
-    for (NSManagedObject* item in fetchedObjects)
-    {
-        [workContext deleteObject:item];
-    }
-    
-    if(![workContext save:&error])
-    {
-        NSLog(@"%@",[error localizedDescription]);
-    }
-    else
-    {
-        [kAppDelegate saveContextWithWait:YES];
-    }
-}
-
 +(void)hiddenKeyboard
 {
     [[[UIApplication sharedApplication] keyWindow] endEditing:YES];

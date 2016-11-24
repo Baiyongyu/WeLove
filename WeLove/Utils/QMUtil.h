@@ -92,7 +92,7 @@ const static NSString *websiteRegex = @"((http|https|Http|Https|rtsp|Rtsp|http|w
  *
  *  @param entityName 表名
  */
-+(void)deleteCoreDataWithEntity:(NSString*)entityName;
+//+(void)deleteCoreDataWithEntity:(NSString*)entityName;
 
 /**
  *  隐藏键盘
