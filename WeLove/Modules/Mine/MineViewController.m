@@ -20,6 +20,11 @@
 #import "LineDisplayModel.h"
 
 #import "BirdFlyViewController.h" // 飞翔小鸟
+#import "WebViewController.h"
+#import "PhotosTypeViewController.h"
+#import "PhotoAlbumViewController.h"  // 左右滑动模式
+#import "AlbumPhotosViewController.h" // 流式
+#import "ListPhotoViewController.h"   // 列表
 
 @interface MineViewController ()<NavHeadTitleViewDelegate,headLineDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -27,10 +32,10 @@
     UIImageView *_headerImg;
     //昵称
     UILabel *_nickLabel;
-    NSMutableArray *_dataArray0;
-    NSMutableArray *_dataArray1;
-    NSMutableArray *_dataArray2;
 }
+
+@property(nonatomic,strong)UIView *headerView;
+
 @property(nonatomic,strong)UIImageView *backgroundImgV;//背景图
 /** 头部 */
 @property(nonatomic,assign)float backImgHeight;
@@ -39,66 +44,28 @@
 @property(nonatomic,strong)NavHeadTitleView *NavView;//导航栏
 @property(nonatomic,strong)HeadImageView *headImageView;//头视图
 @property(nonatomic,strong)HeadLineView *headLineView;//
-
-/** data*/
-@property(nonatomic,assign)NSInteger currentIndex;
 @property(nonatomic,assign)int rowHeight;
-
 @property(nonatomic,strong)UITableView *tableView;
 
 @end
 
 @implementation MineViewController
 
-static NSString *cellTimeOne = @"DayTimeCell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // 拉伸顶部图片
     [self lashenBgView];
     // 创建导航栏
     [self createNav];
-    // 初始化数据源
-    [self loadData];
     // 创建TableView
     [self createTableView];
 }
-#pragma mark - 创建数据源
-- (void)loadData {
-    _currentIndex = 0;
-    _dataArray0 = [[NSMutableArray alloc]init];
-    _dataArray1 = [[NSMutableArray alloc]init];
-    _dataArray2 = [[NSMutableArray alloc]init];
-    for (int i = 0; i < 3; i++) {
-        if (i == 0) {
-            
-            LineDayModel *Model0 = [[LineDayModel alloc]initWithDay:@"5.1" imgArray:@[@"1",@"1",@"1"]];
-            LineDayModel *Model1 = [[LineDayModel alloc]initWithDay:@"5.2" imgArray:@[@"1",@"1",@"1"]];
-            LineDayModel *Model2 = [[LineDayModel alloc]initWithDay:@"5.3" imgArray:@[@"1",@"1",@"1"]];
-            
-            LineMonthModel *Model_0 = [[LineMonthModel alloc]initWithMonth:@"2016年5月" days:@[Model0,Model1, Model2]];
-            
-            _dataArray0 = [NSMutableArray arrayWithArray:@[Model_0]];
-            
-            
-        }else if(i == 1) {
-            for (int i = 1; i < 10; i++) {
-                NSString *string = [NSString stringWithFormat:@"%d 小v",i];
-                [_dataArray1 addObject:string];
-            }
-        }else if (i == 2){
-            for (int i = 0; i < 10; i++) {
-                NSString * string = [NSString stringWithFormat:@"测试 %d",i];
-                [_dataArray2 addObject:string];
-            }
-        }
-    }
-}
 #pragma mark - 拉伸顶部图片
 - (void)lashenBgView {
-    UIImage *image = [UIImage imageNamed:@"lbg41009"];
-    _backgroundImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 250)];
-    _backgroundImgV.image = image;
+    
+    _backgroundImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 180)];
+    _backgroundImgV.image = [UIImage imageNamed:@"lbg41009"];
     _backgroundImgV.userInteractionEnabled = YES;
     _backImgHeight = _backgroundImgV.frame.size.height;
     _backImgWidth = _backgroundImgV.frame.size.width;
@@ -113,66 +80,41 @@ static NSString *cellTimeOne = @"DayTimeCell";
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.dataSource = self;
         _tableView.delegate = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.tableFooterView = [[UIView alloc] init];
-        
-        [_tableView registerNib:[DayTimeCell nib] forCellReuseIdentifier:cellTimeOne];
         [self.view addSubview:_tableView];
     }
-    [_tableView setTableHeaderView:[self headImageView]];
-}
-
-- (void)handleSwipes:(UISwipeGestureRecognizer *)sender {
-    UIView *targetview = sender.view;
-    if(targetview.tag == 1) {
-        return;
-    }
-    if (sender.direction == UISwipeGestureRecognizerDirectionLeft) {
-        if (_currentIndex > 1) {
-            return;
-        }
-        _currentIndex ++;
-    }else if (sender.direction == UISwipeGestureRecognizerDirectionRight) {
-        if (_currentIndex <= 0) {
-            return;
-        }
-        _currentIndex --;
-    }
-    [_headLineView setCurrentIndex:_currentIndex];
-}
-- (void)refreshHeadLine:(NSInteger)currentIndex {
-    _currentIndex = currentIndex;
-    [_tableView reloadData];
+    _tableView.tableHeaderView = self.headerView;
 }
 
 #pragma mark - 头视图
-- (HeadImageView *)headImageView {
-    if (!_headImageView) {
-        // 背景
-        _headImageView = [[HeadImageView alloc]init];
-        _headImageView.frame = CGRectMake(0, 64, kScreenWidth, 170);
-        _headImageView.backgroundColor = [UIColor clearColor];
+- (UIView *)headerView {
+    if (!_headerView) {
+        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, 180)];
+        _headerView.backgroundColor = [UIColor clearColor];
+        
         // 头像
-        _headerImg = [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth/2-35, 50, 70, 70)];
-        _headerImg.center = CGPointMake(kScreenWidth/2, 70);
+        _headerImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_headerView.frame) - 40, 80, 80)];
+        _headerImg.center = CGPointMake(kScreenWidth/2, 100);
         [_headerImg setImage:[UIImage imageNamed:@"WechatIMG11.jpeg"]];
         [_headerImg.layer setMasksToBounds:YES];
-        [_headerImg.layer setCornerRadius:35];
-        _headerImg.backgroundColor = [UIColor whiteColor];
+        [_headerImg.layer setCornerRadius:2.0f];
         _headerImg.userInteractionEnabled = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapClick:)];
         [_headerImg addGestureRecognizer:tap];
-        [_headImageView addSubview:_headerImg];
+        [_headerView addSubview:_headerImg];
         // 昵称
-        _nickLabel = [[UILabel alloc]initWithFrame:CGRectMake(147, 130, 105, 20)];
-        _nickLabel.center = CGPointMake(kScreenWidth/2, 125);
-        _nickLabel.text = @"宇哥爱小v";
-        _nickLabel.textColor = [UIColor whiteColor];
+        _nickLabel = [[UILabel alloc]initWithFrame:CGRectMake(147, CGRectGetMaxY(_headerImg.frame) + 20, kScreenWidth - 20, 20)];
+        _nickLabel.center = CGPointMake(kScreenWidth/2, 160);
+        _nickLabel.text = @"◆◇、遇见你、是我今生最美好的相遇...";
+        _nickLabel.textColor = kDarkGrayColor;
+        _nickLabel.font = XiHeiFont(14);
         _nickLabel.textAlignment = NSTextAlignmentCenter;
-        [_headImageView addSubview:_nickLabel];
+        [_headerView addSubview:_nickLabel];
     }
-    return _headImageView;
+    return _headerView;
 }
+
+
 // 头像点击事件
 - (void)tapClick:(UITapGestureRecognizer *)recognizer {
     NSLog(@"修改头像");
@@ -190,32 +132,23 @@ static NSString *cellTimeOne = @"DayTimeCell";
 // 右按钮回调
 - (void)NavHeadToRight {
     NSLog(@"点击了右按钮");
-//    BirdFlyViewController *birdVC = [[BirdFlyViewController alloc] init];
-//    [kRootNavigation pushViewController:birdVC animated:YES];
+    //    BirdFlyViewController *birdVC = [[BirdFlyViewController alloc] init];
+    //    [kRootNavigation pushViewController:birdVC animated:YES];
 }
 
 #pragma mark ---- UITableViewDelegate ----
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 48;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (_currentIndex == 0) {
-        return 86;
-    }
-    return 120;
+    return 44;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (_currentIndex == 0) {
-        LineMonthModel *mModel = _dataArray0[section];
-        return mModel.monthRows;
-    }else if(_currentIndex == 1){
-        return _dataArray1.count;
-    }
-    return _dataArray2.count;
-
+    return 5;
 }
+/*
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (!_headLineView) {
         _headLineView = [[HeadLineView alloc]init];
@@ -225,52 +158,107 @@ static NSString *cellTimeOne = @"DayTimeCell";
     }
     return _headLineView;
 }
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    static NSString *reusID = @"ID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reusID];
+    
+    static NSString *identifier = @"ID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reusID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    if (_currentIndex == 0) {
-        
-        LineMonthModel *mModel = _dataArray0[indexPath.section];
-        LineDisplayModel *dModel = mModel.displayArray[indexPath.row];
-        if (dModel.isFirst) {
-            DayTimeCell *tempCell = [tableView dequeueReusableCellWithIdentifier:cellTimeOne];
-            [tempCell refreshUIWithImageArray:dModel.imgArray time:dModel.day];
-            cell = tempCell;
-        }
-
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-        
-    }else if(_currentIndex == 1) {
-        
-        cell.textLabel.text = [_dataArray1 objectAtIndex:indexPath.row];
-        cell.detailTextLabel.text = [_dataArray1 objectAtIndex:indexPath.row];
-        [cell.imageView setImage:[UIImage imageNamed:@"WechatIMG9.jpeg"]];
-        
-        return cell;
-    }else if(_currentIndex == 2) {
-        cell.textLabel.text = [_dataArray2 objectAtIndex:indexPath.row];
-        cell.detailTextLabel.text = [_dataArray2 objectAtIndex:indexPath.row];
-        [cell.imageView setImage:[UIImage imageNamed:@"WechatIMG10.jpeg"]];
-        
-        return cell;
+    
+    if (indexPath.row == 0) {
+        cell.imageView.image = [UIImage imageNamed:@"ICON_wodedingdan"];
+        cell.textLabel.text = @"宇哥资料";
+    }
+    else if (indexPath.row == 1) {
+        cell.imageView.image = [UIImage imageNamed:@"ICON_dizhi"];
+        cell.textLabel.text = @"小v资料";
+    }
+    else if (indexPath.row == 2) {
+        cell.imageView.image = [UIImage imageNamed:@"ICON_jilu"];
+        cell.textLabel.text = @"相册";
+    }
+    else if (indexPath.row == 3) {
+        cell.imageView.image = [UIImage imageNamed:@"ICON_kefu"];
+        cell.textLabel.text = @"清理缓存";
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    else if (indexPath.row == 4) {
+        cell.imageView.image = [UIImage imageNamed:@"ICON_setting"];
+        cell.textLabel.text = @"我们家在哈尔滨";
     }
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //cell被点击恢复
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (_currentIndex == 0) {
+    
+    if (indexPath.row == 2) {
+        PhotosTypeViewController *typeVC = [[PhotosTypeViewController alloc] initWithViewControllerClasses:@[[PhotoAlbumViewController class], [ListPhotoViewController class], [AlbumPhotosViewController class]] andTheirTitles:@[@"陌陌模式", @"列表相册", @"流式相册"]];
+        typeVC.menuViewStyle = WMMenuViewStyleLine;
+        typeVC.menuItemWidth = 80;
+        typeVC.menuBGColor= [UIColor whiteColor];
+        typeVC.menuHeight = 40;
+        typeVC.titleColorSelected = kNavColor;
+        typeVC.titleSizeNormal = 14;
+        typeVC.titleSizeSelected = 14;
         
-    } else if (_currentIndex == 1) {
-        
-    }else {
+        [self.navigationController pushViewController:typeVC animated:YES];
+    }
+    
+    if (indexPath.row == 3) {
+        NSString *path = kCachesPath;
+        NSFileManager *fileManager=[NSFileManager defaultManager];
+        float folderSize;
+        if ([fileManager fileExistsAtPath:path]) {
+            // 拿到所有文件的数组
+            NSArray *childerFiles = [fileManager subpathsAtPath:path];
+            // 拿到每个文件的名字,如有有不想清除的文件就在这里判断
+            for (NSString *fileName in childerFiles) {
+                //将路径拼接到一起
+                NSString *fullPath = [path stringByAppendingPathComponent:fileName];
+                folderSize += [self fileSizeAtPath:fullPath];
+            }
+            
+            [UIAlertController showAlertInViewController:self withTitle:@"清理缓存" message:[NSString stringWithFormat:@"缓存大小为%.2fM,确定要清理缓存吗?", folderSize] cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:nil tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+                if (buttonIndex == controller.destructiveButtonIndex) {
+                    //点击了确定,遍历整个caches文件,将里面的缓存清空
+                    NSString *path = kCachesPath;
+                    NSFileManager *fileManager=[NSFileManager defaultManager];
+                    if ([fileManager fileExistsAtPath:path]) {
+                        NSArray *childerFiles=[fileManager subpathsAtPath:path];
+                        for (NSString *fileName in childerFiles) {
+                            //如有需要，加入条件，过滤掉不想删除的文件
+                            NSString *absolutePath=[path stringByAppendingPathComponent:fileName];
+                            [fileManager removeItemAtPath:absolutePath error:nil];
+                        }
+                    }
+                }
+            }];
+            
+        }
+    }
+    if (indexPath.row == 4) {
+        WebViewController *webVC = [[WebViewController alloc] init];
+        webVC.urlStr = @"http://h5.eqxiu.com/s/NABANe?eqrcode=1&from=timeline&isappinstalled=0";
+        [kRootNavigation pushViewController:webVC animated:YES];
     }
 }
+
+//计算单个文件夹的大小
+- (float)fileSizeAtPath:(NSString *)path{
+    
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    
+    if([fileManager fileExistsAtPath:path]){
+        
+        long long size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        return size/1024.0/1024.0;
+    }
+    return 0;
+}
+
 
 #pragma mark - 导航栏渐变效果
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -282,7 +270,7 @@ static NSString *cellTimeOne = @"DayTimeCell";
         self.NavView.rightImageView = @"Setting";
         self.NavView.color = [UIColor whiteColor];
         //状态栏字体白色
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     }else {
         self.NavView.headBgView.alpha = 1;
         self.NavView.rightImageView = @"Setting-click";
@@ -296,7 +284,7 @@ static NSString *cellTimeOne = @"DayTimeCell";
         CGRect rect = _backgroundImgV.frame;
         rect.size.height = _backImgHeight - contentOffsety;
         rect.size.width = _backImgWidth * (_backImgHeight - contentOffsety)/_backImgHeight;
-        rect.origin.x =  -(rect.size.width-_backImgWidth)/2;
+        rect.origin.x = -(rect.size.width-_backImgWidth)/2;
         rect.origin.y = 0;
         _backgroundImgV.frame = rect;
     }else {
@@ -307,7 +295,6 @@ static NSString *cellTimeOne = @"DayTimeCell";
         rect.origin.y = -contentOffsety;
         _backgroundImgV.frame = rect;
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {

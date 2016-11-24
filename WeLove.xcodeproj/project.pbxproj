@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		384A6D8B6A8499C303297944 /* libPods-WeLove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ADB022CCEB32BD4198DC8F /* libPods-WeLove.a */; };
+		F3090FD81DE6770A00A73DBC /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F3090FD71DE6770A00A73DBC /* UIImage+ImageEffects.m */; };
+		F3090FDA1DE6797E00A73DBC /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3090FD91DE6797E00A73DBC /* MineViewController.m */; };
 		F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9D71DDA9F3F00800E43 /* HappinessTimeTableViewController.m */; };
 		F35AD9E51DDA9F3F00800E43 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9E01DDA9F3F00800E43 /* TimeViewController.m */; };
 		F35ADA001DDAB1D400800E43 /* BirdFlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F35AD9FF1DDAB1D400800E43 /* BirdFlyViewController.m */; };
@@ -50,17 +52,6 @@
 		F37E63B71DDD61040061D6BC /* MemoryDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63A31DDD61040061D6BC /* MemoryDayViewController.m */; };
 		F37E63B81DDD61040061D6BC /* MemoryDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */; };
 		F37E63C11DDD61040061D6BC /* WishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63B61DDD61040061D6BC /* WishViewController.m */; };
-		F37E63D71DDD72B40061D6BC /* 10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63CC1DDD72B40061D6BC /* 10.jpeg */; };
-		F37E63D81DDD72B40061D6BC /* 5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63CD1DDD72B40061D6BC /* 5.jpeg */; };
-		F37E63D91DDD72B40061D6BC /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63CE1DDD72B40061D6BC /* 4.jpeg */; };
-		F37E63DA1DDD72B40061D6BC /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63CF1DDD72B40061D6BC /* 3.jpeg */; };
-		F37E63DB1DDD72B40061D6BC /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63D01DDD72B40061D6BC /* 6.jpeg */; };
-		F37E63DC1DDD72B40061D6BC /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63D11DDD72B40061D6BC /* 2.jpeg */; };
-		F37E63DD1DDD72B40061D6BC /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63D21DDD72B40061D6BC /* 1.jpeg */; };
-		F37E63DE1DDD72B40061D6BC /* 7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63D31DDD72B40061D6BC /* 7.jpeg */; };
-		F37E63DF1DDD72B40061D6BC /* 8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63D41DDD72B40061D6BC /* 8.jpeg */; };
-		F37E63E01DDD72B40061D6BC /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63D51DDD72B40061D6BC /* 0.jpeg */; };
-		F37E63E11DDD72B40061D6BC /* 9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F37E63D61DDD72B40061D6BC /* 9.jpeg */; };
 		F37E63E51DDD86FD0061D6BC /* PhotosTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63E41DDD86FD0061D6BC /* PhotosTypeViewController.m */; };
 		F37E63F21DDD94C10061D6BC /* AlbumPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63E81DDD94C10061D6BC /* AlbumPhotosViewController.m */; };
 		F37E63F31DDD94C10061D6BC /* DragCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37E63EB1DDD94C10061D6BC /* DragCardView.m */; };
@@ -136,7 +127,6 @@
 		F3FAE7391DD9ED2A00CBB034 /* LoveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE60F1DD9ED2A00CBB034 /* LoveViewController.xib */; };
 		F3FAE7421DD9ED2A00CBB034 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6211DD9ED2A00CBB034 /* NavigationController.m */; };
 		F3FAE7431DD9ED2A00CBB034 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6231DD9ED2A00CBB034 /* TabBarController.m */; };
-		F3FAE7581DD9ED2A00CBB034 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FAE6411DD9ED2A00CBB034 /* MineViewController.m */; };
 		F3FAE7761DD9ED2A00CBB034 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE6871DD9ED2A00CBB034 /* CodeScan.bundle */; };
 		F3FAE7771DD9ED2A00CBB034 /* Digital-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE6891DD9ED2A00CBB034 /* Digital-Regular.ttf */; };
 		F3FAE7781DD9ED2A00CBB034 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FAE68A1DD9ED2A00CBB034 /* Roboto-Medium.ttf */; };
@@ -217,6 +207,10 @@
 		4399DA5190B99074E3B33762 /* Pods-WeLove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLove.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeLove/Pods-WeLove.release.xcconfig"; sourceTree = "<group>"; };
 		632E0F2E8D15E27FB247BC26 /* Pods-WeLove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeLove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeLove/Pods-WeLove.debug.xcconfig"; sourceTree = "<group>"; };
 		76ADB022CCEB32BD4198DC8F /* libPods-WeLove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeLove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3090FCF1DE66AD800A73DBC /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		F3090FD61DE6770A00A73DBC /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		F3090FD71DE6770A00A73DBC /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		F3090FD91DE6797E00A73DBC /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		F35AD9D61DDA9F3F00800E43 /* HappinessTimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HappinessTimeTableViewController.h; sourceTree = "<group>"; };
 		F35AD9D71DDA9F3F00800E43 /* HappinessTimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HappinessTimeTableViewController.m; sourceTree = "<group>"; };
 		F35AD9DF1DDA9F3F00800E43 /* TimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
@@ -297,17 +291,6 @@
 		F37E63A41DDD61040061D6BC /* MemoryDayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoryDayViewController.xib; sourceTree = "<group>"; };
 		F37E63B51DDD61040061D6BC /* WishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishViewController.h; sourceTree = "<group>"; };
 		F37E63B61DDD61040061D6BC /* WishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishViewController.m; sourceTree = "<group>"; };
-		F37E63CC1DDD72B40061D6BC /* 10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpeg; sourceTree = "<group>"; };
-		F37E63CD1DDD72B40061D6BC /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = "<group>"; };
-		F37E63CE1DDD72B40061D6BC /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
-		F37E63CF1DDD72B40061D6BC /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
-		F37E63D01DDD72B40061D6BC /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = "<group>"; };
-		F37E63D11DDD72B40061D6BC /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
-		F37E63D21DDD72B40061D6BC /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
-		F37E63D31DDD72B40061D6BC /* 7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpeg; sourceTree = "<group>"; };
-		F37E63D41DDD72B40061D6BC /* 8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpeg; sourceTree = "<group>"; };
-		F37E63D51DDD72B40061D6BC /* 0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpeg; sourceTree = "<group>"; };
-		F37E63D61DDD72B40061D6BC /* 9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpeg; sourceTree = "<group>"; };
 		F37E63E31DDD86FD0061D6BC /* PhotosTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTypeViewController.h; sourceTree = "<group>"; };
 		F37E63E41DDD86FD0061D6BC /* PhotosTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosTypeViewController.m; sourceTree = "<group>"; };
 		F37E63E71DDD94C10061D6BC /* AlbumPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumPhotosViewController.h; sourceTree = "<group>"; };
@@ -322,6 +305,7 @@
 		F3A5C47A1DDC27C0007E933C /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
 		F3A5C47B1DDC27C0007E933C /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
 		F3D23EB91DE52F4300D5CFE5 /* HappyTime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HappyTime.plist; sourceTree = "<group>"; };
+		F3D23ECA1DE573BC00D5CFE5 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		F3FAE2D41DD9EAFC00CBB034 /* WeLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3FAE2D81DD9EAFC00CBB034 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F3FAE2DA1DD9EAFC00CBB034 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -452,8 +436,6 @@
 		F3FAE6211DD9ED2A00CBB034 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		F3FAE6221DD9ED2A00CBB034 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		F3FAE6231DD9ED2A00CBB034 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		F3FAE6401DD9ED2A00CBB034 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
-		F3FAE6411DD9ED2A00CBB034 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		F3FAE6851DD9ED2A00CBB034 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F3FAE6871DD9ED2A00CBB034 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		F3FAE6891DD9ED2A00CBB034 /* Digital-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Digital-Regular.ttf"; sourceTree = "<group>"; };
@@ -752,7 +734,6 @@
 				F37E63E31DDD86FD0061D6BC /* PhotosTypeViewController.h */,
 				F37E63E41DDD86FD0061D6BC /* PhotosTypeViewController.m */,
 				F37E63E61DDD94C10061D6BC /* PhotoType */,
-				F37E63E21DDD74250061D6BC /* image */,
 			);
 			path = PhotosAlbum;
 			sourceTree = "<group>";
@@ -764,24 +745,6 @@
 				F37E63B61DDD61040061D6BC /* WishViewController.m */,
 			);
 			path = WishBall;
-			sourceTree = "<group>";
-		};
-		F37E63E21DDD74250061D6BC /* image */ = {
-			isa = PBXGroup;
-			children = (
-				F37E63CC1DDD72B40061D6BC /* 10.jpeg */,
-				F37E63CD1DDD72B40061D6BC /* 5.jpeg */,
-				F37E63CE1DDD72B40061D6BC /* 4.jpeg */,
-				F37E63CF1DDD72B40061D6BC /* 3.jpeg */,
-				F37E63D01DDD72B40061D6BC /* 6.jpeg */,
-				F37E63D11DDD72B40061D6BC /* 2.jpeg */,
-				F37E63D21DDD72B40061D6BC /* 1.jpeg */,
-				F37E63D31DDD72B40061D6BC /* 7.jpeg */,
-				F37E63D41DDD72B40061D6BC /* 8.jpeg */,
-				F37E63D51DDD72B40061D6BC /* 0.jpeg */,
-				F37E63D61DDD72B40061D6BC /* 9.jpeg */,
-			);
-			name = image;
 			sourceTree = "<group>";
 		};
 		F37E63E61DDD94C10061D6BC /* PhotoType */ = {
@@ -823,6 +786,7 @@
 			children = (
 				F3FAE2DA1DD9EAFC00CBB034 /* AppDelegate.h */,
 				F3FAE2DB1DD9EAFC00CBB034 /* AppDelegate.m */,
+				F3D23ECA1DE573BC00D5CFE5 /* Header.h */,
 				F3FAE5F91DD9ED2A00CBB034 /* Modules */,
 				F3FAE5581DD9ED2900CBB034 /* Categories */,
 				F3FAE56B1DD9ED2A00CBB034 /* Components */,
@@ -856,6 +820,8 @@
 		F3FAE5581DD9ED2900CBB034 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F3090FD61DE6770A00A73DBC /* UIImage+ImageEffects.h */,
+				F3090FD71DE6770A00A73DBC /* UIImage+ImageEffects.m */,
 				F371A6B81DE410F900A70A77 /* UIAlertController+Blocks.h */,
 				F371A6B91DE410F900A70A77 /* UIAlertController+Blocks.m */,
 				F3A5C47A1DDC27C0007E933C /* NSString+time.h */,
@@ -1162,11 +1128,11 @@
 		F3FAE62B1DD9ED2A00CBB034 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				F3FAE6401DD9ED2A00CBB034 /* MineViewController.h */,
-				F3FAE6411DD9ED2A00CBB034 /* MineViewController.m */,
 				F35ADA0B1DDAD43600800E43 /* DayInspect */,
 				F35ADA011DDAB20D00800E43 /* HeadView */,
 				F35AD9FD1DDAB1D400800E43 /* Games */,
+				F3090FCF1DE66AD800A73DBC /* MineViewController.h */,
+				F3090FD91DE6797E00A73DBC /* MineViewController.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1499,7 +1465,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F37E63D71DDD72B40061D6BC /* 10.jpeg in Resources */,
 				F3FAE7A31DD9ED2A00CBB034 /* icomoon.ttf in Resources */,
 				F3FAE7881DD9ED2A00CBB034 /* WechatIMG21.jpeg in Resources */,
 				F3FAE7BA1DD9ED2A00CBB034 /* timeline.html in Resources */,
@@ -1509,17 +1474,14 @@
 				F3FAE2E71DD9EAFC00CBB034 /* LaunchScreen.storyboard in Resources */,
 				F3FAE70F1DD9ED2A00CBB034 /* sr_refresh@2X.png in Resources */,
 				F3FAE7391DD9ED2A00CBB034 /* LoveViewController.xib in Resources */,
-				F37E63DF1DDD72B40061D6BC /* 8.jpeg in Resources */,
 				F3FAE7841DD9ED2A00CBB034 /* WechatIMG18.jpeg in Resources */,
 				F3FAE7931DD9ED2A00CBB034 /* WechatIMG7.jpeg in Resources */,
 				F3FAE7B41DD9ED2A00CBB034 /* vue-resource.min.js in Resources */,
-				F37E63DC1DDD72B40061D6BC /* 2.jpeg in Resources */,
 				F3FAE7871DD9ED2A00CBB034 /* WechatIMG20.jpeg in Resources */,
 				F3FAE7B81DD9ED2A00CBB034 /* sensorWater.html in Resources */,
 				F3FAE78D1DD9ED2A00CBB034 /* WechatIMG26.jpeg in Resources */,
 				F3FAE77B1DD9ED2A00CBB034 /* WechatIMG1.jpeg in Resources */,
 				F3FAE7A51DD9ED2A00CBB034 /* icon.css in Resources */,
-				F37E63DE1DDD72B40061D6BC /* 7.jpeg in Resources */,
 				F3FAE7B01DD9ED2A00CBB034 /* leaflet.js in Resources */,
 				F3FAE77F1DD9ED2A00CBB034 /* WechatIMG13.jpeg in Resources */,
 				F3FAE78E1DD9ED2A00CBB034 /* WechatIMG27.jpeg in Resources */,
@@ -1532,12 +1494,8 @@
 				F3FAE7AE1DD9ED2A00CBB034 /* echarts.common.min.js in Resources */,
 				F37E63B81DDD61040061D6BC /* MemoryDayViewController.xib in Resources */,
 				F3FAE7941DD9ED2A00CBB034 /* WechatIMG8.jpeg in Resources */,
-				F37E63DD1DDD72B40061D6BC /* 1.jpeg in Resources */,
-				F37E63D91DDD72B40061D6BC /* 4.jpeg in Resources */,
-				F37E63E01DDD72B40061D6BC /* 0.jpeg in Resources */,
 				F3FAE7811DD9ED2A00CBB034 /* WechatIMG15.jpeg in Resources */,
 				F3FAE7821DD9ED2A00CBB034 /* WechatIMG16.jpeg in Resources */,
-				F37E63D81DDD72B40061D6BC /* 5.jpeg in Resources */,
 				F35ADA321DDAD82F00800E43 /* DayTimeCell.xib in Resources */,
 				F3FAE78C1DD9ED2A00CBB034 /* WechatIMG25.jpeg in Resources */,
 				F3FAE7901DD9ED2A00CBB034 /* WechatIMG4.jpeg in Resources */,
@@ -1550,7 +1508,6 @@
 				F3FAE7981DD9ED2A00CBB034 /* iconfont.ttf in Resources */,
 				F3FAE7B11DD9ED2A00CBB034 /* swiper.animate-twice.min.js in Resources */,
 				F3FAE7A71DD9ED2A00CBB034 /* bie.png in Resources */,
-				F37E63E11DDD72B40061D6BC /* 9.jpeg in Resources */,
 				F3FAE7991DD9ED2A00CBB034 /* leaflet.css in Resources */,
 				F3FAE7B31DD9ED2A00CBB034 /* swiper.min.js in Resources */,
 				F3FAE79C1DD9ED2A00CBB034 /* sensorWater.css in Resources */,
@@ -1566,7 +1523,6 @@
 				F3FAE7831DD9ED2A00CBB034 /* WechatIMG17.jpeg in Resources */,
 				F3FAE6E91DD9ED2A00CBB034 /* 3DBallPlist.plist in Resources */,
 				F3FAE70E1DD9ED2A00CBB034 /* sr_refresh.png in Resources */,
-				F37E63DB1DDD72B40061D6BC /* 6.jpeg in Resources */,
 				F3FAE77A1DD9ED2A00CBB034 /* youyuan.ttf in Resources */,
 				F3FAE7191DD9ED2A00CBB034 /* TZImagePickerController.bundle in Resources */,
 				F3FAE79B1DD9ED2A00CBB034 /* normalize.min.css in Resources */,
@@ -1591,7 +1547,6 @@
 				F3FAE2E21DD9EAFC00CBB034 /* Main.storyboard in Resources */,
 				F3FAE7271DD9ED2A00CBB034 /* HappyTimeList.plist in Resources */,
 				F3FAE7AF1DD9ED2A00CBB034 /* jquery.min.js in Resources */,
-				F37E63DA1DDD72B40061D6BC /* 3.jpeg in Resources */,
 				F3FAE7AC1DD9ED2A00CBB034 /* tempdata.json in Resources */,
 				F3FAE78F1DD9ED2A00CBB034 /* WechatIMG3.jpeg in Resources */,
 				F3FAE7AD1DD9ED2A00CBB034 /* timeline.json in Resources */,
@@ -1656,7 +1611,6 @@
 				F371A6BA1DE410F900A70A77 /* UIAlertController+Blocks.m in Sources */,
 				F3FAE7311DD9ED2A00CBB034 /* BaseViewController.m in Sources */,
 				F3FAE7031DD9ED2A00CBB034 /* ZYQAssetPickerController.m in Sources */,
-				F3FAE7581DD9ED2A00CBB034 /* MineViewController.m in Sources */,
 				F3FAE7261DD9ED2A00CBB034 /* NSManagedObjectContext+GenerateContext.m in Sources */,
 				F3A5C47E1DDC27C0007E933C /* NSString+time.m in Sources */,
 				F3FAE70B1DD9ED2A00CBB034 /* QMPictureView.m in Sources */,
@@ -1686,12 +1640,14 @@
 				F35ADA281DDAD73600800E43 /* LineDisplayModel.m in Sources */,
 				F3FAE71A1DD9ED2A00CBB034 /* TZImagePickerController.m in Sources */,
 				F371A7031DE44E8300A70A77 /* NSTimer+QM.m in Sources */,
+				F3090FD81DE6770A00A73DBC /* UIImage+ImageEffects.m in Sources */,
 				F3FAE7151DD9ED2A00CBB034 /* NSBundle+TZImagePicker.m in Sources */,
 				F3FAE71F1DD9ED2A00CBB034 /* UIView+Layout.m in Sources */,
 				F3FAE6EB1DD9ED2A00CBB034 /* NSObject+PerformBlockAfterDelay.m in Sources */,
 				F3FAE7251DD9ED2A00CBB034 /* VideoCache.m in Sources */,
 				F3FAE6FE1DD9ED2A00CBB034 /* FFNumberScrollView.m in Sources */,
 				F35AD9E11DDA9F3F00800E43 /* HappinessTimeTableViewController.m in Sources */,
+				F3090FDA1DE6797E00A73DBC /* MineViewController.m in Sources */,
 				F371A6AF1DE3E98200A70A77 /* PRTweenTimingFunctions.m in Sources */,
 				F3FAE7131DD9ED2A00CBB034 /* TYWaterWaveView.m in Sources */,
 				F3FAE6F11DD9ED2A00CBB034 /* UIView+UIViewFrame.m in Sources */,

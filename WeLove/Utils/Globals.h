@@ -89,7 +89,7 @@
 #define userManager [UserManager sharedInstance]
 #define locationManager [LocationManager sharedInstance]
 #define rootContext (((AppDelegate*)[[UIApplication sharedApplication] delegate]).managedObjectContext)
-
+#define kCachesPath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
 /*-----------------------------文件路径-----------------------------*/
 #define kSearchHistoryPath @"SearchHistory"
 #define kUserAgreementFilePath @"user_agreement"
