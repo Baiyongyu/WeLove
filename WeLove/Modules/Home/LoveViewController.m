@@ -15,6 +15,7 @@
 #import "PhotosTypeViewController.h"// 相册集
 #import "ChatListViewController.h"  // 聊天吧
 
+#import "LoversViewController.h"      // 情侣空间
 #import "PhotoAlbumViewController.h"  // 左右滑动模式
 #import "AlbumPhotosViewController.h" // 流式
 #import "ListPhotoViewController.h"   // 列表
@@ -125,7 +126,7 @@ BOOL isPlay = YES;
         [kRootNavigation pushViewController:wishVC animated:YES];
     }
     else if (btn.tag == 3) {
-        PhotosTypeViewController *typeVC = [[PhotosTypeViewController alloc] initWithViewControllerClasses:@[[PhotoAlbumViewController class], [ListPhotoViewController class], [AlbumPhotosViewController class]] andTheirTitles:@[@"陌陌模式", @"列表相册", @"流式相册"]];
+        PhotosTypeViewController *typeVC = [[PhotosTypeViewController alloc] initWithViewControllerClasses:@[[LoversViewController class], [PhotoAlbumViewController class], [ListPhotoViewController class], [AlbumPhotosViewController class]] andTheirTitles:@[@"情侣相册", @"陌陌模式", @"列表相册", @"流式相册"]];
         typeVC.menuViewStyle = WMMenuViewStyleLine;
         typeVC.menuItemWidth = 80;
         typeVC.menuBGColor= [UIColor whiteColor];

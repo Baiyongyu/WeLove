@@ -50,6 +50,7 @@
         self.headerImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.width + 50)];
         self.headerImageView.backgroundColor = [UIColor lightGrayColor];
         self.headerImageView.userInteractionEnabled = YES;
+        self.headerImageView.contentMode = UIViewContentModeScaleAspectFit;
         [bgView addSubview:self.headerImageView];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGesture:)];
         [self.headerImageView addGestureRecognizer:tap];

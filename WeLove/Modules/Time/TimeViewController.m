@@ -43,11 +43,16 @@
     self.headView = [[FFMemberCenterHeadView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 140)];
     
     // 计算在一起时间
-    NSString *beginTime = [self getUTCFormateDate:@"2016-10-26 05:20"];
+    NSString *beginTime = [self getUTCFormateDate:@"2016-10-26 00:00"];
+    NSLog(@"beginTime=%ld", [beginTime integerValue]);
     // 倒计时还有多少天见面
-//    NSString *jianTime = [self getUTCFormateDate:@"2016-12-02 00:00"];
+    NSString *jianTime = [self getUTCFormateDate:@"2016-12-02 00:00"];
+    NSLog(@"jianmian=%ld",[jianTime integerValue]);
     
-    [self.headView startIntegralAnimationWithMaxLevel:11 UserIntegral:[beginTime floatValue] UserLevel:7 UserlevelIntegral:0 nextLevelIntegral:36 userNickName:@"" ActiveSize:CGSizeMake(180, 75) NormalSize:CGSizeMake(30, 35)];
+    /**
+     * maxLevel 最高的等级 例如15  userLevel用户当前等级  userIntegral 用户积分 userlevelIntegral 用户当前等级积分 nextLevelIntegral 下个等级积分
+     */
+    [self.headView startIntegralAnimationWithMaxLevel:11 UserIntegral:[beginTime integerValue] UserLevel:7 UserlevelIntegral:3000 nextLevelIntegral:[jianTime integerValue] userNickName:@"" ActiveSize:CGSizeMake(180, 75) NormalSize:CGSizeMake(30, 35)];
     
     /***************************恋爱时光*****************************/
     WS(weakSelf);
@@ -248,32 +253,35 @@
     NSDate* current_date = [[NSDate alloc] init];
     
     NSTimeInterval time = [current_date timeIntervalSinceDate:newsDateFormatted];//间隔的秒数
-    int month = ((int)time) / (3600*24*30);
+//    int month = ((int)time) / (3600*24*30);
     int days = ((int)time) / (3600*24);
-    int hours = ((int)time) % (3600*24)/3600;
-    int minute = ((int)time) % (3600*24)/60;
+//    int hours = ((int)time) % (3600*24)/3600;
+//    int minute = ((int)time) % (3600*24)/60;
     
     NSLog(@"time=%f",(double)time);
     
     NSString *dateContent;
     
+    dateContent = [NSString stringWithFormat:@"%i",days];
+    self.dateContent = dateContent;
+    NSLog(@"dateContent=%@",dateContent);
     
-    if(month!=0){
-        
-        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",month,@"个月前"];
-        
-    }else if(days!=0){
-        
-        dateContent = [NSString stringWithFormat:@"%i",days];
-        self.dateContent = dateContent;
-        NSLog(@"%@",dateContent);
-    }else if(hours!=0){
-        
-        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",hours,@"小时前"];
-    }else {
-        
-        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",minute,@"分钟前"];
-    }
+//    if(month!=0){
+//        
+//        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",month,@"个月前"];
+//        
+//    }else if(days!=0){
+//        
+//        dateContent = [NSString stringWithFormat:@"%i",days];
+//        self.dateContent = dateContent;
+//        NSLog(@"%@",dateContent);
+//    }else if(hours!=0){
+//        
+//        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",hours,@"小时前"];
+//    }else {
+//        
+//        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",minute,@"分钟前"];
+//    }
     
     //    NSString *dateContent = [[NSString alloc] initWithFormat:@"%i天",days];
     

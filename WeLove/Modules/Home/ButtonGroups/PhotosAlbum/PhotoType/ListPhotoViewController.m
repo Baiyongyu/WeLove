@@ -8,7 +8,7 @@
 
 #import "ListPhotoViewController.h"
 
-#define cellHeight 250
+#define cellHeight 350
 
 @interface ListPhotoViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -106,7 +106,7 @@
         //pictureView的Y往上加一半cellHeight 高度为2 * cellHeight，这样上下多出一半的cellHeight
         _pictureView = ({
             UIImageView * picture = [[UIImageView alloc]initWithFrame:CGRectMake(0, -cellHeight/2, kScreenWidth, cellHeight * 2)];
-            picture.contentMode = UIViewContentModeScaleAspectFill;
+            picture.contentMode = UIViewContentModeScaleAspectFit;
             picture;
         });
         [self.contentView  addSubview:_pictureView];

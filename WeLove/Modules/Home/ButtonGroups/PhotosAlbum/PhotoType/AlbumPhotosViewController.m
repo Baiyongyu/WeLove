@@ -9,13 +9,11 @@
 #import "AlbumPhotosViewController.h"
 #import "ComAlbumPhoto.h"
 
-#import "FFBarrageManager.h"
-#import "FFBarrageView.h" // 弹幕
+#import "FlyTextView.h" // 弹幕
 
 @interface AlbumPhotosViewController ()
+@property(nonatomic, strong) FlyTextView *flyView;
 @property(nonatomic, strong) NSMutableArray *photos;
-/** 弹幕 */
-@property(nonatomic, strong) FFBarrageManager *manager;
 @end
 
 @implementation AlbumPhotosViewController
@@ -29,22 +27,28 @@
 }
 
 - (void)loadSubViews {
-    
-    // 弹幕效果
-    _manager = [[FFBarrageManager alloc] initWithComments:@[@"2016.1026.5.20，我们在一起~~~~~~~~~~~~~~", @"小v，我爱你~~~~~~~~~~~~~~~~~~", @"亲爱的，你说我为什么那么喜欢你的名字呢？~~~~~~~~~~~~~~~~~~~~~~~~",
-                                                            @"老婆，老公爱你~~~~~~~~~~~~~~", @"亲爱的的，么么哒~~~~~~~~~~~~~~~~~~", @"我们会一直幸福下去的~~~~~~~~~~~~~~~~~~",
-                                                            @"亲爱的，要等我来娶你哦~~~~~~~~~~~~~", @"宇哥爱小v~~~~~~~~~~~~~~~~~~~~~~~~", @"爱上你从那天起，甜蜜的很轻易~~~~~~~~~~~"]];
-    WS(weakSelf);
-    _manager.trajectoryCount = 5;
-    _manager.generateViewBlock = ^(FFBarrageView *barrageView){
-        barrageView.frame = CGRectMake(kScreenWidth, barrageView.trajectory * 40 + 165, barrageView.frame.size.width, 30);
-        [weakSelf.view addSubview:barrageView];
-        
-        [barrageView startAnimation];
-    };
-    [_manager start];
-    
-    
+
+     // 弹幕效果
+     NSArray *nameArray = @[@"2016.1026.5.20，我们在一起~", @"小v，我爱你~", @"亲爱的，你说我为什么那么喜欢你的名字呢？~",
+     @"老婆，老公爱你~", @"亲爱的的，么么哒~", @"我们会一直幸福下去的~",
+     @"亲爱的，要等我来娶你哦~", @"宇哥爱小v~", @"爱上你从那天起，甜蜜的很轻易~", @"厉害了，我的v", @"666666666666666666666"];
+     NSArray *colorArray = @[[UIColor redColor], [UIColor blackColor], [UIColor greenColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor purpleColor], [UIColor magentaColor], [UIColor brownColor]];
+     for(int i = 0 ; i < 1000; i++) {
+         float   tempNum     = arc4random()%550;
+         int     tempI       = arc4random()%10;
+         int     sleepTime   = arc4random()%20;
+         int     colorNum    = arc4random()%8;
+
+     dispatch_async(dispatch_get_global_queue(0, 0), ^{
+         sleep(sleepTime);
+         dispatch_async(dispatch_get_main_queue(), ^{
+             self.flyView = [[FlyTextView alloc] initWithY:tempNum AndText:nameArray[tempI] AndWordSize:18];
+             self.flyView.textColor = colorArray[colorNum];
+             [self.view addSubview:self.flyView];
+         });
+        });
+     }
+
     // 图片流
     self.photos = [[NSMutableArray alloc] init];
     NSMutableArray *photoPaths = [[NSMutableArray alloc] init];
@@ -52,8 +56,7 @@
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSLog(@"path = %@", path);
     
-    NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray *fileNames = [fm contentsOfDirectoryAtPath:path error:nil];
+    NSArray *fileNames = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
     
     for (NSString *fileName in fileNames ) {
         if ([fileName hasSuffix:@"jpeg"] || [fileName hasSuffix:@"JPG"]) {
@@ -131,6 +134,11 @@
             }
         }
     }];
+}
+
+- (void)dealloc {
+    [self.flyView removeFromSuperview];
+    [self.photos removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {

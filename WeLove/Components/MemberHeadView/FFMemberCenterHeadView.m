@@ -70,15 +70,15 @@ static float Padding = 70;
     
     UIView *previousItemView = nil;
 
-    NSArray *titleArray = @[@"",@"相遇",@"约会",@"相识",@"相爱",@"分开",@"异地",@"",@"见面",@"待续",@"待续",@"待续",@"待续"];
+    NSArray *titleArray = @[@"",@"相遇",@"约会",@"相识",@"相爱",@"分开",@"异地",@"",@"见面",@"么么哒",@"待续",@"待续",@"待续"];
     
     for (NSInteger i = 1; i <= maxLevel ; i ++) {
         FFUserLevelView * levelView = nil;
         BOOL isUserLevel = (i == userLevel)? YES :NO;
         if (previousItemView) {
-           levelView  = [FFUserLevelView showLevelInfoWithLevel:i IsUserLevel:isUserLevel Frame: isUserLevel ? CGRectMake(Padding + previousItemView.x + previousItemView.width, 0, activeSize.width, activeSize.height) : CGRectMake(Padding +  previousItemView.x + previousItemView.width, 0, normalSize.width, normalSize.height) avator:@"http://c1.cdn.goumin.com/cms/video_activity/day_161013/20161013_0ccd5cb.jpg"];
+           levelView  = [FFUserLevelView showLevelInfoWithLevel:i IsUserLevel:isUserLevel Frame: isUserLevel ? CGRectMake(Padding + previousItemView.x + previousItemView.width, 0, activeSize.width, activeSize.height) : CGRectMake(Padding +  previousItemView.x + previousItemView.width, 0, normalSize.width, normalSize.height) avator:@"http://a2.qpic.cn/psb?/V10xIXyj3VXuB8/Q1daAD0shpzbck7sKGbcBrsQP6vWyHMe2lZpfM.Hzs0!/b/dNwAAAAAAAAA&bo=gAJVA4ACVQMFCSo!&rf=viewer_4"];
         }else{
-            levelView = [FFUserLevelView showLevelInfoWithLevel:i IsUserLevel:isUserLevel Frame: isUserLevel ? CGRectMake(Padding *(i) + previousItemView.x + previousItemView.width, 0, activeSize.width, activeSize.height) : CGRectMake(Padding *(i) +  previousItemView.x + previousItemView.width, 0, normalSize.width, normalSize.height) avator:@"http://c1.cdn.goumin.com/cms/video_activity/day_161013/20161013_0ccd5cb.jpg"];
+            levelView = [FFUserLevelView showLevelInfoWithLevel:i IsUserLevel:isUserLevel Frame: isUserLevel ? CGRectMake(Padding *(i) + previousItemView.x + previousItemView.width, 0, activeSize.width, activeSize.height) : CGRectMake(Padding *(i) +  previousItemView.x + previousItemView.width, 0, normalSize.width, normalSize.height) avator:@"http://a2.qpic.cn/psb?/V10xIXyj3VXuB8/Q1daAD0shpzbck7sKGbcBrsQP6vWyHMe2lZpfM.Hzs0!/b/dNwAAAAAAAAA&bo=gAJVA4ACVQMFCSo!&rf=viewer_4"];
         }
         
         levelView.centerY = self.scrollView.centerY;
@@ -120,7 +120,8 @@ static float Padding = 70;
     
     self.toastLabel.centerX = (userLevel - 2 + 1) * Padding + Padding + (userLevel - 1) * normalSize.width + activeSize.width + Padding / 2;
     
-    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral - userIntegral)];
+//    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral - userIntegral)];
+    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral)];
 //    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral - userlevelIntegral)];
     
     self.toastLabel.y = - 30;

@@ -9,7 +9,7 @@
 #import "HappinessTimeTableViewController.h"
 #import "AnimaViewController.h"
 
-@interface HappinessTimeTableViewController ()
+@interface HappinessTimeTableViewController () 
 // 恋爱动画按钮
 @property(nonatomic,strong)QMButton *loveBtn;
 @property(nonatomic,strong)UIView *footerView;
@@ -65,6 +65,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 55;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *vc = [[UIViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - actions
