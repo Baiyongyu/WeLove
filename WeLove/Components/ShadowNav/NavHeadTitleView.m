@@ -1,9 +1,9 @@
 //
 //  NavHeadTitleView.m
-//  WeLove
+//  LoveLove
 //
-//  Created by 宇玄丶 on 2016/11/13.
-//  Copyright © 2016年 qianmo. All rights reserved.
+//  Created by 宇玄丶 on 2016/11/29.
+//  Copyright © 2016年 北京116科技有限公司. All rights reserved.
 //
 
 #import "NavHeadTitleView.h"
@@ -11,6 +11,7 @@
 @interface NavHeadTitleView()
 @property(nonatomic,strong)UILabel *label;
 @property(nonatomic,strong)UIButton *back;
+@property(nonatomic,strong)UIButton *leftBtn;
 @property(nonatomic,strong)UIButton *rightBtn;
 @end
 
@@ -32,6 +33,12 @@
         self.label.font = [UIFont systemFontOfSize:18];
         [self addSubview:self.label];
         
+        self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.leftBtn.backgroundColor = [UIColor clearColor];
+        self.leftBtn.frame = CGRectMake(15, 25, 30, 30);
+        [self.leftBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.leftBtn];
+        
         self.rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         self.rightBtn.backgroundColor = [UIColor clearColor];
         self.rightBtn.frame = CGRectMake(self.frame.size.width-46, 30, 30, 30);
@@ -39,6 +46,15 @@
         [self addSubview:self.rightBtn];
     }
     return self;
+}
+
+- (void)setLeftImageView:(NSString *)leftImageView {
+    _leftImageView = leftImageView;
+    [self.leftBtn setImage:[UIImage imageNamed:_leftImageView] forState:UIControlStateNormal];
+}
+- (void)setLeftTitleImage:(NSString *)leftImageView {
+    _leftImageView = leftImageView;
+    [self.leftBtn setImage:[UIImage imageNamed:_leftImageView] forState:UIControlStateNormal];
 }
 
 - (void)setRightImageView:(NSString *)rightImageView {
@@ -60,7 +76,13 @@
     self.label.textColor = color;
 }
 
-// 右边按钮
+
+- (void)leftBtnClick{
+    if ([_delegate respondsToSelector:@selector(NavHeadToLeft)]) {
+        [_delegate NavHeadToLeft];
+    }
+}
+
 - (void)rightBtnClick{
     if ([_delegate respondsToSelector:@selector(NavHeadToRight)]) {
         [_delegate NavHeadToRight];

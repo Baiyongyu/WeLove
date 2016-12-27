@@ -8,7 +8,7 @@
 
 #import "TabBarController.h"
 
-#import "LoveViewController.h"
+#import "HomeViewController.h"
 #import "TimeViewController.h"
 #import "MineViewController.h"
 
@@ -21,9 +21,10 @@
 - (instancetype)init {
     
     if (self = [super init]) {
+        
         // 首页
-        LoveViewController *homeVC = [[LoveViewController alloc] init];
-        homeVC.tabBarItem.title = @"微爱";
+        HomeViewController *homeVC = [[HomeViewController alloc] init];
+        homeVC.tabBarItem.title = @"首页";
         homeVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
         homeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
         

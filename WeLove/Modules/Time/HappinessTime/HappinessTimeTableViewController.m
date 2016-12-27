@@ -8,6 +8,7 @@
 
 #import "HappinessTimeTableViewController.h"
 #import "AnimaViewController.h"
+#import "ViewController.h"
 
 @interface HappinessTimeTableViewController () 
 // 恋爱动画按钮
@@ -68,8 +69,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *vc = [[UIViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    ViewController *vc = [[ViewController alloc] init];
+    [kRootNavigation pushViewController:vc animated:YES];
 }
 
 #pragma mark - actions

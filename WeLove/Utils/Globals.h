@@ -9,6 +9,8 @@
 #ifndef Globals_h
 #define Globals_h
 
+
+#import <UIKit/UIKit.h>
 /*----------------------------常用尺寸-----------------------------*/
 //屏幕尺寸
 #define kScreenSize           [[UIScreen mainScreen] bounds].size
@@ -93,5 +95,21 @@
 /*-----------------------------文件路径-----------------------------*/
 #define kSearchHistoryPath @"SearchHistory"
 #define kUserAgreementFilePath @"user_agreement"
+
+
+/*-----------------------------首页刚进入界面时卡片展示动画-----------------------------*/
+static inline CAKeyframeAnimation *GetPopAnimation() {
+    
+    CAKeyframeAnimation *popAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    popAnimation.duration = 0.5;
+    popAnimation.values = @[[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.1f, 0.1f, 1.0f)],
+                            [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0f, 1.0f, 1.0f)]];
+    popAnimation.keyTimes = @[@0.2f, @1.0f];
+    popAnimation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    return popAnimation;
+}
+
 
 #endif /* Globals_h */

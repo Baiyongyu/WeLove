@@ -20,7 +20,6 @@
 #import "UIColor+HexStringToColor.h"
 #import "UIImageView+WebCache.h"
 #import "NSObject+PerformBlockAfterDelay.h"
-#import "UIViewController+NavigationHandler.h"
 #import "UIImageView+NetworkMonitor.h"
 #import "UIImageView+FullScreen.h"
 #import "UIAlertController+Blocks.h"

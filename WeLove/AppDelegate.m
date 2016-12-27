@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "LoveViewController.h"
 #import "WMVideoMessage.h"
 #import "TouchWindow.h"
 typedef void (^RootContextSave)(void);

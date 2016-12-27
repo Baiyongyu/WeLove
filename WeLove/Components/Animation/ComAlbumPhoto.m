@@ -18,8 +18,9 @@
         self.imageView = [[UIImageView alloc]initWithFrame:self.bounds];
         self.drawView = [[ComDrawView alloc]initWithFrame:self.bounds];
         // 修复图片让其按自身属性符合
-        //self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-        // self.drawView.contentMode = UIViewContentModeScaleAspectFit;
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        self.drawView.contentMode = UIViewContentModeScaleAspectFit;
+        
         [self addSubview:self.drawView];
         [self addSubview:self.imageView];
 #pragma mark - 这里面有个TIME的高级使用:就是forMode后面的属性,默认就是当点击窗口事件产生后，time定时器的那个线程将会取消变的无效

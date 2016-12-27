@@ -189,16 +189,16 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 2) {
-        PhotosTypeViewController *typeVC = [[PhotosTypeViewController alloc] initWithViewControllerClasses:@[[PhotoAlbumViewController class], [ListPhotoViewController class], [AlbumPhotosViewController class]] andTheirTitles:@[@"陌陌模式", @"列表相册", @"流式相册"]];
-        typeVC.menuViewStyle = WMMenuViewStyleLine;
-        typeVC.menuItemWidth = 80;
-        typeVC.menuBGColor= [UIColor whiteColor];
-        typeVC.menuHeight = 40;
-        typeVC.titleColorSelected = kNavColor;
-        typeVC.titleSizeNormal = 14;
-        typeVC.titleSizeSelected = 14;
+//        PhotosTypeViewController *typeVC = [[PhotosTypeViewController alloc] initWithViewControllerClasses:@[[PhotoAlbumViewController class], [ListPhotoViewController class], [AlbumPhotosViewController class]] andTheirTitles:@[@"陌陌模式", @"列表相册", @"流式相册"]];
+//        typeVC.menuViewStyle = WMMenuViewStyleLine;
+//        typeVC.menuItemWidth = 80;
+//        typeVC.menuBGColor= [UIColor whiteColor];
+//        typeVC.menuHeight = 40;
+//        typeVC.titleColorSelected = kNavColor;
+//        typeVC.titleSizeNormal = 14;
+//        typeVC.titleSizeSelected = 14;
         
-        [self.navigationController pushViewController:typeVC animated:YES];
+//        [self.navigationController pushViewController:typeVC animated:YES];
     }
     
     if (indexPath.row == 3) {
