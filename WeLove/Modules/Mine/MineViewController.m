@@ -17,6 +17,7 @@
 #import "PhotoAlbumViewController.h"  // 左右滑动模式
 #import "AlbumPhotosViewController.h" // 流式
 #import "ListPhotoViewController.h"   // 列表
+#import "CacheManager.h"
 
 @interface MineViewController () <UITableViewDataSource,UITableViewDelegate,NavHeadTitleViewDelegate>
 {
@@ -35,7 +36,6 @@
 @property(nonatomic,assign)float backImgOrgy;
 @property(nonatomic,strong)NavHeadTitleView *NavView;//导航栏
 @property(nonatomic,strong)HeadImageView *headImageView;//头视图
-//@property(nonatomic,strong)HeadLineView *headLineView;//
 @property(nonatomic,assign)int rowHeight;
 @property(nonatomic,strong)UITableView *tableView;
 
@@ -126,8 +126,6 @@
 // 右按钮回调
 - (void)NavHeadToRight {
     NSLog(@"点击了右按钮");
-    //    BirdFlyViewController *birdVC = [[BirdFlyViewController alloc] init];
-    //    [kRootNavigation pushViewController:birdVC animated:YES];
 }
 
 #pragma mark ---- UITableViewDelegate ----
@@ -142,17 +140,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 5;
 }
-/*
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (!_headLineView) {
-        _headLineView = [[HeadLineView alloc]init];
-        _headLineView.frame = CGRectMake(0, 0, kScreenWidth, 48);
-        _headLineView.delegate = self;
-        [_headLineView setTitleArray:@[@"日鉴",@"阅读",@"我们的资料"]];
-    }
-    return _headLineView;
-}
- */
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *identifier = @"ID";
@@ -189,52 +177,19 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 2) {
-//        PhotosTypeViewController *typeVC = [[PhotosTypeViewController alloc] initWithViewControllerClasses:@[[PhotoAlbumViewController class], [ListPhotoViewController class], [AlbumPhotosViewController class]] andTheirTitles:@[@"陌陌模式", @"列表相册", @"流式相册"]];
-//        typeVC.menuViewStyle = WMMenuViewStyleLine;
-//        typeVC.menuItemWidth = 80;
-//        typeVC.menuBGColor= [UIColor whiteColor];
-//        typeVC.menuHeight = 40;
-//        typeVC.titleColorSelected = kNavColor;
-//        typeVC.titleSizeNormal = 14;
-//        typeVC.titleSizeSelected = 14;
-        
-//        [self.navigationController pushViewController:typeVC animated:YES];
     }
     
     if (indexPath.row == 3) {
-        NSString *path = kCachesPath;
-        NSFileManager *fileManager=[NSFileManager defaultManager];
-        float folderSize;
-        if ([fileManager fileExistsAtPath:path]) {
-            // 拿到所有文件的数组
-            NSArray *childerFiles = [fileManager subpathsAtPath:path];
-            // 拿到每个文件的名字,如有有不想清除的文件就在这里判断
-            for (NSString *fileName in childerFiles) {
-                //将路径拼接到一起
-                NSString *fullPath = [path stringByAppendingPathComponent:fileName];
-                folderSize += [self fileSizeAtPath:fullPath];
+        
+        [UIAlertController showAlertInViewController:self withTitle:@"清理缓存" message:[NSString stringWithFormat:@"缓存大小为%.2fM,确定要清理缓存吗?", [[CacheManager sharedCacheManager] cacheFileSize]] cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:nil tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+            if (buttonIndex == controller.destructiveButtonIndex) {
+                
+                [[CacheManager sharedCacheManager] clearCache];
             }
-            
-            [UIAlertController showAlertInViewController:self withTitle:@"清理缓存" message:[NSString stringWithFormat:@"缓存大小为%.2fM,确定要清理缓存吗?", folderSize] cancelButtonTitle:@"取消" destructiveButtonTitle:@"确定" otherButtonTitles:nil tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
-                if (buttonIndex == controller.destructiveButtonIndex) {
-                    //点击了确定,遍历整个caches文件,将里面的缓存清空
-                    NSString *path = kCachesPath;
-                    NSFileManager *fileManager=[NSFileManager defaultManager];
-                    if ([fileManager fileExistsAtPath:path]) {
-                        NSArray *childerFiles=[fileManager subpathsAtPath:path];
-                        for (NSString *fileName in childerFiles) {
-                            //如有需要，加入条件，过滤掉不想删除的文件
-                            NSString *absolutePath=[path stringByAppendingPathComponent:fileName];
-                            [fileManager removeItemAtPath:absolutePath error:nil];
-                        }
-                    }
-                }
-            }];
-            
-        }
+        }];
     }
     if (indexPath.row == 4) {
-        WebViewController *webVC = [[WebViewController alloc] init];
+        ComWebViewController *webVC = [[ComWebViewController alloc] init];
         webVC.urlStr = @"http://h5.eqxiu.com/s/NABANe?eqrcode=1&from=timeline&isappinstalled=0";
         [kRootNavigation pushViewController:webVC animated:YES];
     }
@@ -248,23 +203,6 @@
 //        [tableView setLayoutMargins:UIEdgeInsetsZero];
 //    }
 //}
-
-
-
-
-
-//计算单个文件夹的大小
-- (float)fileSizeAtPath:(NSString *)path{
-    
-    NSFileManager *fileManager=[NSFileManager defaultManager];
-    
-    if([fileManager fileExistsAtPath:path]){
-        
-        long long size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
-        return size/1024.0/1024.0;
-    }
-    return 0;
-}
 
 
 #pragma mark - 导航栏渐变效果

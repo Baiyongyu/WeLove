@@ -65,9 +65,16 @@
 //融云 key
 #define RONGCLOUD_AppKey @"e0x9wycfed23q"
 #define RONGCLOUD_TokenY @"JG3tL/VpRU/h+mdxepDZA9O71edud+MM+6xXrbw4gbMSAPSlArTtw6akhltL7d5rvB4QLcs6E+7hWhhM94p5kg==" // 宇哥
-
 #define RONGCLOUD_TokenW @"JfukmMOGpPxyOrKMF0r8ZDXm6C475QYWljt7S8FHv/uyf0pKKHN6sQqpua7kQ9YFUiLc2x69VHIjBDGefoBmwSoFVDVKUg6g" // 小v
-
+//ShareSDK
+#define ShareSDK_AppKey @"1a5fa468777df"
+// 腾讯开放平台
+#define TXQQ_AppID @"1105844983"
+#define TXQQ_AppKey @"MyNzzY35WSz1yAwU"
+// URL_Schemes 41e9daf7
+// 新浪微博开放平台
+#define XinLang_AppKey @"331064572"
+#define XinLang_AppSecret @"378fa26361a25558d522483e5847b65a"
 /*----------------------------本地持久化------------------------------*/
 //Cookie
 #define kCookie @"Cookie"
@@ -96,6 +103,8 @@
 #define kSearchHistoryPath @"SearchHistory"
 #define kUserAgreementFilePath @"user_agreement"
 
+#define kBackMusicPathUrl @"http://cdn.y.baidu.com/746dd400ec21750107a8cfd227d999f0.mp3"
+
 
 /*-----------------------------首页刚进入界面时卡片展示动画-----------------------------*/
 static inline CAKeyframeAnimation *GetPopAnimation() {
@@ -110,6 +119,16 @@ static inline CAKeyframeAnimation *GetPopAnimation() {
                                      [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     return popAnimation;
 }
+
+#define XNColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define XNWindowWidth        ([[UIScreen mainScreen] bounds].size.width)
+
+#define XNWindowHeight       ([[UIScreen mainScreen] bounds].size.height)
+
+#define XNFont(font)         [UIFont systemFontOfSize:(font)]
+
+#define XNWidth_Scale        [UIScreen mainScreen].bounds.size.width/375.0f
 
 
 #endif /* Globals_h */

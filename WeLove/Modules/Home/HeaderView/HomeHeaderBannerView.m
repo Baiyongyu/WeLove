@@ -55,7 +55,7 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
     NSLog(@"index=%ld", index);
     
-    WebViewController *webVC = [[WebViewController alloc] init];
+    ComWebViewController *webVC = [[ComWebViewController alloc] init];
     webVC.urlStr = @"http://h5.eqxiu.com/s/NABANe?eqrcode=1&from=timeline&isappinstalled=0";
     [kRootNavigation pushViewController:webVC animated:YES];
 }

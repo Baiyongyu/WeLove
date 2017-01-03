@@ -70,7 +70,7 @@ static float Padding = 70;
     
     UIView *previousItemView = nil;
 
-    NSArray *titleArray = @[@"",@"相遇",@"约会",@"相识",@"相爱",@"分开",@"异地",@"",@"见面",@"么么哒",@"待续",@"待续",@"待续"];
+    NSArray *titleArray = @[@"",@"相遇",@"约会",@"相识",@"相爱",@"分开",@"异地",@"见面",@"幸福中",@"么么哒",@"待续",@"待续",@"待续"];
     
     for (NSInteger i = 1; i <= maxLevel ; i ++) {
         FFUserLevelView * levelView = nil;
@@ -82,7 +82,7 @@ static float Padding = 70;
         }
         
         levelView.centerY = self.scrollView.centerY;
-        previousItemView  =levelView;
+        previousItemView = levelView;
         [self.scrollView addSubview:levelView];
         
         if (!isUserLevel) {
@@ -120,10 +120,9 @@ static float Padding = 70;
     
     self.toastLabel.centerX = (userLevel - 2 + 1) * Padding + Padding + (userLevel - 1) * normalSize.width + activeSize.width + Padding / 2;
     
-//    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral - userIntegral)];
-    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral)];
-//    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral - userlevelIntegral)];
-    
+//    self.toastLabel.text = [NSString stringWithFormat:@"距见面还差%ld天",(NSInteger)(nextLevelIntegral)];
+    self.toastLabel.text = @"幸福进行时...";
+
     self.toastLabel.y = - 30;
     
     self.userIntegral = [[NSString stringWithFormat:@"%f 天", userIntegral] floatValue];

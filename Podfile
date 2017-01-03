@@ -13,5 +13,10 @@ pod 'DBSphereTagCloud', '~> 1.0.0'
 pod 'MJExtension', '~> 3.0.13'
 pod 'SDAutoLayout', '~> 2.1.1’
 pod 'WMPageController', '~> 2.0.2'
-
+pod 'ShareSDK3'
+pod 'MOBFoundation'
+pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+pod 'IQKeyboardManager'
 end

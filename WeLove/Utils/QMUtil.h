@@ -195,4 +195,8 @@ const static NSString *websiteRegex = @"((http|https|Http|Https|rtsp|Rtsp|http|w
 //时间搓转为时间字符串
 + (NSString*)getTimeStrFormatter:(NSString*)formattter withTimeSp:(NSInteger)currentInteger;
 
++ (NSDateFormatter *)dateFormatter;
+
++ (NSString *)getUTCFormateDate:(NSString *)newsDate;
+
 @end

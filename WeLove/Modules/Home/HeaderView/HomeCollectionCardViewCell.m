@@ -18,9 +18,11 @@
     self.imageView.layer.borderWidth = 2.0f;
     self.imageView.layer.cornerRadius = 1.0f;
     self.imageView.layer.masksToBounds = YES;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 - (void)setImageName:(NSString *)imageName {
   _imageName = [imageName copy];
     self.imageView.image = [UIImage imageNamed:_imageName];
 }
+
 @end

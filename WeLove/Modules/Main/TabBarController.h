@@ -10,8 +10,6 @@
 
 typedef NS_ENUM(NSInteger,TabBarIndex) {
     TabBarIndexHome,    // 首页
-    TabBarIndexTime,    // 时光
-    TabBarIndexChat,    // 聊天
     TabBarIndexMine     // 我的
 };
 

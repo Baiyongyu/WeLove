@@ -8,6 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^BtnClickActionBlock)();
+typedef void (^ShareBtnActionBlock)();
 @interface HomeFirstViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *icon;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *time;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *detail;
+@property (weak, nonatomic) IBOutlet UILabel *oursName;
+@property (weak, nonatomic) IBOutlet UIButton *btnTitle;
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+
+@property (nonatomic, copy) BtnClickActionBlock btnClickActionBlock;
+@property (nonatomic, copy) ShareBtnActionBlock shareBtnActionBlock;
+
+- (IBAction)btnClickAction:(id)sender;
+- (IBAction)shareBtnAction:(id)sender;
+
++ (instancetype)homeFirstCellWithTableView:(UITableView *)tableView;
 
 @end

@@ -9,7 +9,6 @@
 #import "TabBarController.h"
 
 #import "HomeViewController.h"
-#import "TimeViewController.h"
 #import "MineViewController.h"
 
 @interface TabBarController ()
@@ -28,12 +27,6 @@
         homeVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
         homeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_chat_32x19_"];
         
-        // 时光
-        TimeViewController *timeVC = [[TimeViewController alloc] init];
-        timeVC.tabBarItem.title = @"时光";
-        timeVC.tabBarItem.image = [UIImage imageNamed:@"ln_tab_timeline_25x19_"];
-        timeVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_timeline_25x19_"];
-        
         // 我的
         MineViewController *mineVC = [[MineViewController alloc] init];
         mineVC.tabBarItem.title = @"我们";
@@ -41,7 +34,7 @@
         mineVC.tabBarItem.selectedImage = [UIImage imageNamed:@"ln_tab_index_22x19_"];
         
         self.tabBar.tintColor = kNavColor;
-        self.viewControllers = @[homeVC, timeVC, mineVC];
+        self.viewControllers = @[homeVC, mineVC];
     }
     return self;
 }

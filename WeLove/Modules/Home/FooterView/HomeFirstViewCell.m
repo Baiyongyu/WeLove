@@ -10,6 +10,28 @@
 
 @implementation HomeFirstViewCell
 
+- (IBAction)btnClickAction:(id)sender {
+    if (self.btnClickActionBlock) {
+        self.btnClickActionBlock();
+    }
+}
+
+- (IBAction)shareBtnAction:(id)sender {
+    if (self.shareBtnActionBlock) {
+        self.shareBtnActionBlock();
+    }
+}
+
++ (instancetype)homeFirstCellWithTableView:(UITableView *)tableView {
+    static NSString *Identifier = @"cell";
+    HomeFirstViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"HomeFirstViewCell" owner:self options:nil] firstObject];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return cell;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

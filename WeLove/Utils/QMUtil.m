@@ -334,8 +334,8 @@
     NSString* str=[QMUtil formatter:@"yyyy-MM-dd" fromeDate:date];
     str=[str stringByAppendingString:@" 0:0:0"];
     date=[QMUtil getDateFromeString:str];
-    NSUInteger unitFlags =NSDayCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit;
-    NSCalendar *cal = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSUInteger unitFlags = NSCalendarUnitDay|NSCalendarUnitYear|NSCalendarUnitMonth;
+    NSCalendar *cal = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDate* today=[NSDate date];
     
     NSDateComponents *comps = [cal components:unitFlags fromDate:date toDate:today options:0];
@@ -356,8 +356,8 @@
     toDateStr=[toDateStr stringByAppendingString:@" 0:0:0"];
     toDate=[QMUtil getDateFromeString:toDateStr];
     
-    NSUInteger unitFlags =NSDayCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit;
-    NSCalendar *cal = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSUInteger unitFlags = NSCalendarUnitDay|NSCalendarUnitYear|NSCalendarUnitMonth;
+    NSCalendar *cal = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     NSDateComponents *comps = [cal components:unitFlags fromDate:fromDate toDate:toDate options:0];
     NSInteger days=[comps day];
@@ -484,5 +484,65 @@
     newSize.height+=16.0;
     return newSize.height;
 }
+
++ (NSDateFormatter *)dateFormatter {
+    static NSDateFormatter* dateFormatter;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MM月dd日 hh:mm"];
+    });
+    return dateFormatter;
+}
+
+#pragma mark - 计时器，获取天数
++ (NSString *)getUTCFormateDate:(NSString *)newsDate {
+    //    newsDate = @"2013-08-09 17:01";
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    
+    NSLog(@"newsDate = %@",newsDate);
+    NSDate *newsDateFormatted = [dateFormatter dateFromString:newsDate];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    [dateFormatter setTimeZone:timeZone];
+    
+    NSDate* current_date = [[NSDate alloc] init];
+    
+    NSTimeInterval time = [current_date timeIntervalSinceDate:newsDateFormatted];//间隔的秒数
+    //    int month = ((int)time) / (3600*24*30);
+    int days = ((int)time) / (3600*24);
+    //    int hours = ((int)time) % (3600*24)/3600;
+    //    int minute = ((int)time) % (3600*24)/60;
+    
+    NSLog(@"time=%f",(double)time);
+    
+    NSString *dateContent;
+    
+    dateContent = [NSString stringWithFormat:@"%i",days];
+    NSLog(@"dateContent=%@",dateContent);
+    
+    //    if(month!=0){
+    //
+    //        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",month,@"个月前"];
+    //
+    //    }else if(days!=0){
+    //
+    //        dateContent = [NSString stringWithFormat:@"%i",days];
+    //        self.dateContent = dateContent;
+    //        NSLog(@"%@",dateContent);
+    //    }else if(hours!=0){
+    //
+    //        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",hours,@"小时前"];
+    //    }else {
+    //
+    //        dateContent = [NSString stringWithFormat:@"%@%i%@",@"   ",minute,@"分钟前"];
+    //    }
+    
+    //    NSString *dateContent = [[NSString alloc] initWithFormat:@"%i天",days];
+    
+    
+    return dateContent;
+}
+
 
 @end

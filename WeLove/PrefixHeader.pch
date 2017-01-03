@@ -45,7 +45,9 @@
 /*---------------Base----------------*/
 #import "BaseViewController.h"
 #import "BaseTableViewController.h"
-#import "WebViewController.h"
+#import "ComWebViewController.h"
 
+#import "Gallop.h"
+#import "IQKeyboardManager.h"
 
 #endif /* PrefixHeader_pch */

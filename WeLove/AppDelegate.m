@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "WMVideoMessage.h"
 #import "TouchWindow.h"
+#import "ShareSDKManagers.h"
+
 typedef void (^RootContextSave)(void);
 
 @interface AppDelegate ()
@@ -38,13 +40,16 @@ typedef void (^RootContextSave)(void);
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    
-    
     self.tabBarController = [[TabBarController alloc] init];
     self.nav = [[NavigationController alloc] initWithRootViewController:self.tabBarController];
     self.nav.navigationBar.hidden = YES;
     self.window.rootViewController = self.nav;
 
+    
+    /** ShareSDK */
+    ShareSDKManagers *registerManagers = [[ShareSDKManagers alloc] init];
+    [registerManagers getShareSDKManagersLaunchOption:launchOptions];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
